@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex,nofollow">
+<title>投影｜花蓮觀光旅宿 AI 專班 Day 1</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%93%BA%3C/text%3E%3C/svg%3E">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;700;900&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+:root{--teal:#0f8a86;--mint:#7fe3dd;--sun:#ef8a3d;--deep:#0d2229;--line:rgba(255,255,255,.15);--mute:#9ab4b8}
+body{font-family:'Noto Sans TC',system-ui,sans-serif;color:#fff;min-height:100vh;
+  background:radial-gradient(circle at 18% 0%,#14434a,#0d2229 62%);overflow-x:hidden}
+.top{display:flex;align-items:center;gap:14px;padding:14px 30px;background:rgba(13,34,41,.86);
+  border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10;flex-wrap:wrap}
+.top h1{font-size:1.1rem;font-weight:900}
+.top h1 small{display:block;font-size:.74rem;color:var(--mute);font-weight:400}
+.modes{margin-left:auto;display:flex;gap:7px;flex-wrap:wrap}
+.modes button{border:1px solid var(--line);background:rgba(255,255,255,.07);color:#fff;border-radius:999px;
+  padding:7px 16px;font-weight:800;font-family:inherit;font-size:.86rem;cursor:pointer}
+.modes button.on{background:var(--teal);border-color:var(--teal)}
+.wrap{padding:26px 30px 50px;max-width:1700px;margin:0 auto}
+.view{display:none}.view.on{display:block}
+h2.t{font-size:1.5rem;font-weight:900;margin-bottom:18px;color:var(--mint)}
+.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(192px,1fr))}
+.g{background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center}
+.g.top{background:linear-gradient(140deg,rgba(239,138,61,.28),rgba(127,227,221,.14));border-color:var(--sun)}
+.g .gn{font-size:1.15rem;font-weight:900}
+.g .pt{font-size:3.4rem;font-weight:900;color:var(--mint);line-height:1.1}
+.g.top .pt{color:#ffd0a4}
+.g .sm{font-size:.84rem;color:var(--mute)}
+.g .vote{margin-top:9px;height:8px;border-radius:999px;background:rgba(255,255,255,.12);overflow:hidden}
+.g .vote i{display:block;height:100%;background:var(--sun)}
+.stat{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));margin-bottom:22px}
+.s{background:rgba(255,255,255,.07);border:1px solid var(--line);border-radius:18px;padding:18px;text-align:center}
+.s b{display:block;font-size:2.8rem;font-weight:900;color:var(--mint);line-height:1.15}
+.s span{font-size:.92rem;color:var(--mute);font-weight:700}
+.s.o b{color:#ffb879}
+.wall{columns:4;column-gap:14px}
+@media (max-width:1280px){.wall{columns:3}}
+@media (max-width:860px){.wall{columns:2}}
+.wn{break-inside:avoid;background:rgba(255,255,255,.08);border:1px solid var(--line);border-left:4px solid var(--sun);
+  border-radius:14px;padding:14px 16px;margin-bottom:14px}
+.wn .wt{font-size:1.06rem;line-height:1.6}
+.wn .wb{font-size:.8rem;color:var(--mute);margin-top:8px}
+.big{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:68vh;text-align:center;padding:30px}
+.big .q{font-size:clamp(1.9rem,4.6vw,3.6rem);font-weight:900;line-height:1.45;max-width:1200px}
+.big .by{margin-top:26px;font-size:1.2rem;color:var(--mute);font-weight:700}
+.big .idx{margin-top:16px;font-size:.92rem;color:var(--mute)}
+.bars{display:grid;gap:12px}
+.br{display:flex;align-items:center;gap:14px}
+.br .lb{width:190px;font-weight:900;font-size:1.02rem;flex:0 0 auto}
+.br .ln{flex:1;height:28px;border-radius:999px;background:rgba(255,255,255,.1);overflow:hidden}
+.br .ln i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--mint));border-radius:999px;transition:width .6s}
+.br .ln i.o{background:linear-gradient(90deg,#d2701f,var(--sun))}
+.br .vl{width:118px;text-align:right;font-weight:900;color:var(--mint);flex:0 0 auto}
+.hint{position:fixed;left:0;right:0;bottom:0;background:rgba(13,34,41,.9);border-top:1px solid var(--line);
+  padding:8px 30px;font-size:.8rem;color:var(--mute);display:flex;gap:18px;flex-wrap:wrap}
+.empty{color:var(--mute);font-size:1.05rem;padding:40px 0;text-align:center}
+</style>
+</head>
+<body>
+<div class="top">
+  <h1>🏨 花蓮觀光旅宿 AI 營運實作專班<small>Day 1 打好底 · 10/27 F HOTEL 花蓮站前館 · 講師 何佳勳（小圭）</small></h1>
+  <div class="modes">
+    <button data-v="score" class="on">1 計分榜</button>
+    <button data-v="warm">2 暖身牆</button>
+    <button data-v="big">3 一句話輪播</button>
+    <button data-v="q10">4 自評落點</button>
+    <button id="full">⛶ 全螢幕</button>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="view on" data-v="score">
+    <div class="stat" id="scStat"></div>
+    <h2 class="t">各組分數（交件 ＋ 講師加分，兩天累計）</h2>
+    <div class="grid" id="scGrid"></div>
+  </div>
+
+  <div class="view" data-v="warm">
+    <h2 class="t">全班的一句話：現在最花時間的事</h2>
+    <div class="wall" id="warmWall"></div>
+  </div>
+
+  <div class="view" data-v="big">
+    <div class="big" id="bigBox"></div>
+  </div>
+
+  <div class="view" data-v="q10">
+    <div class="stat" id="q10Stat"></div>
+    <h2 class="t">每一題回答「是」的比例（由低到高，越低越是今天的重點）</h2>
+    <div class="bars" id="q10Bars"></div>
+  </div>
+</div>
+
+<div class="hint">
+  <span>1 計分榜</span><span>2 暖身牆</span><span>3 一句話輪播</span><span>4 自評落點</span>
+  <span>← → 切換句子</span><span>A 自動播放</span><span>F 全螢幕</span><span id="st">每 10 秒自動更新</span>
+</div>
+
+<script>
+(function(){
+'use strict';
+var SUPA='https://dpglkagtzdwiovzbtase.supabase.co';
+var KEY='sb_publishable_Tuj9p4DXvO-jEqVcBnumTg_TqZ1NnRu';
+var COURSE='hualien-hotel-ai';
+var COHORT=(new URLSearchParams(location.search).get('c')||'').trim()||'hualien-1027';
+var GROUPS=['第1組','第2組','第3組','第4組','第5組','第6組','第7組','第8組','第9組','第10組','第11組','第12組'];
+var Q10=['用過生成式 AI 處理工作','有重複使用的提示詞','AI 文案不用大改就能用','清楚哪些資料不能貼給 AI','常見客服問題已整理成文字','LINE 有歡迎訊息與自動回應','每月整理一次評論','能匯出旅客名單','依客人類型發不同訊息','店裡有分工或 SOP'];
+function H(){return {apikey:KEY,Authorization:'Bearer '+KEY};}
+function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c];});}
+function q(s){return document.querySelector(s);}
+var D={students:[],subs:[],scores:[]}, warm=[], bigI=0, auto=true, autoT=null;
+
+async function get(p){var r=await fetch(SUPA+'/rest/v1/'+p,{headers:H()});if(!r.ok)throw new Error(r.status);return await r.json();}
+async function load(){
+  var base='course=eq.'+encodeURIComponent(COURSE)+'&cohort=eq.'+encodeURIComponent(COHORT);
+  try{
+    var a=await Promise.all([
+      get('lw_line_students?'+base+'&select=code,name,office,quiz'),
+      get('lw_workshop_submissions?'+base+'&select=team,submitter,task,content,created_at&order=created_at.desc'),
+      get('lw_workshop_scores?'+base+'&select=team,points')
+    ]);
+    D.students=a[0]||[];D.subs=a[1]||[];D.scores=a[2]||[];
+    warm=D.subs.filter(function(x){return x.task==='warm';});
+    if(bigI>=warm.length)bigI=0;
+    render();
+    q('#st').textContent='更新於 '+new Date().toLocaleTimeString('zh-TW',{hour12:false,hour:'2-digit',minute:'2-digit',second:'2-digit'});
+  }catch(e){q('#st').textContent='讀取失敗，10 秒後再試';}
+}
+function teamOf(c){return String(c||'').split('｜')[0];}
+
+function renderScore(){
+  var subs=D.subs.filter(function(x){return x.task!=='warm';});
+  var up={},bo={},ppl={},vt={},vn=0;
+  subs.forEach(function(x){up[x.team]=(up[x.team]||0)+1;});
+  D.scores.forEach(function(x){bo[x.team]=(bo[x.team]||0)+(+x.points||0);});
+  D.students.forEach(function(s){
+    ppl[teamOf(s.code)]=(ppl[teamOf(s.code)]||0)+1;
+    var v=(s.quiz||{}).vote; if(v){vt[v]=(vt[v]||0)+1;vn++;}
+  });
+  var arr=GROUPS.map(function(g){return {g:g,n:ppl[g]||0,u:up[g]||0,b:bo[g]||0,p:(up[g]||0)+(bo[g]||0),v:vt[g]||0};});
+  var max=Math.max.apply(null,arr.map(function(a){return a.p;}));
+  var maxV=Math.max.apply(null,arr.map(function(a){return a.v;}));
+  q('#scStat').innerHTML=[
+    ['報到人數',D.students.length,''],['交件總數',subs.length,'o'],
+    ['暖身牆',warm.length,''],['投票數',vn,'o']
+  ].map(function(x){return '<div class="s '+x[2]+'"><b>'+x[1]+'</b><span>'+x[0]+'</span></div>';}).join('');
+  q('#scGrid').innerHTML=arr.map(function(a){
+    return '<div class="g'+(max>0&&a.p===max?' top':'')+'"><div class="gn">'+(max>0&&a.p===max?'🏆 ':'')+a.g+'</div>'
+      +'<div class="pt">'+a.p+'</div><div class="sm">'+a.n+' 人 · 交件 '+a.u+(a.b?' · 講師 '+(a.b>0?'+':'')+a.b:'')+'</div>'
+      +(maxV>0?'<div class="vote"><i style="width:'+Math.round(a.v/maxV*100)+'%"></i></div><div class="sm">'+a.v+' 票</div>':'')
+      +'</div>';
+  }).join('');
+}
+function renderWarm(){
+  q('#warmWall').innerHTML=warm.length?warm.map(function(x){
+    return '<div class="wn"><div class="wt">'+esc(x.content||'')+'</div><div class="wb">'+esc(x.team||'')+' · '+esc(x.submitter||'')+'</div></div>';
+  }).join(''):'<p class="empty">還沒有人貼。請學員打開網站「🚀 開始」分頁，寫一句話送出。</p>';
+}
+function renderBig(){
+  if(!warm.length){q('#bigBox').innerHTML='<p class="empty">還沒有人貼。請學員到「🚀 開始」分頁寫一句話。</p>';return;}
+  if(bigI<0)bigI=warm.length-1; if(bigI>=warm.length)bigI=0;
+  var x=warm[bigI];
+  q('#bigBox').innerHTML='<div class="q">「'+esc(x.content||'')+'」</div>'
+    +'<div class="by">'+esc(x.team||'')+'　'+esc(x.submitter||'')+'</div>'
+    +'<div class="idx">'+(bigI+1)+' / '+warm.length+(auto?'　自動播放中（按 A 暫停）':'　已暫停（按 A 播放）')+'</div>';
+}
+function stageOf(s){return s<=3?0:(s<=7?1:2);}
+function renderQ10(){
+  var fin=D.students.map(function(s){
+    var a=((s.quiz||{}).q10)||[];
+    return {a:a,done:a.filter(function(x){return x===0||x===1;}).length,sum:a.filter(function(x){return x===1;}).length};
+  }).filter(function(r){return r.done===10;});
+  var cnt=[0,0,0]; fin.forEach(function(r){cnt[stageOf(r.sum)]++;});
+  var avg=fin.length?(fin.reduce(function(n,r){return n+r.sum;},0)/fin.length):0;
+  q('#q10Stat').innerHTML=[
+    ['完成自評',fin.length+' 人',''],['平均分數',(Math.round(avg*10)/10)+' 分','o'],
+    ['階段一 基礎',cnt[0]+' 人',''],['階段二 中階',cnt[1]+' 人','o'],['階段三 整合',cnt[2]+' 人','']
+  ].map(function(x){return '<div class="s '+x[2]+'"><b>'+x[1]+'</b><span>'+x[0]+'</span></div>';}).join('');
+  var per=Q10.map(function(t,i){
+    var y=fin.filter(function(r){return r.a[i]===1;}).length;
+    return {t:t,y:y,pct:fin.length?Math.round(y/fin.length*100):0};
+  });
+  per.sort(function(a,b){return a.pct-b.pct;});
+  q('#q10Bars').innerHTML=fin.length?per.map(function(x){
+    return '<div class="br"><span class="lb">'+esc(x.t)+'</span><div class="ln"><i class="'+(x.pct<40?'o':'')+'" style="width:'+x.pct+'%"></i></div>'
+      +'<span class="vl">'+x.y+' 人 '+x.pct+'%</span></div>';
+  }).join(''):'<p class="empty">還沒有人完成自評表。</p>';
+}
+function render(){renderScore();renderWarm();renderBig();renderQ10();}
+
+function setView(v){
+  document.querySelectorAll('.view').forEach(function(s){s.classList.toggle('on',s.getAttribute('data-v')===v);});
+  document.querySelectorAll('.modes button[data-v]').forEach(function(b){b.classList.toggle('on',b.getAttribute('data-v')===v);});
+  if(v==='big')startAuto(); else stopAuto();
+}
+function startAuto(){stopAuto();if(auto&&warm.length>1)autoT=setInterval(function(){bigI++;renderBig();},8000);}
+function stopAuto(){if(autoT){clearInterval(autoT);autoT=null;}}
+
+document.querySelectorAll('.modes button[data-v]').forEach(function(b){
+  b.addEventListener('click',function(){setView(b.getAttribute('data-v'));});
+});
+q('#full').addEventListener('click',function(){
+  if(document.fullscreenElement)document.exitFullscreen();
+  else document.documentElement.requestFullscreen().catch(function(){});
+});
+document.addEventListener('keydown',function(e){
+  var k=e.key.toLowerCase();
+  if(k==='1')setView('score');
+  else if(k==='2')setView('warm');
+  else if(k==='3')setView('big');
+  else if(k==='4')setView('q10');
+  else if(k==='f'){if(document.fullscreenElement)document.exitFullscreen();else document.documentElement.requestFullscreen().catch(function(){});}
+  else if(k==='a'){auto=!auto;renderBig();startAuto();}
+  else if(e.key==='ArrowRight'){bigI++;renderBig();startAuto();}
+  else if(e.key==='ArrowLeft'){bigI--;renderBig();startAuto();}
+});
+load();
+setInterval(load,10000);
+})();
+</script>
+</body>
+</html>

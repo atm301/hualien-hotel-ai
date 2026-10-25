@@ -1,0 +1,2125 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#0f8a86">
+<title>花蓮觀光旅宿 AI 營運實作專班 Day 1｜打好底：讓 AI 聽得懂你的店</title>
+<meta name="description" content="TISSA 115 年 AI 實作專班（觀光旅宿業），講師何佳勳（小圭）。AI 落點自評表、R-T-C-F 四段式指令、一稿四平台、FAQ 知識庫與 LINE 自動回覆樹，11 組可複製提示詞與 34 支免費工具，一天做出回去明天就能用的成果。">
+<link rel="canonical" href="https://atm301.github.io/hualien-hotel-ai/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="圭話行銷 ATMarketing">
+<meta property="og:title" content="花蓮觀光旅宿 AI 營運實作專班 Day 1｜打好底：讓 AI 聽得懂你的店">
+<meta property="og:description" content="AI 落點自評表、R-T-C-F 指令、一稿四平台、FAQ 與 LINE 自動回覆樹。今天做出來的東西，回去明天就能用。">
+<meta property="og:url" content="https://atm301.github.io/hualien-hotel-ai/">
+<meta property="og:image" content="https://atm301.github.io/hualien-hotel-ai/og.png">
+<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+<meta property="og:locale" content="zh_TW">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="花蓮觀光旅宿 AI 營運實作專班 Day 1">
+<meta name="twitter:description" content="打好底：讓 AI 聽得懂你的店。">
+<meta name="twitter:image" content="https://atm301.github.io/hualien-hotel-ai/og.png">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+<link rel="apple-touch-icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8F%A8%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Event","name":"花蓮觀光旅宿 AI 營運實作專班 Day 1 打好底","startDate":"2026-10-27T09:00+08:00","endDate":"2026-10-27T16:00+08:00","eventStatus":"https://schema.org/EventScheduled","eventAttendanceMode":"https://schema.org/OfflineEventAttendanceMode","location":{"@type":"Place","name":"F HOTEL 花蓮站前館 吉祥廳","address":{"@type":"PostalAddress","addressLocality":"花蓮市","addressCountry":"TW"}},"performer":{"@type":"Person","name":"何佳勳（小圭）"},"organizer":{"@type":"Organization","name":"圭話行銷股份有限公司","url":"https://atmarketing.tw/"},"description":"TISSA 115 年 AI 實作專班（觀光旅宿業）：從提示詞到工作流程，12 小時兩日課程的第一天。"}
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RDJD1YVHR7"></script>
+<script>
+  window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments);}gtag('js',new Date());gtag('config','G-RDJD1YVHR7');
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init','4979950938896019');fbq('track','PageView');
+</script>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0;}
+  :root{
+    --teal:#0f8a86; --teal-d:#0a6b68; --ocean:#2a7fb8; --ocean-d:#1f6694;
+    --sun:#ef8a3d; --sun-d:#d2701f; --deep:#13303a;
+    --ink:#13303a; --mute:#64808a; --cream:#f3f8f8; --paper:#fff;
+    --line:#d9e9e8; --tint:#e6f5f4; --tinto:#fdf0e4; --sunken:#f7fbfb;
+    --amber:#d2701f; --red:#d2483a; --blue:#2a7fb8; --purple:#7a5bd0; --green:#1f8a62;
+    --brand-primary:var(--teal);
+    --shadow:0 10px 28px rgba(19,48,58,.07);
+  }
+  html{scroll-behavior:smooth;}
+  body{font-family:'Noto Sans TC',system-ui,'PingFang TC','Microsoft JhengHei',sans-serif;background:var(--cream);color:var(--ink);line-height:1.75;-webkit-text-size-adjust:100%;}
+  .wrap{max-width:1020px;margin:0 auto;padding:0 18px;}
+  a{color:var(--teal-d);}
+  header.top{position:sticky;top:0;z-index:40;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);}
+  .topbar{display:flex;align-items:center;gap:10px;padding:8px 0;}
+  .logo{font-weight:900;font-size:1rem;color:var(--deep);white-space:nowrap;}
+  .logo small{display:block;font-size:.66rem;color:var(--mute);font-weight:700;letter-spacing:.04em;}
+  .tabwrap{position:relative;}
+  .tabwrap::after{content:"";position:absolute;right:-18px;top:0;bottom:8px;width:38px;background:linear-gradient(90deg,rgba(255,255,255,0),rgba(255,255,255,.97));pointer-events:none;}
+  .tabs{display:flex;gap:6px;overflow-x:auto;padding:0 26px 8px 0;scrollbar-width:none;scroll-behavior:smooth;}
+  .tabs::-webkit-scrollbar{display:none;}
+  .tab-btn{flex:0 0 auto;border:1px solid var(--line);background:var(--paper);color:var(--mute);border-radius:999px;padding:7px 13px;font-weight:800;font-size:.84rem;font-family:inherit;cursor:pointer;}
+  .tab-btn.on{background:var(--teal);border-color:var(--teal);color:#fff;box-shadow:0 4px 14px rgba(15,138,134,.3);}
+  @media (max-width:430px){.tab-btn{padding:7px 11px;font-size:.8rem;}}
+  .hero{background:linear-gradient(122deg,#0f8a86 0%,#17a09b 46%,#2a7fb8 100%);color:#fff;padding:34px 0 30px;}
+  .hero .kicker{display:inline-block;background:rgba(255,255,255,.18);border:1px solid rgba(255,255,255,.4);border-radius:999px;padding:4px 14px;font-weight:800;font-size:.8rem;margin-bottom:12px;}
+  .hero h1{font-size:clamp(1.5rem,5vw,2.4rem);font-weight:900;line-height:1.3;letter-spacing:-.01em;}
+  .hero .sub{margin-top:10px;font-size:clamp(.95rem,2.4vw,1.1rem);opacity:.96;font-weight:500;}
+  .hero .meta{display:flex;flex-wrap:wrap;gap:8px;margin-top:16px;}
+  .hero .meta span{background:rgba(0,0,0,.18);border-radius:999px;padding:5px 13px;font-size:.84rem;font-weight:700;}
+  .hero-btns{display:flex;flex-wrap:wrap;gap:10px;margin-top:20px;}
+  .btn{display:inline-flex;align-items:center;gap:7px;border:0;border-radius:999px;padding:11px 20px;font-weight:800;font-size:.94rem;font-family:inherit;cursor:pointer;text-decoration:none;transition:transform .12s;}
+  .btn:active{transform:translateY(1px);}
+  .btn-primary{background:var(--teal);color:#fff;box-shadow:0 6px 18px rgba(15,138,134,.32);}
+  .btn-sun{background:var(--sun);color:#fff;box-shadow:0 6px 18px rgba(239,138,61,.3);}
+  .btn-light{background:#fff;color:var(--teal-d);}
+  .btn-ghost{background:var(--paper);color:var(--teal-d);border:1px solid var(--line);}
+  .btn-sm{padding:7px 14px;font-size:.84rem;}
+  .tab-section{display:none;padding:26px 0 78px;}
+  .tab-section.active{display:block;animation:fade .25s ease;}
+  @keyframes fade{from{opacity:0;transform:translateY(6px);}to{opacity:1;transform:none;}}
+  .sec-tag{display:inline-block;background:var(--tint);color:var(--teal-d);border-radius:999px;padding:4px 13px;font-weight:800;font-size:.78rem;margin-bottom:10px;}
+  .sec-title{font-size:clamp(1.3rem,3.8vw,1.9rem);font-weight:900;margin-bottom:14px;line-height:1.35;}
+  .sec-title .em{color:var(--teal-d);}
+  .h3{font-size:1.06rem;font-weight:900;margin:26px 0 12px;padding-left:11px;border-left:5px solid var(--teal);}
+  .h3.o{border-left-color:var(--sun);}
+  .lead{color:var(--mute);margin-bottom:14px;}
+  .callout{background:var(--paper);border:1px solid var(--line);border-left:5px solid var(--teal);border-radius:12px;padding:13px 16px;margin:12px 0;box-shadow:var(--shadow);}
+  .callout.warn{border-left-color:var(--sun);background:var(--tinto);}
+  .callout.ok{border-left-color:var(--green);background:#eff9f4;}
+  .callout.bad{border-left-color:var(--red);background:#fdf3f2;}
+  .tip{display:flex;gap:10px;align-items:flex-start;background:var(--tinto);border:1px solid #f6d6b6;border-radius:14px;padding:11px 14px;margin:12px 0;}
+  .tip .ic{font-size:1.5rem;line-height:1.1;flex:0 0 auto;}
+  .tip .t{font-size:.9rem;} .tip .t b{display:block;color:var(--amber);font-size:.78rem;margin-bottom:2px;}
+  .muted-note{color:var(--mute);font-size:.88rem;}
+  .grid{display:grid;gap:12px;}
+  .g2{grid-template-columns:repeat(auto-fit,minmax(250px,1fr));}
+  .g3{grid-template-columns:repeat(auto-fit,minmax(215px,1fr));}
+  .g4{grid-template-columns:repeat(auto-fit,minmax(168px,1fr));}
+  .g5{grid-template-columns:repeat(auto-fit,minmax(142px,1fr));}
+  .card{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:15px 16px;box-shadow:var(--shadow);}
+  .card h3{font-size:1rem;font-weight:900;margin-bottom:6px;color:var(--teal-d);display:flex;align-items:center;gap:7px;}
+  .card p{font-size:.9rem;color:var(--mute);}
+  .card .num{display:inline-flex;width:26px;height:26px;border-radius:50%;background:var(--teal);color:#fff;align-items:center;justify-content:center;font-size:.82rem;flex:0 0 auto;font-weight:900;}
+  .card.dk{background:linear-gradient(140deg,#13303a,#1d4450);border-color:#13303a;}
+  .card.dk h3{color:#7fe3dd;} .card.dk p{color:#dbeceb;}
+  .card.x{border-top:4px solid var(--red);} .card.x h3{color:var(--red);}
+  .card.b{border-top:4px solid var(--blue);} .card.b h3{color:var(--blue);}
+  .card.p{border-top:4px solid var(--purple);} .card.p h3{color:var(--purple);}
+  .card.a{border-top:4px solid var(--sun);} .card.a h3{color:var(--amber);}
+  .card.g{border-top:4px solid var(--green);} .card.g h3{color:var(--green);}
+  .stat{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:15px;text-align:center;box-shadow:var(--shadow);border-top:4px solid var(--teal);}
+  .stat b{display:block;font-size:1.72rem;font-weight:900;color:var(--teal-d);line-height:1.25;}
+  .stat.o{border-top-color:var(--sun);} .stat.o b{color:var(--sun-d);}
+  .stat.bl{border-top-color:var(--blue);} .stat.bl b{color:var(--ocean-d);}
+  .stat.gr{border-top-color:var(--green);} .stat.gr b{color:var(--green);}
+  .stat span{font-size:.82rem;color:var(--mute);font-weight:700;}
+  .flow{display:flex;gap:6px;flex-wrap:wrap;align-items:center;margin:12px 0;}
+  .flow .n{background:var(--teal);color:#fff;border-radius:999px;padding:7px 14px;font-weight:800;font-size:.86rem;}
+  .flow .n.lite{background:var(--tint);color:var(--teal-d);}
+  .flow .ar{color:var(--mute);font-weight:900;}
+  .tw{overflow-x:auto;margin:12px 0;border:1px solid var(--line);border-radius:14px;background:var(--paper);box-shadow:var(--shadow);}
+  .tw table{width:100%;border-collapse:collapse;min-width:620px;font-size:.88rem;}
+  .tw.sm table{min-width:440px;}
+  .tw th{background:var(--teal);color:#fff;text-align:left;padding:10px 12px;font-weight:800;white-space:nowrap;}
+  .tw th.o{background:var(--sun);}
+  .tw td{padding:10px 12px;border-top:1px solid var(--line);vertical-align:top;}
+  .tw tr:nth-child(even) td{background:var(--sunken);}
+  .tw td b{color:var(--teal-d);}
+  .tw .bad{color:var(--red);} .tw .ok{color:var(--green);}
+  .vs{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));margin:12px 0;}
+  .col{border-radius:14px;padding:15px 16px;border:1px solid var(--line);background:var(--paper);}
+  .col h4{font-size:.95rem;font-weight:900;margin-bottom:8px;}
+  .col.bad{background:#fdf3f2;border-color:#f0ccc8;} .col.bad h4{color:var(--red);}
+  .col.good{background:#eff9f4;border-color:#bfe4d3;} .col.good h4{color:var(--green);}
+  .col.blue{background:#eef5fb;border-color:#c6dcee;} .col.blue h4{color:var(--blue);}
+  .col ul{margin:0;padding-left:19px;} .col li{font-size:.88rem;margin:5px 0;}
+  .poll{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:15px 16px;margin:12px 0;box-shadow:var(--shadow);}
+  .poll .q{font-weight:900;margin-bottom:4px;font-size:1rem;}
+  .poll .qs{font-size:.84rem;color:var(--mute);margin-bottom:10px;}
+  .pchip{display:inline-block;background:var(--tinto);color:var(--sun-d);border-radius:999px;padding:2px 10px;font-size:.72rem;font-weight:900;margin-bottom:8px;}
+  .pchip.g{background:var(--tint);color:var(--teal-d);}
+  .popt{display:flex;align-items:center;gap:10px;width:100%;text-align:left;border:1px solid var(--line);background:var(--sunken);border-radius:11px;padding:10px 12px;margin-bottom:7px;font-family:inherit;font-size:.9rem;color:var(--ink);cursor:pointer;position:relative;overflow:hidden;}
+  .popt .k{flex:0 0 auto;width:25px;height:25px;border-radius:50%;background:var(--teal-d);color:#fff;font-weight:900;display:flex;align-items:center;justify-content:center;font-size:.8rem;z-index:1;}
+  .popt .lb{flex:1;z-index:1;}
+  .popt .pc{font-weight:900;color:var(--teal-d);font-size:.84rem;z-index:1;}
+  .popt .bar{position:absolute;left:0;top:0;bottom:0;background:#c7eae8;width:0;transition:width .5s;}
+  .popt.mine{border-color:var(--teal);box-shadow:0 0 0 2px rgba(15,138,134,.2);}
+  .poll .n{font-size:.8rem;color:var(--mute);margin-top:6px;}
+  .ansbox{display:none;margin-top:10px;border-radius:12px;padding:12px 14px;background:#eff9f4;border:1px solid #bfe4d3;}
+  .ansbox.show{display:block;animation:fade .3s ease;}
+  .ansbox .a{font-weight:900;color:var(--green);margin-bottom:5px;}
+  .ansbox p{font-size:.88rem;margin-bottom:6px;}
+  .ansbox .ext{font-size:.84rem;color:var(--mute);}
+  .tcard{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px;margin-bottom:14px;box-shadow:var(--shadow);}
+  .tcard .hd{display:flex;align-items:flex-start;gap:10px;flex-wrap:wrap;margin-bottom:8px;}
+  .tcard h3{font-size:1.04rem;font-weight:900;flex:1;min-width:180px;}
+  .badge{background:var(--tint);color:var(--teal-d);border-radius:999px;padding:3px 11px;font-size:.72rem;font-weight:800;white-space:nowrap;}
+  .badge.o{background:var(--tinto);color:var(--sun-d);}
+  .pbody{white-space:pre-wrap;font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.83rem;line-height:1.66;background:#13303a;color:#dff3f1;border-radius:12px;padding:13px;max-height:270px;overflow:auto;}
+  .pbody.open{max-height:none;}
+  .prow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px;}
+  .ai-go{display:flex;gap:8px;flex-wrap:wrap;}
+  .ai-go a{display:inline-flex;align-items:center;gap:6px;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:6px 13px;font-size:.82rem;font-weight:800;text-decoration:none;color:var(--teal-d);}
+  .src{font-size:.76rem;color:var(--mute);margin-left:auto;}
+  .toolgrid{display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));}
+  .toolcard{display:flex;flex-direction:column;gap:6px;background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:14px 15px;box-shadow:var(--shadow);}
+  .toolcard .tn{font-weight:900;font-size:.98rem;display:flex;align-items:center;gap:7px;}
+  .toolcard .td{font-size:.85rem;color:var(--mute);flex:1;}
+  .toolcard .tu{font-size:.76rem;color:var(--mute);word-break:break-all;}
+  .toolcard a.go{align-self:flex-start;margin-top:4px;}
+  .star{color:var(--sun);}
+  .calc{background:linear-gradient(140deg,#13303a,#1d4450);color:#fff;border-radius:16px;padding:18px;margin:12px 0;box-shadow:0 12px 30px rgba(19,48,58,.26);}
+  .calc h4{font-size:1rem;font-weight:900;margin-bottom:4px;color:#7fe3dd;}
+  .calc .hint{font-size:.82rem;color:#a9c2c6;margin-bottom:10px;}
+  .calc .inrow{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(132px,1fr));}
+  .calc label{display:block;font-size:.78rem;font-weight:700;margin-bottom:4px;color:#a9c2c6;}
+  .calc input,.calc select,.calc textarea{width:100%;border:1px solid rgba(255,255,255,.22);border-radius:10px;padding:9px 11px;font-family:inherit;font-size:1rem;font-weight:800;background:rgba(255,255,255,.1);color:#fff;}
+  .calc textarea{font-weight:500;font-size:.92rem;min-height:56px;resize:vertical;}
+  .calc select option{color:#13303a;}
+  .calc .out{display:grid;gap:10px;grid-template-columns:repeat(auto-fit,minmax(124px,1fr));margin-top:14px;}
+  .calc .o{background:rgba(255,255,255,.1);border-radius:12px;padding:11px;text-align:center;}
+  .calc .o b{display:block;font-size:1.26rem;font-weight:900;color:#7fe3dd;line-height:1.3;}
+  .calc .o span{font-size:.74rem;color:#a9c2c6;font-weight:700;}
+  .calc .o.win{background:rgba(127,227,221,.2);box-shadow:0 0 0 2px rgba(127,227,221,.4);}
+  .calc .note{margin-top:12px;font-size:.84rem;color:#dfeceb;background:rgba(0,0,0,.25);border-radius:10px;padding:10px 12px;}
+  .calc .note b{color:#7fe3dd;}
+  .calc .lbl{font-size:.82rem;font-weight:800;color:#dfeceb;margin:12px 0 5px;}
+  .chips{display:flex;gap:7px;flex-wrap:wrap;}
+  .chip{border:1px solid var(--line);background:var(--sunken);border-radius:999px;padding:6px 13px;font-size:.84rem;font-weight:800;font-family:inherit;cursor:pointer;color:var(--mute);}
+  .chip.on{background:var(--teal);border-color:var(--teal);color:#fff;}
+  .fill{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);margin:12px 0;}
+  .fill label{display:block;font-weight:800;font-size:.86rem;margin:11px 0 5px;}
+  .fill input[type=text],.fill input[type=number],.fill select,.fill textarea{width:100%;border:1px solid var(--line);border-radius:11px;padding:10px 12px;font-family:inherit;font-size:.92rem;background:var(--sunken);color:var(--ink);}
+  .fill textarea{min-height:64px;resize:vertical;}
+  .fill .sub{font-size:.8rem;color:var(--mute);margin-top:3px;}
+  .q10{background:var(--paper);border:2px solid var(--teal);border-radius:16px;overflow:hidden;margin:12px 0;box-shadow:var(--shadow);}
+  .q10 .hd{background:var(--teal);color:#fff;padding:11px 16px;font-weight:900;display:flex;align-items:center;gap:8px;flex-wrap:wrap;}
+  .q10 .hd .sc{margin-left:auto;font-size:.82rem;background:rgba(0,0,0,.2);border-radius:999px;padding:2px 12px;}
+  .q10 .qrow{display:flex;gap:10px;align-items:center;padding:10px 14px;border-top:1px solid var(--line);}
+  .q10 .qrow:first-of-type{border-top:0;}
+  .q10 .qn{flex:0 0 auto;width:24px;height:24px;border-radius:50%;background:var(--tint);color:var(--teal-d);font-weight:900;font-size:.78rem;display:flex;align-items:center;justify-content:center;}
+  .q10 .qt{flex:1;font-size:.92rem;line-height:1.5;}
+  .q10 .yn{flex:0 0 auto;display:flex;gap:5px;}
+  .q10 .yn button{border:1px solid var(--line);background:var(--sunken);border-radius:9px;padding:6px 12px;font-weight:800;font-size:.84rem;font-family:inherit;cursor:pointer;color:var(--mute);}
+  .q10 .yn button.y.on{background:var(--green);border-color:var(--green);color:#fff;}
+  .q10 .yn button.n.on{background:#c9d4d8;border-color:#c9d4d8;color:#fff;}
+  .q10 .ft{background:var(--sunken);padding:13px 16px;border-top:1px solid var(--line);}
+  .stage{display:grid;gap:8px;grid-template-columns:repeat(3,1fr);margin:10px 0;}
+  .stg{border:2px solid var(--line);border-radius:12px;padding:10px;text-align:center;background:var(--paper);}
+  .stg.on{border-color:var(--teal);background:var(--tint);box-shadow:0 0 0 2px rgba(15,138,134,.16);}
+  .stg b{display:block;font-size:.92rem;font-weight:900;color:var(--teal-d);}
+  .stg span{font-size:.74rem;color:var(--mute);}
+  @media (max-width:430px){.q10 .qrow{padding:9px 11px;gap:8px;}.q10 .qt{font-size:.86rem;}.q10 .yn button{padding:6px 10px;font-size:.8rem;}}
+  @media (max-width:340px){.q10 .qrow{flex-wrap:wrap;}.q10 .qt{flex:1 0 70%;}}
+  .chk{display:flex;gap:10px;align-items:flex-start;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:11px 13px;margin-bottom:8px;cursor:pointer;}
+  .chk.on{border-color:var(--teal);background:#eef8f7;}
+  .chk input{margin-top:5px;width:17px;height:17px;accent-color:var(--teal);flex:0 0 auto;}
+  .chk .t{font-size:.92rem;font-weight:700;} .chk .t small{display:block;font-weight:400;color:var(--mute);font-size:.82rem;}
+  .chk .d{flex:0 0 auto;font-weight:900;color:var(--teal-d);font-size:.78rem;background:var(--tint);border-radius:999px;padding:2px 9px;margin-top:2px;}
+  textarea{width:100%;border:1px solid var(--line);border-radius:12px;padding:11px;font-family:inherit;font-size:.93rem;background:var(--sunken);resize:vertical;min-height:100px;color:var(--ink);}
+  .up{background:var(--paper);border:1px solid var(--line);border-radius:16px;padding:16px;box-shadow:var(--shadow);}
+  .lb2{display:block;font-weight:800;font-size:.88rem;margin:10px 0 5px;}
+  select,input[type=text]{width:100%;border:1px solid var(--line);border-radius:11px;padding:10px 12px;font-family:inherit;font-size:.93rem;background:var(--sunken);color:var(--ink);}
+  .modeseg{display:flex;gap:7px;}
+  .modeseg button{flex:1;border:1px solid var(--line);background:var(--sunken);border-radius:11px;padding:9px;font-weight:800;font-family:inherit;font-size:.88rem;cursor:pointer;color:var(--mute);}
+  .modeseg button.on{background:var(--teal);border-color:var(--teal);color:#fff;}
+  .dropz{border:2px dashed var(--line);border-radius:12px;padding:22px 14px;text-align:center;color:var(--mute);font-weight:700;cursor:pointer;background:var(--sunken);font-size:.9rem;}
+  .dropz.has{border-color:var(--teal);color:var(--teal-d);}
+  .dropz img{max-width:100%;max-height:190px;border-radius:10px;margin-top:9px;}
+  .who{display:flex;align-items:center;gap:9px;flex-wrap:wrap;background:var(--tint);border:1px solid var(--line);border-radius:12px;padding:10px 13px;margin-bottom:12px;}
+  .who .g{font-weight:900;color:var(--teal-d);}
+  .who button{margin-left:auto;border:1px solid var(--line);background:var(--paper);border-radius:999px;padding:5px 12px;font-size:.8rem;font-weight:800;font-family:inherit;cursor:pointer;color:var(--mute);}
+  .subitem{display:flex;gap:11px;background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:12px;margin-bottom:9px;}
+  .subitem .vN{flex:0 0 auto;background:var(--sun-d);color:#fff;border-radius:999px;padding:2px 10px;font-size:.74rem;font-weight:800;height:fit-content;white-space:nowrap;}
+  .subitem .who2{font-size:.78rem;color:var(--mute);margin-bottom:5px;}
+  .subitem .txt{white-space:pre-wrap;font-size:.88rem;}
+  .subitem img{max-width:100%;border-radius:10px;}
+  .wall{display:grid;gap:9px;grid-template-columns:repeat(auto-fill,minmax(228px,1fr));}
+  .wnote{background:var(--paper);border:1px solid var(--line);border-left:4px solid var(--sun);border-radius:12px;padding:11px 13px;box-shadow:var(--shadow);}
+  .wnote .wt{font-size:.92rem;}
+  .wnote .wb{font-size:.76rem;color:var(--mute);margin-top:6px;}
+  .mboard{display:grid;gap:9px;grid-template-columns:repeat(auto-fit,minmax(108px,1fr));}
+  .mb{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:10px;text-align:center;}
+  .mb.me{border-color:var(--teal);box-shadow:0 0 0 2px rgba(15,138,134,.18);}
+  .mb.top{background:linear-gradient(140deg,#fdf0e4,#fbe0c4);border-color:var(--sun);}
+  .mb .gn{font-weight:900;font-size:.88rem;}
+  .mb .pt{font-size:1.5rem;font-weight:900;color:var(--teal-d);line-height:1.2;}
+  .mb .sm{font-size:.72rem;color:var(--mute);}
+  .votegrid{display:grid;gap:9px;grid-template-columns:repeat(auto-fit,minmax(126px,1fr));}
+  .vcard{border:2px solid var(--line);background:var(--paper);border-radius:12px;padding:12px 10px;text-align:center;font-family:inherit;cursor:pointer;}
+  .vcard.on{border-color:var(--teal);background:#eef8f7;}
+  .vcard.self{opacity:.45;cursor:not-allowed;}
+  .vcard .vn{font-weight:900;font-size:.95rem;}
+  .vcard .vc{font-size:.76rem;color:var(--mute);}
+  .pill-live{display:inline-flex;align-items:center;gap:6px;background:var(--tint);color:var(--teal-d);border-radius:999px;padding:2px 11px;font-size:.74rem;font-weight:800;margin-left:8px;vertical-align:middle;}
+  .hud{position:fixed;right:14px;bottom:14px;z-index:35;background:rgba(19,48,58,.94);color:#fff;border-radius:999px;padding:8px 15px;display:none;align-items:center;gap:9px;box-shadow:0 8px 26px rgba(0,0,0,.26);cursor:pointer;font-size:.82rem;font-weight:800;}
+  .hud.show{display:flex;}
+  .hud .bar{width:54px;height:6px;border-radius:999px;background:rgba(255,255,255,.25);overflow:hidden;}
+  .hud .bar i{display:block;height:100%;background:linear-gradient(90deg,#9ff0e6,#0f8a86);width:0;transition:width .5s;}
+  .hud .gp small{display:block;font-weight:600;font-size:.7rem;opacity:.8;}
+  .overlay{position:fixed;inset:0;background:rgba(19,48,58,.62);z-index:60;display:none;align-items:center;justify-content:center;padding:18px;}
+  .overlay.show{display:flex;}
+  .modal{background:var(--paper);border-radius:20px;padding:22px;max-width:430px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);max-height:92vh;overflow:auto;}
+  .modal h2{font-size:1.2rem;font-weight:900;margin-bottom:5px;}
+  .modal .sub{color:var(--mute);font-size:.88rem;margin-bottom:14px;}
+  .modal label{display:block;font-weight:800;font-size:.86rem;margin:11px 0 5px;}
+  .gpick{display:grid;grid-template-columns:repeat(4,1fr);gap:7px;}
+  .gpick button{border:2px solid var(--line);background:var(--sunken);border-radius:11px;padding:11px 2px;font-weight:900;font-size:.94rem;color:var(--teal-d);font-family:inherit;cursor:pointer;}
+  .gpick button.on{background:var(--teal);border-color:var(--teal);color:#fff;}
+  .err{display:none;color:var(--red);font-weight:800;font-size:.84rem;margin-top:9px;}
+  .skip{display:block;text-align:center;margin-top:11px;color:var(--mute);font-size:.84rem;}
+  #toast{position:fixed;left:50%;bottom:78px;transform:translateX(-50%) translateY(14px);background:var(--deep);color:#fff;padding:10px 20px;border-radius:999px;font-weight:800;font-size:.88rem;opacity:0;pointer-events:none;transition:.25s;z-index:70;max-width:90vw;text-align:center;}
+  #toast.show{opacity:1;transform:translateX(-50%);}
+  footer{background:var(--deep);color:#cfdedd;padding:26px 0 96px;font-size:.86rem;}
+  footer a{color:#7fe3dd;}
+  footer .fl{display:flex;flex-wrap:wrap;gap:12px;margin-top:9px;}
+  .srcs li{margin:7px 0;font-size:.9rem;}
+  details.pack{background:var(--paper);border:1px solid var(--line);border-radius:14px;padding:13px 16px;margin:10px 0;box-shadow:var(--shadow);}
+  details.pack summary{font-weight:900;cursor:pointer;color:var(--teal-d);font-size:.98rem;}
+  details.pack .pk{white-space:pre-wrap;font-size:.86rem;background:var(--sunken);border:1px solid var(--line);border-radius:10px;padding:12px;margin-top:11px;max-height:360px;overflow:auto;line-height:1.7;}
+  @media print{header.top,.hud,.tabs,.hero-btns,#toast{display:none!important;}.tab-section{display:block!important;}body{background:#fff;}}
+  @media (max-width:520px){.src{margin-left:0;width:100%;}.stage{grid-template-columns:1fr;}}
+</style>
+<body>
+
+<header class="top">
+  <div class="wrap">
+    <div class="topbar"><div class="logo">🏨 花蓮觀光旅宿 AI 營運實作專班<small>Day 1 打好底：讓 AI 聽得懂你的店 · 10/27 F HOTEL 花蓮站前館</small></div></div>
+    <div class="tabwrap">
+    <nav class="tabs" id="tabs" role="tablist">
+      <button class="tab-btn on" data-tab="start" type="button">🚀 開始</button>
+      <button class="tab-btn" data-tab="check" type="button">① 盤點</button>
+      <button class="tab-btn" data-tab="rtcf" type="button">② 提示詞</button>
+      <button class="tab-btn" data-tab="content" type="button">③ 內容</button>
+      <button class="tab-btn" data-tab="cs" type="button">④ 客服</button>
+      <button class="tab-btn" data-tab="ai" type="button">🤖 提示詞庫</button>
+      <button class="tab-btn" data-tab="work" type="button">📝 交作業</button>
+      <button class="tab-btn" data-tab="done" type="button">🎁 帶走</button>
+    </nav>
+    </div>
+  </div>
+</header>
+
+<!-- ===================== 開始 ===================== -->
+<section class="tab-section active" data-tab="start">
+  <div class="hero">
+    <div class="wrap">
+      <span class="kicker">TISSA 115 年 AI 實作專班 · 觀光旅宿業</span>
+      <h1>Day 1 打好底：<br>讓 AI 聽得懂你的店</h1>
+      <p class="sub">從提示詞到工作流程（12 小時 · 兩天）<br><b>今天在課堂做出來的東西，回去明天就能用。</b></p>
+      <div class="meta"><span>📅 10/27（二）09:00 到 16:00</span><span>📍 F HOTEL 花蓮站前館 吉祥廳</span><span>🎤 Angle 何佳勳（小圭）</span></div>
+      <div class="hero-btns">
+        <button class="btn btn-light" id="heroReg" type="button">🙋 先報到</button>
+        <button class="btn btn-sun" type="button" onclick="switchTab('check')">📋 直接做自評表</button>
+        <button class="btn btn-light" type="button" onclick="switchTab('ai')">🤖 11 組提示詞</button>
+      </div>
+    </div>
+  </div>
+  <div class="wrap">
+    <div id="whoBox"></div>
+
+    <h3 class="h3">這一頁怎麼用</h3>
+    <div class="grid g3">
+      <div class="card"><h3><span class="num">1</span>報到</h3><p>選組別、填名字與店名。個人題分數算你的，實作交件算你們這組的，兩天累計。</p></div>
+      <div class="card"><h3><span class="num">2</span>邊上課邊做</h3><p>自評表、提示詞組裝器、FAQ 都在這頁，手機就能填。填到一半離開也不會不見。</p></div>
+      <div class="card"><h3><span class="num">3</span>交件</h3><p>每個模組做完的成果拍照或貼文字上傳，講師後台看得到，也算你們這組的分數。</p></div>
+    </div>
+
+    <h3 class="h3">今天的節奏</h3>
+    <div class="tw"><table>
+      <tr><th>時間</th><th>內容</th><th>今天要完成的成果</th></tr>
+      <tr><td><b>09:00 到 10:00</b></td><td>模組一　課程定位與 AI 落點盤點</td><td>我的 AI 落點自評表 ＋ 選定 1 個流程</td></tr>
+      <tr><td><b>10:00 到 11:30</b></td><td>模組二　R-T-C-F 四段式指令（中間休息 10 分鐘）</td><td>3 組店家專用提示詞 ＋ 品牌口吻指令卡</td></tr>
+      <tr><td><b>11:30 到 12:00</b></td><td>模組三（上）一稿多平台</td><td>一篇底稿改寫成四平台</td></tr>
+      <tr><td>12:00 到 13:00</td><td>午餐休息</td><td></td></tr>
+      <tr><td><b>13:00 到 14:00</b></td><td>模組三（下）短影音腳本、封面圖、社群月曆</td><td>一週社群月曆 ＋ 短影音腳本 ＋ 封面圖</td></tr>
+      <tr><td><b>14:00 到 16:00</b></td><td>模組四　訂房與客服訊息流（中間休息 10 分鐘）</td><td>住宿版 FAQ ＋ LINE 自動回覆樹設定表</td></tr>
+      <tr><td><b>回家</b></td><td>作業一</td><td>30 則評論 ＋ 20 則客服對話 ＋ 歡迎訊息上線</td></tr>
+    </table></div>
+    <p class="muted-note">實作演練占比 55%，每個模組都有成果，全程使用免費、免安裝、瀏覽器就能用的工具。</p>
+
+    <h3 class="h3">兩天地圖</h3>
+    <div class="vs">
+      <div class="col good"><h4>Day 1　10/27（二）打好底</h4><ul>
+        <li>① 課程定位與 AI 落點盤點（1 小時）</li>
+        <li>② Prompt 實戰：R-T-C-F 四段式指令（1.5 小時）</li>
+        <li>③ 內容產製自動化：一次寫完多平台（1.5 小時）</li>
+        <li>④ 訂房與客服訊息流：重複問題交給 AI（2 小時）</li>
+      </ul></div>
+      <div class="col blue"><h4>Day 2　10/28（三）串起來</h4><ul>
+        <li>⑤ 作業檢視與卡關排除（0.5 小時）</li>
+        <li>⑥ 旅客評論與客訴分析（1.5 小時）</li>
+        <li>⑦ 營運數據判讀：住房、客單與回客（1.5 小時）</li>
+        <li>⑧ 流程串接：淡季回客自動化（1.5 小時）</li>
+        <li>⑨ 導入計畫與成果發表（1 小時）</li>
+      </ul></div>
+    </div>
+
+    <h3 class="h3">這間教室，就是一條完整的花蓮旅遊供應鏈</h3>
+    <p class="lead">72 位學員、61 家企業。客人住你家、吃他家、玩她家，買伴手禮回去。明天下午，我們就用這份名單做異業合作。</p>
+    <div class="grid g3">
+      <div class="card b"><h3>🛏️ 住宿 40 家</h3><p>民宿 34 家、飯店旅館青旅 6 家。理想大地、經典假日飯店、多羅滿、花東客棧、象東青旅、途中玉里…</p></div>
+      <div class="card p"><h3>🎁 伴手禮與手作 8 家</h3><p>昇活樂陶陶、醇手工坊、冠達商行香氛蠟燭、客人也工作坊，另有電商零售 4 家。</p></div>
+      <div class="card a"><h3>🍽️ 餐飲與園區 5 家</h3><p>花蓮將軍府 1936、花蓮酒廠、流奶與蜜、谷田、瓦奇咖啡冰舖。</p></div>
+      <div class="card g"><h3>🚐 交通與旅行社 3 家</h3><p>井昇旅行社、銀鳳旅行社、仟合計程車行（觀光包車）。</p></div>
+      <div class="card"><h3>🏄 體驗活動 2 家</h3><p>好野人（SUP、溯溪、潛水）、魚事愛玩（海洋桌遊、DIY）。</p></div>
+      <div class="card x"><h3>🧰 旅宿周邊服務 3 家</h3><p>大花蓮環衛病媒防治、日常生活事業（衛浴）、居改所（短租套房）。</p></div>
+    </div>
+
+    <h3 class="h3">破冰：關於講師的 2 真 1 假</h3>
+    <div class="poll" id="poll_fake"></div>
+
+    <h3 class="h3">暖身：一句話說出你現在最花時間的事<span class="pill-live">🟢 全場即時</span></h3>
+    <p class="lead">不用寫得漂亮，寫你今天早上出門前還在煩的那件事就好。送出後會出現在下面的牆上，全班一起看。</p>
+    <div class="fill">
+      <label for="warmText">你的一句話（40 字內）</label>
+      <input id="warmText" type="text" maxlength="40" placeholder="例如：每天回 LINE 訂房詢問，大概要花一個半小時">
+      <div class="hero-btns" style="margin-top:12px">
+        <button class="btn btn-primary btn-sm" id="warmSend" type="button">📣 貼到牆上</button>
+        <button class="btn btn-ghost btn-sm" id="warmRefresh" type="button">🔄 看最新</button>
+      </div>
+      <p class="muted-note" id="warmStatus" style="margin-top:8px"></p>
+    </div>
+    <div class="wall" id="warmWall"></div>
+
+    <h3 class="h3">先舉手：大家現在怎麼用 AI</h3>
+    <p class="lead">三題都點一下，結果會即時統計給講師看，今天的示範深度會照這個調整。</p>
+    <div class="poll" id="poll_use"></div>
+    <div class="poll" id="poll_pay"></div>
+    <div class="poll" id="poll_cost"></div>
+
+    <h3 class="h3">分組：組長與角色</h3>
+    <div class="callout"><b>誰是組長：</b>這一桌生日最快到的人。今天他最大。</div>
+    <div class="grid g3">
+      <div class="card b"><h3>⚔️ 戰士</h3><p><b>我心熱血</b><br>固定 15,000 分。不多不少，穩穩拿。</p></div>
+      <div class="card g"><h3>✨ 牧師</h3><p><b>體貼包容</b><br>自己 ＋10,000 分，每位組員 ＋2,000 分。</p></div>
+      <div class="card p"><h3>🔮 法師</h3><p><b>魔法擊發</b><br>贏我 ＋40,000、平手 ＋10,000、輸我 ＋5,000。</p></div>
+    </div>
+    <div class="tip"><div class="ic">🤔</div><div class="t"><b>這個開場在幹嘛</b>為什麼要用這種方式開場，有哪些好處？這一組為什麼選這個角色，為什麼不選其他？等一下請各組回答。</div></div>
+
+    <h3 class="h3">課程結束有禮物</h3>
+    <p class="lead">不是簽名照，也不是我的擁抱。兩天分數累計，最後一天頒發。</p>
+    <div class="tw sm"><table>
+      <tr><th>獎項</th><th>禮品</th></tr>
+      <tr><td><b>團體第一名</b></td><td>行銷部落 ×1、Ecom 工具箱 ×3 個月</td></tr>
+      <tr><td><b>個人第一名</b></td><td>行銷部落 ×3、Ecom 工具箱 ×1 個月</td></tr>
+      <tr><td><b>個人第二名</b></td><td>行銷部落 ×2、Ecom 工具箱 ×1 個月</td></tr>
+      <tr><td><b>個人第三名</b></td><td>行銷部落 ×1、Ecom 工具箱 ×1 個月</td></tr>
+    </table></div>
+    <div class="callout warn"><b>分數怎麼來：</b>網站上的互動題答對（個人分）、現場舉手答對（講師加分）、每個模組的實作交件（團體分）、準時交作業（每人 ＋3 分）。分數在「🎁 帶走」分頁隨時看得到。</div>
+
+    <div class="card dk" style="margin-top:20px"><h3>AI 不是來搶你的工作，是來搶你「不想做的那些工作」</h3><p>把時間省下來，留給門口那位旅客。<br><b>Angle 何佳勳（小圭）</b>｜圭話行銷股份有限公司</p></div>
+  </div>
+</section>
+<!-- ===================== ① 盤點 ===================== -->
+<section class="tab-section" data-tab="check"><div class="wrap">
+  <span class="sec-tag">模組一　09:00 到 10:00</span>
+  <h2 class="sec-title">課程定位與 <span class="em">AI 落點盤點</span></h2>
+  <p class="lead">先知道自己在哪裡，才知道從哪裡開始。這個模組結束，你會帶走一張 AI 落點自評表、選定 1 個這兩天要改善的流程，還有一份「哪些資料絕對不能貼給 AI」的紅線清單。</p>
+
+  <h3 class="h3">花蓮旅宿這兩年：客人變少，更要把每位客人留住</h3>
+  <div class="grid g4">
+    <div class="stat"><b>756.8 萬</b><span>2025 年花蓮遊客人次<br>2019 到 2023 平均是 1,321.7 萬</span></div>
+    <div class="stat o"><b>30.59%</b><span>2024 年花蓮旅館平均住用率<br>2023 年是 43.9%</span></div>
+    <div class="stat bl"><b>約 2 成</b><span>業者自述平日住房<br>假日與連假才回到 4 到 5 成</span></div>
+    <div class="stat gr"><b>1,748 家</b><span>花蓮合法民宿（2025/5）<br>全國第 2 多，競爭激烈</span></div>
+  </div>
+  <div class="callout"><b>人力不夠、一人身兼多職，是多數花蓮旅宿的日常。</b>AI 不是要取代你，而是把重複、耗時的工作接過去，讓你把時間留給客人。</div>
+
+  <h3 class="h3">還有三個正在發生的變化</h3>
+  <div class="grid g3">
+    <div class="card x"><h3>🗺️ 路況與景點天天變</h3><p>太魯閣尚未全面開放，砂卡礑、燕子口等步道預估 2031 年後；蘇花路廊遇雨可能預警性封路。旅客會一直問：現在能去嗎？</p></div>
+    <div class="card a"><h3>💰 補助帶動平日訂房</h3><p>115 年平日住宿補助 9/1 到 11/30，每人折 3,200 到 3,700 元，預算用完提前結束；花蓮縣另有連住加碼。詢問量一多，客服就忙不過來。</p></div>
+    <div class="card b"><h3>📱 旅客怎麼找你變了</h3><p>國旅 92.1% 自行規劃行程；Trip.com 報告指 AI 輔助訂單成長 400%；全台犬貓 320.5 萬隻，多於 0 到 14 歲兒童。</p></div>
+  </div>
+
+  <h3 class="h3">你可能也有這五個困擾</h3>
+  <div class="tw"><table>
+    <tr><th>你遇到的困擾</th><th>哪個模組處理</th><th>你會帶走的成果</th></tr>
+    <tr><td>AI 寫出來的文案太制式，不像我的店</td><td>模組二、三</td><td>品牌口吻指令卡 ＋ 多平台貼文</td></tr>
+    <tr><td>每次都要重新下指令，無法變成固定流程</td><td>模組二、九</td><td>3 組店家專用提示詞 ＋ 導入計畫</td></tr>
+    <tr><td>想改善客服與 LINE 自動回覆，不知從何開始</td><td>模組四</td><td>FAQ 知識庫 ＋ LINE 自動回覆樹</td></tr>
+    <tr><td>累積很多評論，不知道怎麼整理運用</td><td>模組六（明天）</td><td>3 項改善行動 ＋ 5 則公開回覆</td></tr>
+    <tr><td>淡季要找回老客人，卻不知道該找誰</td><td>模組七、八（明天）</td><td>沉睡客名單 ＋ 淡季 30 天回客流程</td></tr>
+  </table></div>
+
+  <h3 class="h3">旅宿 AI 成熟度三階段：你在哪一格</h3>
+  <div class="grid g3">
+    <div class="card b"><h3>階段一　基礎應用</h3><p>會開 ChatGPT 問問題，一次一次問；產出要大改才能用。<br><b>常見樣貌：</b>一人包辦的 2 到 5 房民宿主人、管家。<br><b>目標：</b>寫出穩定好用的提示詞。</p></div>
+    <div class="card a"><h3>階段二　中階實作</h3><p>有固定提示詞、品牌口吻；會用工具一次產出多平台內容、FAQ。<br><b>常見樣貌：</b>有社群小編或行銷專人的店家、伴手禮品牌。<br><b>目標：</b>把單點做成固定流程。</p></div>
+    <div class="card g"><h3>階段三　流程整合</h3><p>名單、評論、推播串成一條線；有分工、有 SOP、有數字追蹤。<br><b>常見樣貌：</b>有部門分工的飯店、園區、旅行社。<br><b>目標：</b>導入計畫與人工審閱機制。</p></div>
+  </div>
+  <p class="muted-note">三個階段沒有好壞，只有下一步不同。</p>
+
+  <h3 class="h3">你的時間都花在哪裡？一週工作盤點</h3>
+  <p class="lead">把下面的時數改成你自己的數字。這份盤點等一下會直接帶進提示詞，也是你今天選流程的依據。</p>
+  <div class="calc">
+    <h4>⏱️ 我的一週工作盤點</h4>
+    <div class="hint">欄位填你實際花的時間。右邊的「AI 可分擔」是課堂估算的上限，不是保證值，導入後要用自己的數字驗證。</div>
+    <div id="wkRows"></div>
+    <div class="out">
+      <div class="o"><b id="wkTotal">0</b><span>一週總時數</span></div>
+      <div class="o win"><b id="wkSave">0</b><span>AI 可分擔（小時／週）</span></div>
+      <div class="o"><b id="wkYear">0</b><span>一年約可省（小時）</span></div>
+      <div class="o"><b id="wkTop">　</b><span>最花時間的一件事</span></div>
+    </div>
+    <div class="note" id="wkNote">填上時數後，這裡會告訴你應該先改哪一條流程。</div>
+    <div class="hero-btns" style="margin-top:12px">
+      <button class="btn btn-light btn-sm" id="wkCopy" type="button">📋 複製這份盤點</button>
+      <button class="btn btn-light btn-sm" id="wkToPrompt" type="button">🤖 帶進模組一提示詞</button>
+    </div>
+  </div>
+
+  <h3 class="h3">AI 能做與不能做</h3>
+  <div class="vs">
+    <div class="col bad"><h4>❌ 交給 AI 會出事的事</h4><ul>
+      <li><b>保證事實正確：</b>AI 會一本正經地亂講，稱為「幻覺」</li>
+      <li><b>知道今天的狀況：</b>步道開放、路況、班次、天氣，一定要查官方</li>
+      <li><b>替你做承諾：</b>退訂比例、賠償、優惠，不能讓 AI 自己決定</li>
+      <li><b>處理旅客個資：</b>身分證、完整電話與姓名、信用卡不要貼進去</li>
+    </ul></div>
+    <div class="col good"><h4>✅ 交給 AI 很划算的事</h4><ul>
+      <li><b>寫初稿：</b>房型介紹、貼文、回覆、推播</li>
+      <li><b>改寫：</b>一篇改成四平台，改成中英日</li>
+      <li><b>整理分類：</b>評論分群、客服對話變 FAQ</li>
+      <li><b>出點子：</b>標題、鉤子、活動名稱、合作提案</li>
+      <li><b>模擬客人：</b>請 AI 扮演挑剔的旅客，先幫你找漏洞</li>
+    </ul></div>
+  </div>
+
+  <h3 class="h3">現場實測：AI 的幻覺與時效</h3>
+  <div class="vs">
+    <div class="col bad"><h4>試著問 AI 這兩題</h4>
+      <p style="font-size:.9rem">1. 太魯閣砂卡礑步道現在開放嗎？最近蘇花公路好走嗎？</p>
+      <p style="font-size:.9rem;margin-top:8px">2. 幫我寫一份民宿退訂規定，入住前幾天取消退多少？</p>
+      <p class="muted-note" style="margin-top:10px">觀察重點：它有沒有說資料可能過時？它給的退費比例，是哪裡來的？</p>
+    </div>
+    <div class="col blue"><h4>正確做法</h4>
+      <p style="font-size:.9rem"><b>第 1 題　路況與步道</b><br>依公視 2026/3/6 報導，砂卡礑、燕子口、白楊步道預估 2031 年後才開放。回覆旅客時附上太管處、公路局的官方連結，請旅客出發前再確認。</p>
+      <p style="font-size:.9rem;margin-top:8px"><b>第 2 題　退訂規定</b><br>退費比例要依你家的公告與相關規定。例如行政院消保處說明：透過訂房網預付全額、入住前 3 日以前取消，業者應退 100%。你提供規則，AI 只負責把它寫清楚、寫得有溫度。</p>
+    </div>
+  </div>
+
+  <h3 class="h3">旅客個資使用紅線</h3>
+  <div class="grid g3">
+    <div class="card x"><h3>🚫 不要貼進免費 AI</h3><p>身分證字號、護照號碼；信用卡、匯款帳號；姓名＋電話＋地址同時出現；健康狀況、過敏與姓名一起出現。</p></div>
+    <div class="card g"><h3>🛡️ 去識別化再使用</h3><p>姓名換代號（客人 A、客人 B）；電話遮罩（0912-***-678）；只留分析需要的欄位（日期、金額、房型）；評論與對話先刪掉可辨識資訊。</p></div>
+    <div class="card b"><h3>⚖️ 法規要知道</h3><p>個資法：只能在蒐集目的內使用，違反第 19、20 條可罰 5 萬到 50 萬；民宿管理辦法第 28 條：旅客資料保存 6 個月；觀光產業個資辦法：外洩 72 小時內通報。</p></div>
+  </div>
+  <div class="tip"><div class="ic">🖼️</div><div class="t"><b>連圖片也要清</b>截圖裡常常藏著訂單號、姓名、拍攝位置。上傳前用「圖片標記清除器」先掃一次，看得到圖片裡藏了什麼，清掉之後再掃一次給你看。</div></div>
+
+  <h3 class="h3">📋 實作：我的 AI 落點自評表</h3>
+  <p class="lead">10 題，每題「是」得 1 分、「否」得 0 分。填完自動算出你的階段，並生成一段可以直接貼給 AI 的提示詞。</p>
+  <div class="q10">
+    <div class="hd">🧭 AI 落點自評表<span class="sc" id="q10Score">0 / 10</span></div>
+    <div id="q10Host"></div>
+    <div class="ft">
+      <div class="stage" id="q10Stage"></div>
+      <p class="muted-note" id="q10Msg">10 題都回答完，這裡會告訴你現在的階段與下一步。</p>
+      <div class="hero-btns" style="margin-top:10px">
+        <button class="btn btn-primary btn-sm" id="q10Copy" type="button">📋 複製自評結果</button>
+        <button class="btn btn-ghost btn-sm" type="button" onclick="goPrompt('m1')">🤖 去看模組一提示詞</button>
+      </div>
+    </div>
+  </div>
+
+  <h3 class="h3">選一條流程：這兩天你要改善哪一個</h3>
+  <p class="lead">四條裡選 1 條。選 1 條做到好，比全部都碰一點有用。</p>
+  <div class="chips" id="flowPick"></div>
+  <div class="fill" style="margin-top:12px">
+    <label for="successText">寫下「成功的樣子」（一句話）</label>
+    <input id="successText" type="text" maxlength="60" placeholder="例如：每天回訊息從 2 小時降到 1 小時">
+    <div class="sub">這句話明天成果發表會用到，現在先寫下來。</div>
+  </div>
+
+  <h3 class="h3">互動題</h3>
+  <div class="poll" id="poll_q1"></div>
+  <div class="poll" id="poll_q2"></div>
+
+  <h3 class="h3">模組一重點</h3>
+  <div class="grid g3">
+    <div class="card"><h3><span class="num">1</span>先定位，再出發</h3><p>三個階段沒有好壞，只有下一步不同。選 1 條流程做到好，比全部都碰一點有用。</p></div>
+    <div class="card"><h3><span class="num">2</span>AI 擅長寫、改、整理</h3><p>初稿、改寫、分類、出點子交給 AI；事實、時效、承諾留給自己確認。</p></div>
+    <div class="card"><h3><span class="num">3</span>個資是紅線</h3><p>姓名換代號、電話遮罩、只留需要的欄位，再交給 AI。</p></div>
+  </div>
+  <div class="card dk" style="margin-top:12px"><h3>💡 心得</h3><p>AI 不是來搶你的工作，是來搶你「不想做的那些工作」。把時間省下來，留給門口那位旅客。</p></div>
+</div></section>
+<!-- ===================== ② 提示詞 ===================== -->
+<section class="tab-section" data-tab="rtcf"><div class="wrap">
+  <span class="sec-tag">模組二　10:00 到 11:30</span>
+  <h2 class="sec-title">Prompt 實戰：<span class="em">R-T-C-F 四段式指令</span></h2>
+  <p class="lead">讓 AI 寫出來的東西，像你的店，而不是像別人家。這個模組結束，你會帶走 3 組店家專用、可重複使用的提示詞，加上一張品牌口吻指令卡。</p>
+
+  <h3 class="h3">為什麼 AI 寫的，都像別人家的民宿</h3>
+  <div class="vs">
+    <div class="col bad"><h4>❌ 隨口問</h4>
+      <p style="font-size:.9rem;background:#fff;border-radius:10px;padding:10px;margin-bottom:8px">「幫我寫一篇花蓮民宿介紹」</p>
+      <ul><li>AI 只能猜：寫出「交通便利、溫馨舒適、是您來花蓮的優質首選」</li><li>每家都能用，等於每家都不像</li><li>旅客滑過去，記不住你</li></ul>
+    </div>
+    <div class="col good"><h4>✅ 用 R-T-C-F 問</h4>
+      <p style="font-size:.9rem;background:#fff;border-radius:10px;padding:10px;margin-bottom:8px">告訴 AI：你是誰、要做什麼、店家有哪些具體特色、旅客是誰、要什麼格式</p>
+      <ul><li>AI 寫出：「關掉頂樓的燈，縱谷的星星就全部出來了」</li><li>只有你家寫得出來的畫面</li><li>旅客記得住，也知道下一步要做什麼</li></ul>
+    </div>
+  </div>
+
+  <h3 class="h3">R-T-C-F 四段式指令</h3>
+  <div class="grid g4">
+    <div class="card b"><h3>R 角色 Role</h3><p>AI 要扮演誰？<br>例：熟悉花蓮在地旅遊的民宿管家、專寫伴手禮的品牌小編。</p></div>
+    <div class="card x"><h3>T 任務 Task</h3><p>要它做什麼？一次一件事。<br>動詞要明確：寫、改、整理、比較。</p></div>
+    <div class="card a"><h3>C 情境 Context</h3><p>店家具體特色、地點、旅客是誰、這次重點、限制。<br><b>這一段寫得越具體，越像你的店，也是最常被省略的一段。</b></p></div>
+    <div class="card g"><h3>F 格式 Format</h3><p>平台、字數、段落、語氣、稱呼、emoji、結尾行動呼籲、要表格還是條列。</p></div>
+  </div>
+
+  <h3 class="h3">示範：花蓮月眉民宿的夜間抓蝦貼文</h3>
+  <div class="vs">
+    <div class="col bad"><h4>改寫前</h4>
+      <p style="font-size:.9rem;background:#fff;border-radius:10px;padding:10px">幫我寫一篇民宿的抓蝦活動貼文。</p>
+      <ul><li>沒有角色、沒有店家特色、沒有旅客、沒有格式</li><li>AI 只能寫出通用的抓蝦文</li></ul>
+    </div>
+    <div class="col good"><h4>改寫後（R-T-C-F）</h4>
+      <p style="font-size:.88rem"><b>R：</b>你是花蓮壽豐月眉民宿的管家，熟悉縱谷在地玩法。<br>
+      <b>T：</b>寫一篇 IG 貼文，介紹可代訂的夜間抓蝦體驗。<br>
+      <b>C：</b>民宿在壽豐月眉，縱谷景觀、無光害星空，頂樓可烤肉；觀光署好客民宿、自行車友善旅宿；也能代訂溯溪、縱谷體驗飛行。目標旅客是帶小學生的家庭。不要寫「保證抓到」。<br>
+      <b>F：</b>150 字內、分 3 段、語氣像管家跟熟客聊天，結尾請旅客私訊 LINE 預約，附 5 個 hashtag。</p>
+    </div>
+  </div>
+  <div class="callout ok"><b>AI 產出示範：</b><br>白天在縱谷騎腳踏車，晚上換穿雨鞋，拿起手電筒去田邊找蝦子！<br><br>孩子第一次在夜裡聽見青蛙大合唱，眼睛亮得跟頭上的星星一樣。抓多抓少看運氣，但那份興奮，每一組家庭回來都會跟我們分享好久。<br><br>回到民宿，頂樓烤肉、數星星，一天就圓滿了。想一起去抓蝦嗎？私訊 LINE，管家幫你預約。<br><br>#花蓮民宿 #壽豐 #月眉 #夜間抓蝦 #親子旅行<br><span class="muted-note">（示範用，實際內容依店家資料調整）</span></div>
+
+  <h3 class="h3">讓結果穩定的三個技巧</h3>
+  <div class="grid g3">
+    <div class="card b"><h3>1. 給範例</h3><p>貼上你寫過、最滿意的 3 篇貼文，告訴 AI「照這個感覺寫」。<b>AI 最會模仿，範例比形容詞有用 10 倍。</b></p></div>
+    <div class="card x"><h3>2. 給限制</h3><p>字數、段落、平台；禁用詞：首選、CP 值爆表、全台唯一、保證；不承諾天氣、賞鯨、星空一定看得到；不知道的寫【待確認】，不要自己編。</p></div>
+    <div class="card g"><h3>3. 請 AI 先反問</h3><p>在提示詞最後加一句：「開始之前，先問我 3 個問題」。AI 會告訴你它還缺什麼資訊，回答完產出準確度大幅提升。</p></div>
+  </div>
+
+  <h3 class="h3">技巧 3 示範：花彤林民宿請 AI 先反問</h3>
+  <div class="vs">
+    <div class="col blue"><h4>提示詞最後加一句</h4>
+      <p style="font-size:.9rem">你是花蓮吉安花彤林民宿的小編，請寫一篇親子包棟的 FB 貼文。民宿特色：獨立莊園式包棟、溜滑梯客房、兒童遊戲樹屋、戲水池、大草皮、戶外烤肉區、合法 KTV。<br><br><b>開始之前，先問我 3 個問題。</b></p>
+    </div>
+    <div class="col good"><h4>AI 先問你的 3 個問題</h4>
+      <p style="font-size:.9rem">1. 這篇主要想吸引幾歲的小朋友家庭？是幾個家庭一起包棟，還是單一大家族？<br><br>2. 這次有沒有想推的時段或方案？例如平日包棟、寒假、生日派對？<br><br>3. 溜滑梯、樹屋、戲水池有沒有年齡、身高或開放時間限制，需要在貼文裡先說明？</p>
+      <p class="muted-note" style="margin-top:8px">回答完這 3 題，AI 寫出來的貼文就會精準很多，也比較不會寫出你沒有提供的服務。</p>
+    </div>
+  </div>
+
+  <h3 class="h3">🧩 實作：R-T-C-F 組裝器</h3>
+  <p class="lead">四格填完，下面自動組成一段完整的提示詞，複製就能用。填過的內容會留著，整天都可以回來改。</p>
+  <div class="calc">
+    <h4>🧩 我的 R-T-C-F 提示詞</h4>
+    <div class="hint">C 情境寫得越具體，產出越像你的店。寫不出來的欄位先空著，等一下用「請 AI 先反問」補。</div>
+    <div class="lbl">R 角色：AI 要扮演誰</div>
+    <textarea data-rt="r" placeholder="例如：你是花蓮壽豐月眉民宿的管家，熟悉縱谷在地玩法。"></textarea>
+    <div class="lbl">T 任務：要它做什麼（一次一件事）</div>
+    <textarea data-rt="t" placeholder="例如：寫一篇 IG 貼文，介紹可代訂的夜間抓蝦體驗。"></textarea>
+    <div class="lbl">C 情境：店家特色、地點、旅客是誰、這次重點、限制</div>
+    <textarea data-rt="c" placeholder="例如：民宿在壽豐月眉，縱谷景觀、無光害星空，頂樓可烤肉。目標旅客是帶小學生的家庭。不要寫「保證抓到」。"></textarea>
+    <div class="lbl">F 格式：平台、字數、段落、語氣、結尾</div>
+    <textarea data-rt="f" placeholder="例如：150 字內、分 3 段、語氣像管家跟熟客聊天，結尾請旅客私訊 LINE 預約，附 5 個 hashtag。"></textarea>
+    <div class="note" id="rtOut">四格都填好，這裡會出現完整的提示詞。</div>
+    <div class="hero-btns" style="margin-top:12px">
+      <button class="btn btn-light btn-sm" id="rtCopy" type="button">📋 複製提示詞</button>
+      <a class="btn btn-light btn-sm" href="https://chatgpt.com/" target="_blank" rel="noopener">🤖 開 ChatGPT</a>
+      <a class="btn btn-light btn-sm" href="https://gemini.google.com/app" target="_blank" rel="noopener">✨ 開 Gemini</a>
+    </div>
+  </div>
+
+  <h3 class="h3">同一則「颱風過後」貼文，三種口吻</h3>
+  <div class="grid g3">
+    <div class="card x"><h3>口吻 A</h3><p>親愛的，颱風走了，花蓮的天空又藍回來了。房間已經為妳整理好，香氛點上、床單換新，就等妳回來，好好寵愛自己一晚。想出走嗎？私訊我們，留一間給妳。👑</p></div>
+    <div class="card b"><h3>口吻 B</h3><p>颱風過境，我們平安！🌤️ 單車已經擦乾、交誼廳的燈也亮了。這週有誰要來花蓮？來吃早餐、交換旅行故事，順便告訴我們你最想去哪裡，一起排路線吧！🚲</p></div>
+    <div class="card g"><h3>口吻 C</h3><p>風雨過後，運河恢復了平靜，綠地在陽光下格外清新。我們以一貫的細心，準備好迎接每一位前來休憩的旅人。誠摯期待與您在花蓮相見。</p></div>
+  </div>
+
+  <h3 class="h3">互動題</h3>
+  <div class="poll" id="poll_q3"></div>
+  <div class="poll" id="poll_q4"></div>
+
+  <h3 class="h3">✍️ 實作：品牌口吻指令卡</h3>
+  <p class="lead">寫一次、存起來，以後每個提示詞最前面都貼上它，AI 就會用你的方式說話。沒靈感的話，先用「🤖 提示詞庫」裡的萃取提示詞，貼 3 到 5 篇舊貼文讓 AI 幫你整理，再把結果填回來。</p>
+  <div class="fill">
+    <label>1. 品牌一句話（20 字內）</label>
+    <input type="text" data-vc="one" maxlength="30" placeholder="例如：住進太平洋旁邊，會等你回來的小屋">
+    <label>2. 主要旅客是誰</label>
+    <input type="text" data-vc="who" maxlength="60" placeholder="例如：帶 3 到 8 歲小孩的雙北家庭、帶毛孩的情侶">
+    <label>3. 語氣三個形容詞</label>
+    <input type="text" data-vc="tone" maxlength="40" placeholder="例如：溫暖、在地、像朋友">
+    <label>4. 我們怎麼稱呼旅客</label>
+    <input type="text" data-vc="call" maxlength="30" placeholder="例如：旅人、大朋友小朋友、女王">
+    <label>5. 常用詞（5 到 10 個，用頓號分開）</label>
+    <input type="text" data-vc="yes" maxlength="120" placeholder="例如：管家、海風、慢慢來、窗邊、剛出爐">
+    <label>6. 禁用詞（5 到 10 個）</label>
+    <input type="text" data-vc="no" maxlength="120" placeholder="例如：首選、CP 值爆表、全台唯一、保證看到、錯過可惜">
+    <label>7. 句子長短與分段習慣</label>
+    <input type="text" data-vc="style" maxlength="60" placeholder="例如：短句為主，每段 2 到 3 行，一篇 3 段">
+    <label>8. emoji 使用習慣</label>
+    <input type="text" data-vc="emoji" maxlength="60" placeholder="例如：一篇 2 到 3 個，只用 🌊 ☀️ 🐾">
+    <label>9. 結尾習慣（固定的行動呼籲）</label>
+    <input type="text" data-vc="end" maxlength="60" placeholder="例如：私訊 LINE 問空房，管家幫你安排">
+    <label>10. 兩句「最像我們」的示範句</label>
+    <textarea data-vc="sample" placeholder="例如：起床囉，太平洋已經醒了。&#10;今天的海很藍，早餐桌留了你的位子。"></textarea>
+    <div class="hero-btns" style="margin-top:12px">
+      <button class="btn btn-primary btn-sm" id="vcCopy" type="button">📋 複製我的指令卡</button>
+      <button class="btn btn-ghost btn-sm" id="vcSend" type="button">📤 當成交件送出</button>
+      <span class="muted-note" id="vcStatus"></span>
+    </div>
+  </div>
+  <div class="tip"><div class="ic">💾</div><div class="t"><b>存起來，以後每次都用</b>把這張卡存進 ECom 的「品牌調性設定器」，之後 ECom 所有工具都會自動帶入你的口吻，不用每次重貼。</div></div>
+
+  <h3 class="h3">模組二重點</h3>
+  <div class="grid g3">
+    <div class="card"><h3><span class="num">1</span>R-T-C-F 四段式</h3><p>角色、任務、情境、格式。最常被省略、也最關鍵的是 C 情境。</p></div>
+    <div class="card"><h3><span class="num">2</span>三個穩定技巧</h3><p>給範例、給限制、請 AI 先反問。範例比形容詞有用。</p></div>
+    <div class="card"><h3><span class="num">3</span>口吻指令卡</h3><p>寫一次、存起來、每次貼。口吻一致，旅客才記得住你。</p></div>
+  </div>
+  <div class="card dk" style="margin-top:12px"><h3>💡 心得</h3><p>AI 寫得不像你，不是 AI 不聰明，是它還不認識你。先介紹自己，再請它幫忙。</p></div>
+</div></section>
+<!-- ===================== ③ 內容 ===================== -->
+<section class="tab-section" data-tab="content"><div class="wrap">
+  <span class="sec-tag">模組三　11:30 到 12:00、13:00 到 14:00</span>
+  <h2 class="sec-title">內容產製自動化：<span class="em">一次寫完多平台</span></h2>
+  <p class="lead">寫一次底稿，FB、IG、Threads、LINE 一次搞定。這個模組結束，你會帶走一週社群內容月曆、1 支可直接拍攝的短影音腳本，還有 1 張社群封面圖與它的圖片 SEO 說明。</p>
+
+  <h3 class="h3">四個平台，四種說話方式</h3>
+  <div class="tw"><table>
+    <tr><th>平台</th><th>誰在看、怎麼看</th><th>內容長相</th><th>規格重點</th><th>花蓮旅宿怎麼用</th></tr>
+    <tr><td><b>Facebook</b></td><td>熟客、家族旅遊決策者、在地社團</td><td>故事型長文 ＋ 相簿</td><td>可寫長文，重點放前三行</td><td>房型故事、活動公告、社團經營</td></tr>
+    <tr><td><b>Instagram</b></td><td>年輕旅客、情侶、親子，用看的</td><td>照片、Reels、限時動態</td><td>說明文字上限 2,200 字元、hashtag 最多 30 個</td><td>房間美照、在地景點、短影音</td></tr>
+    <tr><td><b>Threads</b></td><td>想聊天、想問問題的人</td><td>短、真實、有觀點</td><td>單則 500 字元</td><td>幕後日常、提問互動、即時狀況</td></tr>
+    <tr><td><b>LINE 官方帳號</b></td><td>已經加你好友的客人</td><td>短、一則一重點、有按鈕</td><td>推播會計費，要精準</td><td>優惠、回客、入住提醒</td></tr>
+  </table></div>
+  <p class="muted-note">台灣社群使用率：YouTube 72.3%、FB 72.1%、IG 44.7%、Threads 17.5%（MIC 調查）。</p>
+
+  <h3 class="h3">一稿多用：先寫「事實清單」，再請 AI 改寫</h3>
+  <div class="flow">
+    <span class="n">底稿事實清單</span><span class="ar">▶</span>
+    <span class="n lite">FB 長文 250 到 350 字</span><span class="ar">▶</span>
+    <span class="n lite">IG 說明 120 到 180 字</span><span class="ar">▶</span>
+    <span class="n lite">Threads 100 字內</span><span class="ar">▶</span>
+    <span class="n lite">LINE 推播 60 字內</span>
+  </div>
+
+  <h3 class="h3">📝 實作：底稿事實清單</h3>
+  <p class="lead">五格填完，一鍵生成「一稿改寫成四平台」的完整提示詞。所有版本都只能用你填的事實，AI 不能自己加。</p>
+  <div class="calc">
+    <h4>📝 我的底稿事實清單</h4>
+    <div class="hint">這份清單就是 AI 的素材庫。填得越具體，四個平台的版本越不會出現你沒提供的服務。</div>
+    <div class="lbl">主題</div>
+    <textarea data-bs="topic" placeholder="例如：七星潭曼波魚陶器、冬季平日連住優惠、夜間抓蝦體驗"></textarea>
+    <div class="lbl">時間與地點</div>
+    <textarea data-bs="when" placeholder="例如：11 月到 12 月平日，花蓮壽豐月眉，民宿頂樓集合"></textarea>
+    <div class="lbl">3 個賣點</div>
+    <textarea data-bs="sell" placeholder="例如：1 把花蓮的山海揉進陶土　2 半世紀老店第二代手作　3 百大伴手禮金質獎兩度肯定"></textarea>
+    <div class="lbl">旅客能得到的好處</div>
+    <textarea data-bs="good" placeholder="例如：一件陶器，帶走一片花蓮的海"></textarea>
+    <div class="lbl">行動呼籲</div>
+    <textarea data-bs="cta" placeholder="例如：私訊 LINE 預約／到店挑選／點連結看房型"></textarea>
+    <div class="note" id="bsOut">五格填好後，這裡會出現可以直接複製的提示詞。</div>
+    <div class="hero-btns" style="margin-top:12px">
+      <button class="btn btn-light btn-sm" id="bsCopy" type="button">📋 複製一稿四平台提示詞</button>
+      <button class="btn btn-light btn-sm" id="bsSend" type="button">📤 當成交件送出</button>
+      <span class="muted-note" id="bsStatus" style="color:#dfeceb"></span>
+    </div>
+  </div>
+
+  <h3 class="h3">學員案例：昇活樂陶陶的底稿事實清單</h3>
+  <div class="vs">
+    <div class="col blue"><h4>昇活樂陶陶（東昇玻璃禮品行）</h4>
+      <p style="font-size:.9rem">花蓮老店走過半世紀，第二代劉興昇老師投入陶藝創作 20 多年。花蓮百大伴手禮金質獎（2019、2024）、2024 花蓮永續觀光優良伴手禮店家、日本東京誠品生活日本橋邀展。</p>
+    </div>
+    <div class="col good"><h4>底稿事實清單（只有 6 行）</h4>
+      <ul>
+        <li>主題：七星潭曼波魚陶器</li>
+        <li>賣點 1：把花蓮的山海與生活記憶揉進陶土</li>
+        <li>賣點 2：半世紀老店、第二代陶藝家手作</li>
+        <li>賣點 3：百大伴手禮金質獎兩度肯定</li>
+        <li>旅客得到：一件陶器，帶走一片花蓮的海</li>
+        <li>行動呼籲：到店挑選或私訊詢問</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid g2">
+    <div class="card b"><h3>FB（故事型）</h3><p>半世紀前，東昇玻璃禮品行在花蓮開門。二十多年前，第二代的劉興昇老師開始捏陶，把七星潭的浪、山的顏色，一點一點揉進土裡。曼波魚陶器，就是這樣誕生的。它拿過兩次花蓮百大伴手禮金質獎，但我們最喜歡的評語是：「每次用它，就想起花蓮。」到店挑一件，把花蓮的海帶回家。</p></div>
+    <div class="card x"><h3>IG（視覺型）</h3><p>把七星潭的海，捏成一隻曼波魚 🐟<br>第二代陶藝家手作，每一件都不一樣。<br>帶走一片花蓮的海，也帶回一段自己的記憶。<br>📍 到店挑選｜私訊詢問<br>#花蓮伴手禮 #七星潭 #曼波魚 #手作陶藝 #花蓮百大伴手禮</p></div>
+    <div class="card"><h3>Threads（聊天型）</h3><p>老實說，我們家老師捏曼波魚捏了好多年，每一隻表情都不一樣 😂<br>你去七星潭的時候，最記得的是什麼？<br>留言告訴我們，說不定會變成下一件作品。</p></div>
+    <div class="card g"><h3>LINE 推播（行動型）</h3><p>七星潭曼波魚陶器，第二代陶藝家手作，兩度獲百大伴手禮金質獎。一件陶器，帶走花蓮的海。<br><br><b>按鈕：看作品</b></p></div>
+  </div>
+
+  <h3 class="h3">賣點轉文案：特點、好處、畫面</h3>
+  <p class="lead">旅客買的不是「特點」，是「好處」和「腦中的畫面」。</p>
+  <div class="tw"><table>
+    <tr><th></th><th>特點（你有什麼）</th><th>好處（旅客得到什麼）</th><th>畫面（一句讓人想像的話）</th></tr>
+    <tr><td><b>房型</b><br>花彤林民宿</td><td>溜滑梯客房、兒童樹屋、戲水池</td><td>小孩放電、爸媽終於能休息</td><td>孩子從房間溜滑梯尖叫溜下來，爸媽在旁邊喝完了一整杯熱咖啡</td></tr>
+    <tr><td><b>遊程</b><br>好野人</td><td>清水斷崖 SUP，教練旅客比 1:4</td><td>第一次划也有人照顧、有安全感</td><td>腳下是透明的太平洋，抬頭是清水斷崖，教練就在旁邊幫你拍照</td></tr>
+    <tr><td><b>伴手禮</b><br>花蓮酒廠</td><td>花東唯一精釀啤酒工場、現喝手作生啤酒</td><td>只有來花蓮才喝得到的味道</td><td>在金箔牆前舉杯，喝一口只屬於花蓮的生啤酒</td></tr>
+  </table></div>
+
+  <h3 class="h3">短影音前 3 秒：五種開場鉤子</h3>
+  <p class="lead">前 3 秒沒抓住，後面拍得再美也沒人看到。IG Reels 現在最長可上傳 3 分鐘，但開頭永遠最重要。</p>
+  <div class="grid g5">
+    <div class="card b"><h3>🔄 反差</h3><p>「這不是國外，是花蓮清水斷崖」</p></div>
+    <div class="card x"><h3>🔢 數字</h3><p>「一晚 3 件事，讓孩子記得整個暑假」</p></div>
+    <div class="card a"><h3>❓ 提問</h3><p>「你知道花蓮晚上可以去抓蝦嗎？」</p></div>
+    <div class="card g"><h3>🔊 現場聲音</h3><p>浪聲、啤酒倒進杯子的聲音、孩子的笑聲</p></div>
+    <div class="card p"><h3>🔑 秘密</h3><p>「管家才知道的日出最佳位置」</p></div>
+  </div>
+
+  <h3 class="h3">分鏡腳本示範：好野人清水斷崖 SUP（30 秒）</h3>
+  <div class="tw"><table>
+    <tr><th>秒數</th><th>畫面</th><th>字幕（12 字內）</th><th>旁白／聲音</th><th>拍攝提醒</th></tr>
+    <tr><td><b>0 到 3</b></td><td>板子從斷崖前划過，鏡頭由低往高</td><td>這不是國外，是花蓮</td><td>浪聲</td><td>手機貼近水面拍</td></tr>
+    <tr><td><b>3 到 10</b></td><td>教練示範站上板子、學員跟著站起來</td><td>第一次划也站得起來</td><td>教練：膝蓋微彎，看前面</td><td>拍學員的表情</td></tr>
+    <tr><td><b>10 到 20</b></td><td>透明海水、斷崖全景、學員比讚</td><td>教練 1 對 4 照顧你</td><td>輕快音樂</td><td>鏡頭跟著板子移動</td></tr>
+    <tr><td><b>20 到 27</b></td><td>上岸喝飲料、看教練拍的照片</td><td>照片教練幫你拍好</td><td>學員笑聲</td><td>近拍照片畫面</td></tr>
+    <tr><td><b>27 到 30</b></td><td>LOGO 與 LINE 預約畫面</td><td>私訊 LINE 預約</td><td>看浪況出發，安全第一</td><td>結尾停留 2 秒</td></tr>
+  </table></div>
+  <div class="callout ok"><b>結尾加一句「看浪況出發」：</b>不承諾天候，也是在建立信任。</div>
+
+  <h3 class="h3">圖像素材處理：去背、封面圖、圖片 SEO</h3>
+  <div class="grid g3">
+    <div class="card b"><h3>✂️ 去背</h3><p>伴手禮、餐點、商品照最需要。去背後放到乾淨背景，做成主圖或貼文。ECom「商品圖去背神器」圖不離開瀏覽器，免上傳免付費。</p></div>
+    <div class="card x"><h3>🖼️ 社群封面圖</h3><p>FB、IG、Threads、YouTube 尺寸一次做。主標 10 字內，一眼看懂；同一系列用同一種顏色與字型。</p></div>
+    <div class="card g"><h3>🔍 圖片 SEO</h3><p>檔名用英文：hualien-craft-beer.jpg；替代文字 alt 用一句話描述畫面＋地點＋品名；ECom「AI 圖像 Alt 批次產生」一次 1 到 10 張。</p></div>
+  </div>
+
+  <h3 class="h3">一週社群月曆示範：海明蔚民宿</h3>
+  <div class="tw"><table>
+    <tr><th>日期</th><th>平台</th><th>內容類型</th><th>標題</th><th>需要的素材</th></tr>
+    <tr><td><b>週一</b></td><td>IG</td><td>房型</td><td>打開窗簾，太平洋就在床邊</td><td>海景房照片 3 張</td></tr>
+    <tr><td><b>週二</b></td><td>Threads</td><td>幕後人物</td><td>管家每天 5 點起床的原因</td><td>手機隨拍日出</td></tr>
+    <tr><td><b>週三</b></td><td>FB</td><td>在地玩法</td><td>從民宿走私人步道去看海</td><td>步道短影音</td></tr>
+    <tr><td><b>週四</b></td><td>IG Reels</td><td>旅客見證</td><td>毛孩第一次看到海的反應</td><td>旅客授權影片</td></tr>
+    <tr><td><b>週五</b></td><td>LINE</td><td>優惠</td><td>平日入住加贈手作課程體驗</td><td>活動圖卡 1 張</td></tr>
+    <tr><td><b>週末</b></td><td>限時動態</td><td>即時</td><td>今天的海、今天的早餐</td><td>隨拍</td></tr>
+  </table></div>
+  <p class="muted-note">四類內容輪播：房型或商品／在地玩法／幕後人物故事／旅客見證或優惠。一週發 5 篇，LINE 一週最多 1 則。</p>
+
+  <h3 class="h3">互動題</h3>
+  <div class="poll" id="poll_q5"></div>
+  <div class="poll" id="poll_q6"></div>
+
+  <h3 class="h3">模組三重點</h3>
+  <div class="grid g3">
+    <div class="card"><h3><span class="num">1</span>一稿多用</h3><p>先寫事實清單，再請 AI 改寫四平台，只用底稿裡的事實。</p></div>
+    <div class="card"><h3><span class="num">2</span>賣點轉畫面</h3><p>特點、好處、畫面。旅客記得的是畫面，不是規格。</p></div>
+    <div class="card"><h3><span class="num">3</span>前 3 秒決定一切</h3><p>反差、數字、提問、現場聲音、秘密。不承諾天候，反而更有信任。</p></div>
+  </div>
+  <div class="card dk" style="margin-top:12px"><h3>💡 心得</h3><p>內容不是寫給演算法看的，是寫給「下一位會住進來的人」看的。AI 幫你寫得快，你負責寫得真。</p></div>
+</div></section>
+<!-- ===================== ④ 客服 ===================== -->
+<section class="tab-section" data-tab="cs"><div class="wrap">
+  <span class="sec-tag">模組四　14:00 到 16:00</span>
+  <h2 class="sec-title">訂房與客服訊息流：<span class="em">把重複問題交給 AI</span></h2>
+  <p class="lead">同樣的問題回一百次，不如好好回一次，然後存起來。這個模組結束，你會帶走一份住宿版 FAQ 知識庫、六段訊息 SOP 範本，以及一張 LINE 自動回覆樹設定表。</p>
+
+  <h3 class="h3">花蓮旅宿最常被問的 10 個問題</h3>
+  <div class="grid g5">
+    <div class="card b"><h3>🅿️ 停車</h3><p>有停車位嗎？車子開得進去嗎？</p></div>
+    <div class="card x"><h3>🕒 入住退房</h3><p>幾點可以入住？可以先寄放行李嗎？</p></div>
+    <div class="card a"><h3>🐾 寵物</h3><p>可以帶狗嗎？要加價嗎？</p></div>
+    <div class="card g"><h3>🍳 早餐</h3><p>有早餐嗎？幾點？有素食嗎？</p></div>
+    <div class="card p"><h3>🚐 交通接送</h3><p>火車站多遠？可以接送嗎？</p></div>
+    <div class="card g"><h3>🌧️ 天候退訂</h3><p>颱風、地震、封路可以退嗎？</p></div>
+    <div class="card b"><h3>👨‍👩‍👧 加人包棟</h3><p>可以加床嗎？包棟多少錢？</p></div>
+    <div class="card a"><h3>📍 周邊行程</h3><p>太魯閣能去嗎？可以代訂行程嗎？</p></div>
+    <div class="card x"><h3>💳 付款</h3><p>怎麼付訂金？可以刷卡嗎？</p></div>
+    <div class="card p"><h3>🧾 收據發票</h3><p>可以開公司統編嗎？</p></div>
+  </div>
+
+  <h3 class="h3">從歷史對話到 FAQ 知識庫</h3>
+  <div class="flow">
+    <span class="n">1 蒐集</span><span class="ar">▶</span>
+    <span class="n lite">2 去識別化</span><span class="ar">▶</span>
+    <span class="n lite">3 AI 萃取</span><span class="ar">▶</span>
+    <span class="n lite">4 分類標記</span><span class="ar">▶</span>
+    <span class="n lite">5 定期更新</span>
+  </div>
+  <div class="grid g5">
+    <div class="card"><h3>1 蒐集</h3><p>LINE、FB 私訊、OTA 訊息，近半年 20 則以上，複製成文字。</p></div>
+    <div class="card"><h3>2 去識別化</h3><p>姓名換代號，電話、訂單號刪除，一則一段。</p></div>
+    <div class="card"><h3>3 AI 萃取</h3><p>用 ECom FAQ 萃取器或提示詞庫的提示詞，合併相同問題。</p></div>
+    <div class="card"><h3>4 分類標記</h3><p>8 大類，標記可自動回覆或需要真人處理。</p></div>
+    <div class="card"><h3>5 定期更新</h3><p>每月檢查一次，價格與規定變了就改，記下更新日期。</p></div>
+  </div>
+
+  <h3 class="h3">FAQ 知識庫長這樣（示範民宿「山海小棧」）</h3>
+  <div class="tw"><table>
+    <tr><th>分類</th><th>問題</th><th>標準回答（用店家口吻）</th><th>自動／真人</th></tr>
+    <tr><td>入住退房</td><td>幾點可以入住？</td><td>入住時間是下午 3 點，退房是上午 11 點。提早到的話，行李可以先寄放在客廳喔！</td><td class="ok">自動</td></tr>
+    <tr><td>交通停車</td><td>有停車位嗎？</td><td>門口有 4 個免費車位，滿了的話，巷口右轉 50 公尺有公有停車場。</td><td class="ok">自動</td></tr>
+    <tr><td>寵物親子</td><td>可以帶狗狗嗎？</td><td>目前只開放一樓家庭房入住毛孩，每隻清潔費 300 元，入住前請先告訴我們。</td><td class="ok">自動</td></tr>
+    <tr><td>天候退訂</td><td>颱風可以退訂嗎？</td><td>依本館公告的天災退訂規定處理，管家會協助您確認改期或退款。</td><td class="bad">真人</td></tr>
+    <tr><td>周邊行程</td><td>太魯閣現在能去嗎？</td><td>部分步道仍在修復，出發前請查太管處公告，我們也可以幫您推薦其他路線。</td><td>自動＋附連結</td></tr>
+  </table></div>
+  <div class="callout"><b>沒有自家資料的人：</b>到「🎁 帶走」分頁打開<b>練習素材包</b>，裡面有山海小棧的 20 則客服對話與 30 則評論，可以直接拿來練習。</div>
+
+  <h3 class="h3">退訂、退款、賠償：AI 只能「說清楚」，不能「自己決定」</h3>
+  <div class="vs">
+    <div class="col bad"><h4>❌ 危險做法</h4><ul>
+      <li>請 AI「幫我寫退訂規定」，它就自己編出退費比例</li>
+      <li>颱風、地震、封路，AI 自己判斷「可以全額退」</li>
+      <li>客人生氣時，AI 自動答應賠償或折扣</li>
+    </ul></div>
+    <div class="col good"><h4>✅ 正確做法</h4><ul>
+      <li>把你家已公告的退訂規定貼給 AI，請它改寫得清楚、有溫度</li>
+      <li>寫明天災判定依據，例如官方發布警報或道路封閉</li>
+      <li>退訂、退款、賠償一律標記「需真人處理」</li>
+      <li>例：消保處說明，透過訂房網預付全額、入住前 3 日以前取消應退 100%</li>
+    </ul></div>
+  </div>
+
+  <h3 class="h3">六段訊息 SOP：一位旅客從詢問到退房</h3>
+  <div class="grid g3">
+    <div class="card b"><h3><span class="num">1</span>詢問</h3><p>確認日期人數、推薦房型、告訴他下一步。</p></div>
+    <div class="card b"><h3><span class="num">2</span>確認</h3><p>訂單摘要、付款資訊、退訂規定連結。</p></div>
+    <div class="card a"><h3><span class="num">3</span>入住前</h3><p>前 1 天提醒、交通停車、請旅客查官方路況。</p></div>
+    <div class="card x"><h3><span class="num">4</span>當日</h3><p>歡迎訊息、簡單導覽、有事找誰。</p></div>
+    <div class="card p"><h3><span class="num">5</span>退訂</h3><p>依規定回覆、語氣體諒、轉真人處理。</p></div>
+    <div class="card g"><h3><span class="num">6</span>退房後</h3><p>感謝、邀請評論、加好友回訪誘因。</p></div>
+  </div>
+  <div class="tip"><div class="ic">🎯</div><div class="t"><b>最常被忽略的是第 6 段</b>退房後那一則，就是明天模組六評論、模組八回客的起點。</div></div>
+
+  <h3 class="h3">LINE 加好友歡迎訊息：3 秒說清楚</h3>
+  <div class="vs">
+    <div class="col blue"><h4>好的歡迎訊息有 3 個對話框</h4><ul>
+      <li>第 1 框：我們是誰、可以幫你什麼</li>
+      <li>第 2 框：加好友小禮與領取方式</li>
+      <li>第 3 框：教旅客怎麼用圖文選單</li>
+    </ul>
+    <p class="muted-note" style="margin-top:8px">歡迎訊息、自動回應、一對一聊天，都不算在每月訊息則數裡。</p>
+    </div>
+    <div class="col good"><h4>AI 產出示範（山海小棧）</h4>
+      <p style="font-size:.9rem"><b>【第 1 框】</b><br>嗨！歡迎加入山海小棧 🌊 我們是吉安的 6 房小民宿，訂房、交通、在地玩法，都可以在這裡問我們。</p>
+      <p style="font-size:.9rem;margin-top:8px"><b>【第 2 框】</b><br>🎁 加好友小禮：入住時出示這則訊息，可延後退房 1 小時（依當日房況）。</p>
+      <p style="font-size:.9rem;margin-top:8px"><b>【第 3 框】</b><br>👇 點下方選單：查房況、看交通停車、找管家聊天。管家回覆時間是每天 9:00 到 21:00。</p>
+    </div>
+  </div>
+
+  <h3 class="h3">LINE 自動回覆樹：3 到 5 層，客人自己找到答案</h3>
+  <div class="tw"><table>
+    <tr><th>第 1 層主選單</th><th>第 2 層子選項</th><th>怎麼處理</th></tr>
+    <tr><td><b>訂房與房況</b></td><td>查空房日期／房型與價格／包棟與團體</td><td class="ok">自動回覆</td></tr>
+    <tr><td><b>交通停車</b></td><td>火車站怎麼來／停車位置／接送服務</td><td class="ok">自動回覆</td></tr>
+    <tr><td><b>入住須知</b></td><td>入住退房時間／寵物規定／早餐時間</td><td class="ok">自動回覆</td></tr>
+    <tr><td><b>周邊玩法</b></td><td>親子行程／合作體驗代訂／路況查詢連結</td><td>自動＋附官方連結</td></tr>
+    <tr><td><b>找管家</b></td><td>退訂改期／客訴與特殊需求／其他</td><td class="bad">全部轉真人</td></tr>
+  </table></div>
+  <p class="muted-note">第 2 層每個末端寫好回覆內容與 3 個觸發關鍵字；「找管家」底下全部轉給真人。</p>
+
+  <h3 class="h3">什麼時候一定要轉真人</h3>
+  <div class="grid g3">
+    <div class="card x"><h3>😠 情緒與客訴</h3><p>出現「很失望」「要客訴」「太誇張」等字眼，或連續兩次表達不滿。</p></div>
+    <div class="card a"><h3>💰 退訂、退款、賠償</h3><p>所有跟錢與承諾有關的事，AI 只能回「管家會盡快為您處理」。</p></div>
+    <div class="card x"><h3>🚑 安全與健康</h3><p>受傷、身體不適、過敏、迷路、車禍，立即轉真人並提供緊急聯絡方式。</p></div>
+    <div class="card p"><h3>👑 特殊需求與大單</h3><p>無障礙、包棟、婚宴會議、團體與旅行社詢價。</p></div>
+    <div class="card b"><h3>❓ AI 答不出來</h3><p>同一題 AI 連續兩次答非所問，或知識庫沒有答案。</p></div>
+    <div class="card g"><h3>🌙 非回應時間</h3><p>先自動回覆「明早 9 點管家回覆您」，緊急事項留電話。</p></div>
+  </div>
+
+  <h3 class="h3">LINE 官方帳號：11/1 起方案調整，上課這兩天剛好遇到</h3>
+  <div class="tw sm"><table>
+    <tr><th>方案</th><th>月費（未稅）</th><th>每月免費訊息</th><th>加購</th></tr>
+    <tr><td><b>輕用量</b></td><td>0 元</td><td>200 則</td><td class="bad">不能加購</td></tr>
+    <tr><td><b>中用量</b></td><td>800 元 ▶ <b>1,000 元</b></td><td>3,000 則</td><td class="bad">不能加購</td></tr>
+    <tr><td><b>高用量</b></td><td>1,200 元 ▶ <b>1,400 元</b></td><td>6,000 則</td><td>每則 0.2 元起</td></tr>
+  </table></div>
+  <div class="callout warn"><b>這兩天的時間點要注意：</b>10/28 早上 8 點到 11/2 系統維護，期間不能新購或升降級方案；10/27 後仍使用中、高用量，視為同意新價格。</div>
+
+  <div class="calc">
+    <h4>💸 這次推播要花多少？</h4>
+    <div class="hint">輸入方案與人數，算出這一則推播的實際成本。輕用量與中用量超出免費額度不能加購，會直接發不出去。</div>
+    <div class="inrow">
+      <div><label for="mPlan">我的方案</label><select id="mPlan"><option value="light">輕用量（0 元 / 200 則）</option><option value="mid">中用量（1,000 元 / 3,000 則）</option><option value="high" selected>高用量（1,400 元 / 6,000 則）</option></select></div>
+      <div><label for="mUsed">本月已發（則）</label><input id="mUsed" type="number" min="0" value="0"></div>
+      <div><label for="mSend">這次要發（人）</label><input id="mSend" type="number" min="0" value="3000"></div>
+    </div>
+    <div class="out">
+      <div class="o"><b id="mOver">0</b><span>超出免費額度（則）</span></div>
+      <div class="o"><b id="mExtra">0</b><span>加購費用（元）</span></div>
+      <div class="o win"><b id="mTotal">0</b><span>本月總成本（元）</span></div>
+      <div class="o"><b id="mEach">0</b><span>平均每則（元）</span></div>
+    </div>
+    <div class="note" id="mNote"></div>
+    <div class="hero-btns" style="margin-top:12px"><button class="btn btn-light btn-sm" id="mCopy" type="button">📋 複製這筆帳</button></div>
+  </div>
+
+  <h3 class="h3">小民宿也做得到：阿里山 5 房民宿的做法</h3>
+  <div class="vs">
+    <div class="col blue"><h4>他們怎麼做</h4><ul>
+      <li>把房型、交通、訂餐、寵物須知做成 LINE 圖文選單</li>
+      <li>旅客自己點選，常見問題不用一題一題回</li>
+      <li>用 AI 協助回覆 200 多則 Google 評論</li>
+    </ul></div>
+    <div class="col good"><h4>給我們的啟發</h4><ul>
+      <li>不需要大系統，LINE 選單加 FAQ 就能開始</li>
+      <li>評論每則都回，評分維持 4.9</li>
+      <li>今天下午做的設定表，就是同一件事</li>
+    </ul>
+    <p class="muted-note" style="margin-top:8px">規模跟在座多數民宿差不多。工商時報 2026/10/16 報導。</p>
+    </div>
+  </div>
+
+  <h3 class="h3">互動題</h3>
+  <div class="poll" id="poll_q7"></div>
+  <div class="poll" id="poll_q8"></div>
+
+  <h3 class="h3">模組四重點</h3>
+  <div class="grid g3">
+    <div class="card"><h3><span class="num">1</span>FAQ 是客服的地基</h3><p>從真實對話萃取、分類、標記自動或真人，每月更新一次。</p></div>
+    <div class="card"><h3><span class="num">2</span>六段訊息 SOP</h3><p>跟著旅客時間軸寫範本；退訂與賠償，AI 只說明、不決定。</p></div>
+    <div class="card"><h3><span class="num">3</span>LINE 自動回覆樹</h3><p>歡迎訊息、自動回應不計訊息費；轉真人條件一定要寫清楚。</p></div>
+  </div>
+  <div class="card dk" style="margin-top:12px"><h3>💡 心得</h3><p>自動化不是為了少跟客人說話，是為了把「重要的那幾句話」，留給真人好好說。</p></div>
+</div></section>
+<!-- ===================== 提示詞庫 ===================== -->
+<section class="tab-section" data-tab="ai"><div class="wrap">
+  <span class="sec-tag">整天都會用到</span>
+  <h2 class="sec-title">11 組提示詞，<span class="em">複製貼上就能用</span></h2>
+  <p class="lead">每一組都標了對應的模組。按「複製提示詞」之後，貼到 ChatGPT 或 Gemini，把【 】裡的內容換成你家的資料就好。不知道的欄位寫【待確認】，不要讓 AI 自己編。</p>
+  <div class="callout warn"><b>省額度技巧：</b>長文和反覆修改用 ChatGPT 或 Gemini，ECom 用在有固定格式的專用工具。Gemini 與 Claude 的免費額度每 5 小時重置，ChatGPT 免費版的檔案與分析有額度但數字未公開。</div>
+  <div id="promptHost"></div>
+</div></section>
+
+<!-- ===================== 交作業 ===================== -->
+<section class="tab-section" data-tab="work"><div class="wrap">
+  <span class="sec-tag">每個模組做完就交</span>
+  <h2 class="sec-title">交作業：<span class="em">今天的四份成果</span></h2>
+  <div id="whoBox2"></div>
+
+  <h3 class="h3">今天要交的四份</h3>
+  <p class="lead">做完一份就上傳一份，不用等到下課。文字與截圖都可以，交件算你們這組的分數。</p>
+  <div id="chkHost"></div>
+
+  <h3 class="h3">上傳我的成果</h3>
+  <div class="up">
+    <label class="lb2" for="subTask">這是哪一份</label>
+    <select id="subTask">
+      <option value="m1">模組一　AI 落點自評表 ＋ 選定流程</option>
+      <option value="m2">模組二　3 組提示詞 ＋ 品牌口吻指令卡</option>
+      <option value="m3">模組三　社群月曆 ＋ 短影音腳本 ＋ 封面圖</option>
+      <option value="m4">模組四　FAQ ＋ LINE 自動回覆樹設定表</option>
+      <option value="hw">回家作業一</option>
+      <option value="extra">其他補充</option>
+    </select>
+    <label class="lb2">上傳方式</label>
+    <div class="modeseg" id="subMode">
+      <button type="button" data-m="text" class="on">✍️ 貼文字</button>
+      <button type="button" data-m="image">📷 上傳圖片</button>
+    </div>
+    <div id="subTextWrap" style="margin-top:11px">
+      <label class="lb2" for="subText">內容</label>
+      <textarea id="subText" placeholder="把 AI 產出的結果、你的自評結論、FAQ 表格貼進來都可以。&#10;⚠️ 有客人個資的部分請先遮掉或換成代號。"></textarea>
+    </div>
+    <div id="subImgWrap" style="display:none;margin-top:11px">
+      <div class="dropz" id="dropz">📷 點這裡拍照或選一張圖片<br><small>AI 對話畫面、表格、封面圖都可以（10MB 內）<br>⚠️ 有旅客個資的畫面請先遮掉</small></div>
+      <input id="subFile" type="file" accept="image/*" style="display:none">
+    </div>
+    <div class="hero-btns" style="margin-top:13px">
+      <button class="btn btn-primary" id="subBtn" type="button">📤 送出</button>
+      <span class="muted-note" id="subStatus"></span>
+    </div>
+  </div>
+
+  <h3 class="h3">我們這組交過的</h3>
+  <div id="subList"></div>
+
+  <h3 class="h3">回家作業一：明天早上 9 點前完成</h3>
+  <div class="grid g2">
+    <div class="card b"><h3><span class="num">1</span>蒐集 30 則旅客評論</h3><p>Google、Booking、Agoda 都可以，複製成文字貼到一個文件，刪掉旅客全名。明天模組六會用。</p></div>
+    <div class="card x"><h3><span class="num">2</span>蒐集 20 則客服對話</h3><p>LINE、FB 私訊、OTA 訊息，一則一段，姓名電話換代號。今天沒用完的明天繼續用。</p></div>
+    <div class="card g"><h3><span class="num">3</span>把歡迎訊息上線</h3><p>LINE 官方帳號後台：主頁 ▶ 加入好友的歡迎訊息，貼上今天寫好的版本，截圖上傳。</p></div>
+    <div class="card a"><h3><span class="num">4</span>匯出訂房名單（加分題）</h3><p>有訂房系統或表單的人，匯出近一年名單（Excel 或 CSV），明天模組七做分群。</p></div>
+  </div>
+  <div class="callout ok"><b>繳交方式：</b>直接在上面「上傳我的成果」選「回家作業一」送出，或交到課程 LINE 群組。<b>準時繳交每人加 3 分</b>，明天早上模組五會分組交叉檢視。沒有自家資料的人，用「🎁 帶走」分頁的練習素材包。</div>
+
+  <h3 class="h3">我這組的進度</h3>
+  <div class="mboard" id="miniBoard"></div>
+</div></section>
+<!-- ===================== 帶走 ===================== -->
+<section class="tab-section" data-tab="done"><div class="wrap">
+  <span class="sec-tag">今天結束</span>
+  <h2 class="sec-title">帶走：<span class="em">工具、素材包、分數</span></h2>
+
+  <h3 class="h3">🧰 今天會用到的工具（全部免費、免安裝）</h3>
+  <p class="lead">下面依模組分組。有 ⭐ 的是課堂示範會打開的那幾支。ECom 註冊後每天 5 次 AI 生成，純計算工具不用登入。</p>
+  <h3 class="h3 o">模組一　盤點與安全</h3>
+  <div class="toolgrid" id="tool_m1"></div>
+  <h3 class="h3 o">模組二　提示詞與品牌口吻</h3>
+  <div class="toolgrid" id="tool_m2"></div>
+  <h3 class="h3 o">模組三　內容、影音與圖片</h3>
+  <div class="toolgrid" id="tool_m3"></div>
+  <h3 class="h3 o">模組四　客服與 LINE</h3>
+  <div class="toolgrid" id="tool_m4"></div>
+  <h3 class="h3 o">明天會用到（Day 2 預告）</h3>
+  <div class="toolgrid" id="tool_d2"></div>
+
+  <h3 class="h3">📦 練習素材包：示範民宿「山海小棧」</h3>
+  <p class="lead">沒有自家資料、或資料還沒整理好的人，直接用這一包。山海小棧是虛構的 6 房民宿，資料全部是教學用，可以安心貼給 AI 練習。</p>
+  <div class="callout"><b>山海小棧設定：</b>花蓮縣吉安鄉，6 房小民宿，2 間海景房、1 間一樓寵物友善家庭房。入住 15:00、退房 11:00，門口 4 個免費停車位，離花蓮火車站約 15 分鐘車程。老闆娘手作早餐，管家回覆時間每天 9:00 到 21:00。</div>
+
+  <details class="pack">
+    <summary>💬 20 則客服對話（模組四 FAQ 萃取用）</summary>
+    <div class="pk" id="packCs"></div>
+    <div class="hero-btns" style="margin-top:10px"><button class="btn btn-primary btn-sm" id="packCsCopy" type="button">📋 複製 20 則對話</button></div>
+  </details>
+
+  <details class="pack">
+    <summary>⭐ 30 則旅客評論（明天模組六評論分析用）</summary>
+    <div class="pk" id="packRv"></div>
+    <div class="hero-btns" style="margin-top:10px"><button class="btn btn-primary btn-sm" id="packRvCopy" type="button">📋 複製 30 則評論</button></div>
+  </details>
+
+  <details class="pack">
+    <summary>🏨 山海小棧店家基本資料（填提示詞用）</summary>
+    <div class="pk" id="packInfo"></div>
+    <div class="hero-btns" style="margin-top:10px"><button class="btn btn-primary btn-sm" id="packInfoCopy" type="button">📋 複製店家資料</button></div>
+  </details>
+
+  <h3 class="h3">🏆 目前分數<span class="pill-live">🟢 即時</span></h3>
+  <p class="lead">交件數 ＋ 講師加分，兩天累計。團體第一名與個人前三名，明天下課前頒獎。</p>
+  <div class="mboard" id="board2"></div>
+  <div class="callout" id="myScore" style="margin-top:12px">報到後顯示。</div>
+
+  <h3 class="h3">🗳️ 投一組你最想偷學的</h3>
+  <p class="lead">看完各組交出來的成果，投給你覺得「回去真的做得起來」的那一組。不能投自己這組，投完才看得到票數。</p>
+  <div class="votegrid" id="voteGrid"></div>
+  <div class="hero-btns" style="margin-top:11px">
+    <button class="btn btn-primary btn-sm" id="voteSave" type="button">送出我的一票</button>
+    <span class="muted-note" id="voteStatus"></span>
+  </div>
+
+  <h3 class="h3">明天見</h3>
+  <div class="card dk"><h3>今天你讓 AI 認識了你的店。明天，我們讓它開始幫你工作。</h3><p><b>Day 2　10/28（三）09:00</b><br>作業檢視與卡關排除 · 旅客評論與客訴分析 · 營運數據判讀 · 淡季回客自動化 · 導入計畫與成果發表<br><br>記得帶：30 則評論、20 則客服對話、歡迎訊息上線截圖，有訂房名單的也請匯出帶來。</p></div>
+  <div class="hero-btns" style="justify-content:flex-start;margin-top:14px">
+    <button class="btn btn-ghost" id="shareBtn" type="button">🔗 分享這一頁</button>
+    <a class="btn btn-ghost" href="https://atmarketing.tw/" target="_blank" rel="noopener" data-own="1">🏢 圭話行銷</a>
+    <a class="btn btn-ghost" href="https://ecom.atmarketing.tw/" target="_blank" rel="noopener" data-own="1">🧰 ECom 工具箱</a>
+  </div>
+
+  <h3 class="h3">資料出處</h3>
+  <ul class="srcs">
+    <li>花蓮觀光數據：旺得富 2026/4/4 震後 2 年花蓮觀光仍未回溫；工商時報 2025/9/11；公視 2026/3/2；NOWnews 2025/6/21 台灣民宿最多縣市。</li>
+    <li>路況、補助與旅客行為：公視 2026/3/6 太魯閣復原；經濟日報 2026/9/1 國旅補助；工商時報 2026/8/3 國旅調查；1111 2026/5/15 Trip.com 報告；工商時報 2026/6/11。</li>
+    <li>法規：個人資料保護法；民宿管理辦法；觀光產業類個資安全維護管理辦法；行政院消保處 2024/11/28 訂房退費說明。</li>
+    <li>平台規格與方案：Instagram 開發者文件；Threads 開發者文件；NOWnews 2025/12/5 MIC 社群調查；LINE Biz-Solutions 2026 方案調整公告；LINE AI 聊天機器人說明。</li>
+    <li>案例：工商時報 2026/10/16 阿里山 5 房民宿；月眉民宿、好野人、昇活樂陶陶、花彤林民宿、理想大地、象東青旅官方網站與公開資料。</li>
+    <li>課堂上的時數、分擔比例與轉換率為教學用估算值，導入後請換成自己店的實際數字驗證。</li>
+  </ul>
+</div></section>
+
+<footer>
+  <div class="wrap">
+    <div><b>花蓮觀光旅宿 AI 營運實作專班 Day 1</b>｜TISSA 115 年 AI 實作專班（觀光旅宿業）｜講師 Angle 何佳勳（小圭）· 圭話行銷股份有限公司</div>
+    <div class="fl">
+      <a href="https://atmarketing.tw/" target="_blank" rel="noopener" data-own="1">圭話行銷官網</a>
+      <a href="https://ecom.atmarketing.tw/" target="_blank" rel="noopener" data-own="1">ECom 電商營運工具箱</a>
+      <a href="board.html" target="_blank" rel="noopener">投影計分板</a>
+    </div>
+    <div class="muted-note" style="color:#95aaa9;margin-top:10px">本頁會記錄：組別、暱稱、店名、角色、互動題答案、自評表結果、填寫的提示詞與指令卡、投票與上傳的檔案。上傳內容設計成保留多版紀錄不可刪改，課後由講師統一匯出並清除。本站使用 Google Analytics 與 Meta Pixel 記錄瀏覽行為。請勿上傳含旅客個資的畫面。</div>
+  </div>
+</footer>
+
+<div class="hud" id="hud" title="我的進度"><div class="bar"><i id="hudBar"></i></div><span class="gp" id="hudGp">👋 <small id="hudGpSub">點我報到</small></span></div>
+
+<div class="overlay" id="regOverlay" role="dialog" aria-modal="true" aria-labelledby="regTitle"><div class="modal">
+  <h2 id="regTitle">🙋 學員報到</h2>
+  <p class="sub">選你的組別，個人題分數算你的，實作交件算你們這組的。兩天都用同一個報到資料。</p>
+  <label>你是第幾組 *</label>
+  <div class="gpick" id="gpick"></div>
+  <label for="regNick">你的名字或暱稱 *</label>
+  <input id="regNick" type="text" maxlength="20" placeholder="例如：小圭">
+  <label for="regShop">店名或品牌（選填）</label>
+  <input id="regShop" type="text" maxlength="30" placeholder="例如：山海小棧 花蓮吉安">
+  <label for="regType">你是哪一種</label>
+  <select id="regType">
+    <option value="">請選擇</option>
+    <option>民宿</option>
+    <option>飯店／旅館／青旅</option>
+    <option>伴手禮／手作</option>
+    <option>餐飲／園區</option>
+    <option>交通／旅行社</option>
+    <option>體驗活動</option>
+    <option>旅宿周邊服務</option>
+    <option>其他</option>
+  </select>
+  <label for="regRole">你的角色（選填）</label>
+  <select id="regRole">
+    <option value="">請選擇</option>
+    <option>老闆／負責人</option>
+    <option>管家／櫃檯</option>
+    <option>行銷／小編</option>
+    <option>房務／現場</option>
+    <option>其他</option>
+  </select>
+  <div class="err" id="regErr">請選組別並填名字</div>
+  <button class="btn btn-primary" style="width:100%;justify-content:center;margin-top:14px" id="regBtn" type="button">開始 ▶</button>
+  <a class="skip" href="#" id="regSkip">先逛逛，等等再報到</a>
+</div></div>
+
+<div id="toast" role="status" aria-live="polite"></div>
+<script>
+(function(){
+  'use strict';
+  var SUPA_URL='https://dpglkagtzdwiovzbtase.supabase.co';
+  var KEY='sb_publishable_Tuj9p4DXvO-jEqVcBnumTg_TqZ1NnRu';
+  var COURSE='hualien-hotel-ai', STORE='hha1027_v1', BUCKET='lw-workshop';
+  var GROUPS=['第1組','第2組','第3組','第4組','第5組','第6組','第7組','第8組','第9組','第10組','第11組','第12組'];
+  var UTM='utm_source=hualien-hotel-ai&utm_medium=workshop&utm_campaign=tissa-day1-1027';
+  /* 兩天課程分數要累計，cohort 固定不用日期 */
+  var COHORT=(new URLSearchParams(location.search).get('c')||'').trim()||'hualien-1027';
+  function H(){return {apikey:KEY,Authorization:'Bearer '+KEY};}
+  function esc(s){return String(s==null?'':s).replace(/[&<>"]/g,function(c){return({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'})[c];});}
+  function siteUTM(u){ if(!/^https?:\/\/[^/]*(atmarketing\.tw|atmtut\.com)/.test(u)) return u; return u+(u.indexOf('?')>=0?'&':'?')+UTM; }
+  function track(n,p){try{if(window.gtag)gtag('event',n,p||{});}catch(e){}}
+  function n0(n){return Math.round(n).toLocaleString('en-US');}
+  function n1(n){return (Math.round(n*10)/10).toLocaleString('en-US');}
+  async function fetchT(url,opt,ms){
+    opt=opt||{}; var c=new AbortController(), t=setTimeout(function(){c.abort();},ms||12000);
+    try{ return await fetch(url,Object.assign({},opt,{signal:c.signal})); } finally{ clearTimeout(t); }
+  }
+
+  /* ---------- 互動題 ---------- */
+  var POLLS={
+    fake:{q:'破冰：以下三件事，哪一件是假的？',sub:'先猜再說，猜錯不扣分。答案講師現場公布。',o:[['1','錄製 Podcast 100 集'],['2','一個月虛擬貨幣交易 1 億美金'],['3','去過非洲史瓦帝尼演講']]},
+    use:{q:'① 你目前有在用 AI 嗎？',sub:'不用客氣，照實點。這三題的結果會決定今天示範的深度。',o:[['A','有，工作上常用'],['B','有，偶爾用一下'],['C','還沒用過或很少用']]},
+    pay:{q:'② 有花錢買 AI 嗎？',sub:'',o:[['A','只用免費版'],['B','有付費訂閱']]},
+    cost:{q:'③ 每月大約花多少？',sub:'沒付費的人可以跳過這一題。',o:[['A','沒有付費'],['B','約 US$20 一個月'],['C','US$100 以上一個月']]},
+    q1:{q:'互動題 1：哪一件事「不應該」直接丟給免費 AI？',sub:'',pt:1,
+      o:[['A','寫一段雙人房的介紹文字'],['B','把 50 位旅客的姓名、電話、身分證字號貼上去，請它整理成名單'],['C','把 20 則客服問題整理成常見問答'],['D','想 5 個冬季平日優惠的活動名稱']],ans:'B',
+      why:'身分證字號、電話、姓名同時出現，屬於可直接識別個人的資料。個資法要求在蒐集目的內使用，把資料丟到雲端 AI 可能超出原本目的。',
+      ext:'要分析名單時：先把姓名換代號、電話遮罩，只留日期、金額、房型。A、C、D 都是 AI 很擅長、也很安全的工作。'},
+    q2:{q:'互動題 2：旅客在 LINE 問的四題，哪一題「最不能」直接用 AI 的回答？',sub:'',pt:1,
+      o:[['A','附近有什麼適合小朋友的景點？'],['B','明天蘇花路廊會不會封路？'],['C','你們的雙人房有浴缸嗎？（你已經把房型資料給 AI）'],['D','幫我寫一句生日驚喜的卡片文字']],ans:'B',
+      why:'路況、封路、步道開放屬於「隨時在變」的資訊，AI 的資料可能過時。正確回法是提醒旅客出發前查公路局等官方資訊，並附上連結。',
+      ext:'C 題答案來自你提供的房型資料，所以可以用，但上線前仍要人工確認。A 題要注意：AI 推薦的景點可能已經歇業或封閉，記得查證。'},
+    q3:{q:'互動題 3：三種口吻，分別最像班上哪一家？',sub:'各組討論 1 分鐘再點。',pt:1,
+      o:[['A','A＝女王萬歲民宿　B＝象東青旅　C＝理想大地'],['B','A＝象東青旅　B＝理想大地　C＝女王萬歲民宿'],['C','A＝理想大地　B＝女王萬歲民宿　C＝象東青旅'],['D','三家都一樣，看不出差別']],ans:'A',
+      why:'女王萬歲是「為每位到訪的女王量身打造」，口吻是寵愛、對「妳」說話、皇冠符號；象東青旅是青年旅館、環保、文化交流，口吻是朋友、熱鬧、單車與早餐；理想大地是世界百大飯店、運河與綠地，口吻是優雅、沉穩、敬語。',
+      ext:'你能一眼分出來，旅客也能。口吻一致，就是品牌被記住的開始。'},
+    q4:{q:'互動題 4：「幫我寫一篇 300 字的 IG 貼文，介紹我們的雙人房。」最缺哪一段？',sub:'',pt:1,
+      o:[['A','R 角色'],['B','T 任務'],['C','C 情境'],['D','F 格式']],ans:'C',
+      why:'T 任務（寫 IG 貼文）和 F 格式（300 字）都有了，缺的是 C：雙人房有什麼特色？在哪裡？窗外看到什麼？旅客是誰？這次要推什麼？',
+      ext:'R 角色也缺，但影響較小。小技巧：把房型資料、附近景點、3 個賣點做成一份檔案，每次直接貼。'},
+    q5:{q:'互動題 5：以下四段文字，哪一段最適合發在 Threads？',sub:'',pt:1,
+      o:[['A','【限時優惠】11 月平日入住雙人房 2,800 元起，含早餐，即日起至 11/30，立即預訂！'],['B','老實說，今天早上的海真的太誇張了，管家站在頂樓發呆了十分鐘 😂 你們最近看過最美的日出在哪裡？'],['C','#花蓮 #民宿 #海景 #日出 #旅行 #台灣 #週末 #放假'],['D','本民宿位於花蓮縣壽豐鄉，交通便利，客房舒適，提供早餐，歡迎蒞臨。']],ans:'B',
+      why:'Threads 重真實、對話感，最後丟一個問題，讓人想留言。',
+      ext:'A 比較適合 LINE 推播或 FB 公告；C 只有 hashtag，Threads 不靠 hashtag 擴散；D 是典型的「每家都能用」介紹，哪個平台都不太適合。'},
+    q6:{q:'互動題 6：幫花蓮酒廠拍短影音，哪一個前 3 秒開場最可能讓人停下來？',sub:'',pt:1,
+      o:[['A','花蓮酒廠成立於 1988 年，位於美崙工業區'],['B','（啤酒倒進杯子的聲音）花東只有這裡喝得到'],['C','歡迎來到花蓮酒廠，今天帶大家參觀'],['D','請大家記得按讚、追蹤、分享']],ans:'B',
+      why:'現場聲音（倒啤酒）加上獨特性（花東唯一精釀工場），一秒就有畫面。',
+      ext:'A 是背景資料，放在說明文字裡就好；C 是最常見也最容易被滑掉的開場；D 放在片尾，開頭就要求按讚會讓人直接離開。'},
+    q7:{q:'互動題 7：旅客傳來這四則訊息，哪一則「一定要」立刻轉給真人？',sub:'',pt:1,
+      o:[['A','請問停車場在哪裡？'],['B','早餐幾點開始？'],['C','我小孩剛剛在房間跌倒，額頭流血了'],['D','附近有夜市嗎？']],ans:'C',
+      why:'受傷、身體不適屬於安全事件，AI 不能代替人判斷與處理。',
+      ext:'自動回覆可以先送出「已通知管家，馬上過去」，同時附上緊急聯絡電話。A、B、D 都在 FAQ 知識庫裡，可以自動回覆。轉真人條件要寫進設定表，讓每位管家、櫃檯都知道。'},
+    q8:{q:'互動題 8：六段訊息 SOP 的正確順序是？',sub:'',pt:1,
+      o:[['A','詢問 ▶ 確認 ▶ 入住前 ▶ 當日 ▶ 退訂 ▶ 退房後'],['B','確認 ▶ 詢問 ▶ 當日 ▶ 入住前 ▶ 退房後 ▶ 退訂'],['C','詢問 ▶ 入住前 ▶ 確認 ▶ 當日 ▶ 退房後 ▶ 退訂'],['D','當日 ▶ 入住前 ▶ 詢問 ▶ 確認 ▶ 退訂 ▶ 退房後']],ans:'A',
+      why:'訊息 SOP 就是旅客旅程：問、訂、出發前、到了、（可能退訂）、離開之後。',
+      ext:'最常被忽略的是「退房後」：感謝、邀請評論、給回訪理由。退房後那一則，就是明天模組六評論、模組八回客的起點。'}
+  };
+  var pollAgg={}, pollN={}, statSig='';
+  Object.keys(POLLS).forEach(function(k){pollAgg[k]={};pollN[k]=0;});
+
+  /* ---------- 一週工作盤點 ---------- */
+  var WORK=[
+    {k:'w1',n:'回覆訂房詢問、確認訊息',who:'負責人、管家、櫃檯',unit:'每天幾小時',mul:7,def:1.5,ai:0.6,aiT:'高：FAQ 與範本可先擬好'},
+    {k:'w2',n:'寫社群貼文、找照片',who:'負責人、小編',unit:'每週幾小時',mul:1,def:4,ai:0.6,aiT:'高：一稿多平台'},
+    {k:'w3',n:'回覆 Google、OTA 評論',who:'負責人',unit:'每週幾小時',mul:1,def:1.5,ai:0.45,aiT:'中高：AI 擬稿，人工確認'},
+    {k:'w4',n:'整理訂房名單、對帳',who:'負責人、會計',unit:'每月幾小時',mul:0.23,def:4,ai:0.35,aiT:'中：整理格式、分群'},
+    {k:'w5',n:'淡季促銷、找回老客',who:'負責人',unit:'每週幾小時',mul:1,def:1,ai:0.35,aiT:'中：名單分群加分眾訊息'},
+    {k:'w6',n:'現場接待、打掃、早餐',who:'管家、房務',unit:'每週幾小時',mul:1,def:20,ai:0,aiT:'低：這是人的溫度，留給自己'}
+  ];
+
+  /* ---------- AI 落點自評表 ---------- */
+  var Q10=[
+    '我用過 ChatGPT、Gemini 等生成式 AI 處理工作',
+    '我有一段自己會重複使用的提示詞',
+    'AI 寫出來的文案，我幾乎不用大改就能用',
+    '我清楚知道哪些旅客資料不能貼給 AI',
+    '我把常見客服問題整理成文字檔或表格',
+    '我的 LINE 官方帳號有設定歡迎訊息和自動回應',
+    '我每個月會整理一次評論，找出要改善的地方',
+    '我能從訂房系統或表單匯出旅客名單（Excel）',
+    '我會依客人類型（新客、熟客）發不同訊息',
+    '店裡有人分工或有 SOP，不是全部靠我一個人'
+  ];
+  var STAGES=[
+    {n:'階段一　基礎應用',r:'0 到 3 分',d:'目標：寫出穩定好用的提示詞。今天先把模組二的 R-T-C-F 做熟，一組提示詞用到順手，比學十個工具有用。'},
+    {n:'階段二　中階實作',r:'4 到 7 分',d:'目標：把單點做成固定流程。今天的重點放在模組三一稿多平台與模組四 FAQ，把會做的事變成每次都一樣的步驟。'},
+    {n:'階段三　流程整合',r:'8 到 10 分',d:'目標：導入計畫與人工審閱機制。今天可以直接想「誰來維護、多久更新一次、誰負責審」，明天的導入計畫你會寫得最快。'}
+  ];
+  var FLOWS=[
+    {k:'social',n:'社群內容',d:'貼文寫不完、不知道發什麼'},
+    {k:'cs',n:'訂房客服',d:'同樣的問題一直回'},
+    {k:'review',n:'評論回覆',d:'評論累積很多沒整理'},
+    {k:'winback',n:'淡季回客',d:'想找老客人卻不知道找誰'}
+  ];
+
+  /* ---------- 11 組提示詞 ---------- */
+  var PROMPTS=[
+    {id:'m1',m:'模組一',t:'請 AI 幫我確認要先改善哪條流程',src:'簡報 p.50',b:
+'你是花蓮觀光旅宿業的 AI 導入顧問。\n我的店：【店名與業態，例如：吉安鄉 5 房民宿，夫妻兩人經營】\n我的角色：【負責人／管家／小編／櫃檯】\n我做了 10 題 AI 落點自評，得分【　】分，回答「是」的題目是：【題號】\n我一週最花時間的 3 件事：\n1.【例如：回 LINE 和 FB 的訂房詢問，每天約 1.5 小時】\n2.【　】\n3.【　】\n\n請你：\n1. 判斷我目前在「基礎應用／中階實作／流程整合」哪個階段，用兩句話說明理由。\n2. 從「社群內容、訂房客服、評論回覆、淡季回客」四條流程中，建議我這兩天先改善哪一條。估算可以省下的時間時，只能用我提供的時間來算，不要自己編數字。\n3. 列出改善這條流程，我需要先準備的 3 份資料。\n4. 用表格輸出，欄位：項目／建議／我需要準備的東西。\n開始之前，如果資訊不夠，請先問我最多 3 個問題。',
+      tip:'上面的自評表填完按「複製自評結果」，直接貼進這段的前半，省得自己打。'},
+    {id:'m2a',m:'模組二',t:'R-T-C-F 萬用模板',src:'簡報 p.91',b:
+'【R 角色】你是一位熟悉花蓮在地旅遊的【民宿管家／飯店行銷企劃／伴手禮品牌小編】。\n【T 任務】請幫我寫一篇【IG 貼文／房型介紹／LINE 推播】，主題是【　】。\n【C 情境】\n・店家：【店名】，位於【鄉鎮加附近地標】，特色是【3 個具體特色】\n・目標旅客：【例如：帶 3 到 8 歲小孩的雙北家庭】\n・這次要說的重點：【例如：平日入住可代訂夜間抓蝦】\n・限制：不要用「首選」「CP值爆表」「全台唯一」「保證看到」；不承諾天氣與活動結果；我沒提供的資訊不要自己編\n【F 格式】\n・字數 150 到 200 字，分 3 段\n・語氣：【溫暖、像朋友聊天】\n・結尾放行動呼籲：私訊 LINE【ID】預約\n・最後附 5 個 hashtag\n寫完後，再給我一個 60 字內的短版本。\n開始之前，如果資訊不夠，先問我 3 個問題。',
+      tip:'這是今天最常用的一段。存在手機記事本，以後每次寫貼文都從這裡改。'},
+    {id:'m2b',m:'模組二',t:'萃取我的品牌口吻指令卡',src:'簡報 p.92',b:
+'你是品牌文案顧問。以下是我們店過去寫的 3 到 5 篇貼文（或官網介紹）：\n【貼上第 1 篇】\n＝＝＝\n【貼上第 2 篇】\n＝＝＝\n【貼上第 3 篇】\n\n請分析我們的寫法，整理成一張「品牌口吻指令卡」，包含：\n1. 品牌一句話（20 字內）\n2. 主要旅客是誰\n3. 語氣三個形容詞\n4. 我們怎麼稱呼旅客（例如：旅人、大朋友小朋友、女王）\n5. 常用詞 10 個、禁用詞 10 個\n6. 句子長短與分段習慣\n7. emoji 使用習慣（用哪些、一篇大約幾個）\n8. 結尾習慣（例如：固定邀請私訊 LINE）\n9. 兩句「最像我們」的示範句\n請用條列輸出。最後加一段「給 AI 的使用說明」，讓我以後貼在任何提示詞的最前面。',
+      tip:'產出後，把結果填回「② 提示詞」分頁的指令卡表單，存起來當交件。'},
+    {id:'m2c',m:'模組二',t:'一次產出 3 組店家專用提示詞',src:'簡報 p.93',b:
+'以下是我的品牌口吻指令卡：\n【貼上指令卡】\n店家基本資料：【店名、地點、房型或商品、價格區間、附近景點、特色服務】\n\n請根據指令卡與店家資料，幫我寫 3 組之後可以重複使用的提示詞。每組都要用 R-T-C-F 四段結構，需要我每次替換的地方用【　】標出：\n第 1 組：房型或商品介紹（用在官網、OTA 平台的說明欄）\n第 2 組：在地玩法貼文（每週固定一篇，介紹附近的景點、美食或體驗）\n第 3 組：客服回覆（旅客詢問時用我的口吻回覆；遇到不確定的資訊，請旅客稍候，由真人確認）\n每組提示詞後面，附上一個用我店家資料填好的示範結果。\n最後提醒我：哪些資訊是 AI 不能自己編、必須由我提供的。',
+      tip:'這三組就是模組二的交付物。產出後存成一份文件，明天導入計畫會用到。'},
+    {id:'m3a',m:'模組三',t:'一稿改寫成四平台',src:'簡報 p.110',b:
+'你是花蓮在地的社群小編，熟悉 FB、IG、Threads、LINE 官方帳號的差異。\n【貼上品牌口吻指令卡】\n以下是這次的「底稿事實清單」：\n・主題：【　】\n・時間地點：【　】\n・3 個賣點：【　】\n・旅客能得到的好處：【　】\n・行動呼籲：【例如：私訊 LINE 預約／點連結看房型】\n\n請一次改寫成 4 個版本：\n1. FB：250 到 350 字，有故事感，適合熟客與家庭決策者，結尾放行動呼籲\n2. IG：120 到 180 字，前兩行就要抓住目光，附 8 個 hashtag，並建議搭配的 3 張照片\n3. Threads：100 字內，像跟朋友聊天，最後丟一個問題讓人留言，不放 hashtag\n4. LINE 推播：60 字內，一則一個重點，附按鈕文字建議（6 字內）\n所有版本都不能出現底稿以外的事實。如果需要補資訊，請在最後列出「需要店家確認的地方」。',
+      tip:'「③ 內容」分頁的底稿清單填完，按一下就會生成填好的版本。'},
+    {id:'m3b',m:'模組三',t:'30 秒短影音腳本',src:'簡報 p.111',b:
+'你是短影音編導，專拍花蓮旅遊與在地小店。\n請幫我寫一支 30 秒的直式短影音腳本（IG Reels、Threads 都能用）。\n・店家與主題：【例如：好野人清水斷崖 SUP 體驗】\n・目標觀眾：【例如：25 到 40 歲、想來花蓮玩水的情侶與朋友】\n・拍攝條件：只有一支手機、一個人拍，不能空拍\n・一定要出現的賣點：【3 個】\n\n請輸出：\n1. 前 3 秒開場鉤子 5 種：反差、數字、提問、現場聲音、秘密各一種\n2. 選一個最強的鉤子，做成分鏡表，欄位：秒數／畫面／字幕（每句 12 字內）／旁白或聲音／拍攝提醒\n3. 片尾行動呼籲 2 種\n4. 一段 IG 說明文字（100 字內，附 5 個 hashtag）\n不要承諾天候與活動一定成行；我沒提供的資訊不要自己編。',
+      tip:'拍之前先把分鏡表存到手機，現場照著拍，不用邊拍邊想。'},
+    {id:'m3c',m:'模組三',t:'一週社群內容月曆',src:'簡報 p.112',b:
+'你是花蓮旅宿的社群企劃。請用我的品牌口吻指令卡，幫我排【11 月第 1 週】的社群內容月曆。\n【貼上品牌口吻指令卡】\n店家資料：【店名、房型或商品、附近景點、這週的特別活動或優惠】\n規則：\n・四類內容輪播：房型或商品／在地玩法／幕後人物故事／旅客見證或優惠\n・一週發 5 篇（週一到週五），週末只發限時動態\n・每篇指定平台（FB／IG／Threads／LINE），LINE 一週最多 1 則\n・優惠內容只能用我提供的，不要自己發明折扣\n用表格輸出，欄位：日期／平台／內容類型／標題／重點文案（50 字內）／需要準備的照片或影片\n最後告訴我：哪 2 篇最適合改成短影音，為什麼。',
+      tip:'排完先看「需要準備的照片」那一欄，拍得到的才留，拍不到的換掉。'},
+    {id:'m3d',m:'模組三',t:'圖片 SEO 與封面文字',src:'簡報 p.113',b:
+'你是網站 SEO 小幫手。我有一張要放在官網和 Google 商家的照片。\n照片內容：【描述畫面，例如：花蓮酒廠的現喝手作生啤酒，金黃色啤酒杯放在木桌上，背景是金箔牆】\n店家：【店名加地點】\n\n請幫我產出：\n1. 檔名建議：英文小寫，用連字號連接，例如 hualien-craft-beer.jpg\n2. 替代文字 alt：中文 40 字內，描述畫面，自然帶入地點與品名，不要堆砌關鍵字\n3. 一句圖片說明：給 Google 商家用，60 字內\n4. 社群封面圖的主標與副標各 3 組：主標 10 字內，副標 20 字內',
+      tip:'官網照片檔名若還是 IMG_2024.jpg，這一步的效益最大。'},
+    {id:'m4a',m:'模組四',t:'客服對話萃取成 FAQ 知識庫',src:'簡報 p.131',b:
+'你是旅宿客服主管。以下是我們過去的客服對話（姓名、電話已換成代號）：\n【貼上 20 則對話，一則一段，用＝＝＝分隔】\n請完成：\n1. 萃取出 20 到 30 題常見問題，意思相同的問題合併成一題\n2. 分成 8 類：訂房與付款／入住退房／交通停車／房型設施／早餐餐飲／寵物與親子／退訂改期與天候／周邊行程\n3. 每題寫出「標準回答」（80 字內，用我的口吻），內容只能根據對話裡我回答過的資訊；對話裡沒有答案的，標示【待店家補充】，不要自己編\n4. 標記每題是「可自動回覆」或「需真人處理」，並說明理由；退訂、退款、賠償、安全健康一律標「需真人處理」\n用表格輸出，欄位：分類／問題／標準回答／自動或真人／備註\n最後列出：哪 3 題最常被問，建議放進 LINE 圖文選單。',
+      tip:'沒有自家對話的人，用「🎁 帶走」分頁練習素材包的 20 則對話。'},
+    {id:'m4b',m:'模組四',t:'六段訊息 SOP 範本',src:'簡報 p.132',b:
+'你是旅宿客服 SOP 設計師。請用我的品牌口吻指令卡，幫我寫「六段訊息」範本。\n【貼上品牌口吻指令卡】\n店家資料：入住時間【15:00】、退房時間【11:00】、停車方式【　】、早餐時間【　】、付款與訂金規定【　】\n退訂規定：【貼上自家已公告的規定，AI 不可自行修改或補充比例】\n六段：\n1. 詢問：旅客第一次問房況時的回覆（確認日期人數、推薦房型、下一步）\n2. 確認：收到訂金後的確認訊息（訂單摘要、付款資訊、退訂規定）\n3. 入住前：入住前 1 天的提醒（交通、停車、入住時間；路況與天氣請旅客查官方資訊）\n4. 當日：入住當天的歡迎與簡單導覽\n5. 退訂：旅客要退訂或改期時的回覆（依我提供的規定，語氣體諒，最後轉由管家確認）\n6. 退房後：感謝、邀請留下評論、加入 LINE 好友的回訪理由\n每段給 1 個主要版本加 1 個短版本，並標示建議的發送時間與管道（LINE／簡訊／OTA 訊息）。',
+      tip:'退訂那一段，一定要貼自家公告的規定，不要讓 AI 自己生比例。'},
+    {id:'m4c',m:'模組四',t:'LINE 歡迎訊息＋自動回覆樹＋轉真人規則',src:'簡報 p.133',b:
+'你是 LINE 官方帳號規劃師。請幫我的【店名／業態】設計：\nA. 加好友歡迎訊息（3 個對話框以內）：\n第 1 框：3 秒說清楚我們是誰、可以幫什麼\n第 2 框：加好友小禮【例如：延後退房 1 小時／早餐升級】與領取方式\n第 3 框：教旅客使用圖文選單，並寫出管家回覆時間\nB. 自動回覆樹（3 到 5 層）：\n・第 1 層主選單 5 個：訂房與房況／交通停車／入住須知／周邊玩法／找管家\n・每個主選單往下 2 到 4 個子選項\n・每個末端寫出回覆內容（80 字內）與 3 個觸發關鍵字\nC. 轉真人規則：列出 6 種一定要轉給真人的情況，以及轉接時的回覆文字（告訴旅客多久內會有人回）\n我的資料：【房型、價格區間、交通方式、停車、寵物規定、早餐、合作行程、回覆時間】\nB 請用表格輸出，欄位：層級／選項名稱／觸發關鍵字／回覆內容／下一層。\n不知道的資訊標示【待店家補充】，不要自己編。',
+      tip:'產出的表格直接照著設定，今晚就能把歡迎訊息上線，這也是回家作業第 3 項。'}
+  ];
+
+  /* ---------- 工具 ---------- */
+  var E='https://ecom.atmarketing.tw/';
+  var TOOLS={
+    m1:[
+      {n:'AI 工作流範本庫',s:1,d:'7 大經典工作流與自訂流程，每一步都附 AI 提示詞。先看別人怎麼串，再決定自己要改哪一條。',u:E+'workflow-templates'},
+      {n:'圖片標記清除器',s:1,d:'上傳截圖前先掃一次，看得到圖片裡藏了什麼（拍攝位置、裝置、編輯紀錄），清掉之後再掃一次給你看。',u:E+'image-cleaner'},
+      {n:'LINE OA 推播成本 × ROI 試算器',s:0,d:'11/1 新制與現行計價雙軌試算，推播前先知道這一則划不划算。',u:E+'line-cost'}
+    ],
+    m2:[
+      {n:'AI Prompt 產生器（R-T-C-F）',s:1,d:'課堂指定工具。填店家資料，直接生出結構化提示詞，不用自己背四段式。',u:E+'prompt-builder'},
+      {n:'品牌調性設定器',s:1,d:'課堂指定工具。一次填寫，ECom 所有工具自動帶入你的口吻，不用每次重貼指令卡。',u:E+'brand-profile'},
+      {n:'品牌口吻記憶卡',s:1,d:'貼 3 到 5 篇舊貼文，萃取出你的口吻 DNA，變成一段可以貼在任何提示詞前面的指令。',u:E+'brand-voice-memory'},
+      {n:'品牌調性 TOV 設定器',s:0,d:'4 個維度定義語氣，附違規詞清單與範例對話，適合有小編的店家統一口徑。',u:E+'tov-designer'}
+    ],
+    m3:[
+      {n:'社群多平台改寫器',s:1,d:'一篇底稿改成 FB、IG、Threads、LINE、EDM，這就是今天的一稿多平台。',u:E+'social-rewriter'},
+      {n:'社群貼文產生器',s:1,d:'課堂指定工具。一個商品或一個主題，一次生四平台貼文。',u:E+'social-post'},
+      {n:'IG Reels 鉤點設計器',s:1,d:'課堂指定工具。前 3 秒鉤點 10 種公式一次給你，挑一個最強的來拍。',u:E+'ig-reels-hook'},
+      {n:'短影音腳本產生器',s:1,d:'課堂指定工具。Reels、TikTok、Shorts 15 到 60 秒分鏡，一個人一支手機就拍得出來。',u:E+'short-video-script'},
+      {n:'社群封面製作器',s:1,d:'課堂指定工具。FB、IG、Threads、YouTube 六平台尺寸一次做完。',u:E+'social-cover-maker'},
+      {n:'AI 圖像 Alt 批次產生',s:1,d:'課堂指定工具。商品圖與房型圖批次補 SEO alt 文字，一次 1 到 10 張。',u:E+'image-alt-batch'},
+      {n:'內容矩陣規劃',s:0,d:'一次規劃 4 週社群、部落格與 EDM，比一週月曆看得更遠。',u:E+'content-matrix'},
+      {n:'商品圖去背神器',s:0,d:'伴手禮、餐點照拖進來直接去背，免上傳免付費，圖不離開瀏覽器。',u:E+'bg-remover'},
+      {n:'社群封面圖產生器',s:0,d:'輸入標題，10 秒做出 1200×630 分享圖，官網與 FB 連結預覽用得上。',u:E+'og-image-maker'},
+      {n:'短影音多平台改寫器',s:0,d:'一支腳本改成各平台各自吃得下的版本，Reels 與 Shorts 不用重拍。',u:E+'video-repurpose'},
+      {n:'熱門貼文拆解＋仿寫器',s:0,d:'貼一則爆紅貼文，拆解它為什麼紅，再用你的口吻仿寫 3 版可發版本。',u:E+'hot-post-remix'}
+    ],
+    m4:[
+      {n:'FAQ 萃取器（客服紀錄到知識庫）',s:1,d:'課堂指定工具。貼對話，出 FAQ 與自動回覆模板，模組四的主力。',u:E+'faq-extractor'},
+      {n:'LINE 自動回覆樹建構器',s:1,d:'課堂指定工具。畫好回覆樹，一鍵匯出可以照著設定的 LINE OA 設定表。',u:E+'line-auto-reply-tree'},
+      {n:'LINE 圖文選單設計器',s:1,d:'課堂指定工具。選單怎麼配、哪三個問題放最大顆，AI 幫你規劃。',u:E+'crm/line-menu'},
+      {n:'客服 SOP 情境產生器',s:1,d:'課堂指定工具。客訴、退貨、VIP 關懷的完整應對腳本。',u:E+'cs-sop'},
+      {n:'加好友歡迎訊息產生器',s:1,d:'今晚就要上線的那三個對話框，3 版訊息加小誘因一鍵生。',u:E+'restaurant-welcome'},
+      {n:'訂位與訂房話術產生器',s:0,d:'詢問、確認、提醒、no-show、退房後邀評，正好對上六段訊息 SOP。',u:E+'restaurant-reservation'},
+      {n:'新好友 7 日旅程產生器',s:0,d:'加好友後第 1 到第 7 天每天發什麼，而且每一則都在幫你貼標籤。',u:E+'line-welcome-journey'},
+      {n:'AI 客服回覆產生器',s:0,d:'3 秒產生專業客服回覆，臨時遇到不會回的訊息先問它。',u:E+'cs-reply'},
+      {n:'FAQ 常見問答產生器',s:0,d:'還沒有對話紀錄的人，先從商品與房型資料生一份 FAQ 起手。',u:E+'faq-builder'},
+      {n:'奧客演練模擬器',s:0,d:'和 AI 扮演的五種奧客實戰過招，管家上線前先練膽。',u:E+'customer-roleplay'}
+    ],
+    d2:[
+      {n:'買家評價回覆產生器',s:1,d:'明天模組六用。好評感謝、差評滅火，3 秒搞定。',u:E+'review-reply'},
+      {n:'評論回覆與邀評小卡',s:1,d:'明天模組六用。貼一則 Google 評論，AI 客製回覆，再配一張房間邀評小卡。',u:E+'restaurant-review-reply'},
+      {n:'會員 RFM 分群分析',s:1,d:'明天模組七用。上傳訂房名單，自動分群，找出你的 VIP 和沉睡客。',u:E+'rfm'},
+      {n:'評論索取 SOP 設計師',s:0,d:'明天模組六用。三個頻道請評論的話術與最佳時機。',u:E+'review-request-designer'},
+      {n:'客戶旅程地圖產生器',s:0,d:'明天模組八用。看見旅客從哪來、在哪卡住。',u:E+'crm/journey'},
+      {n:'會員指標 Dashboard 計算器',s:0,d:'明天模組七用。RFM、LTV、CAC、回購率一頁看完。',u:E+'member-dashboard'}
+    ]
+  };
+
+  /* ---------- 練習素材包（虛構示範民宿「山海小棧」，教學用） ---------- */
+  var PACK_INFO=
+'【山海小棧 店家基本資料】教學用虛構民宿\n'+
+'地點：花蓮縣吉安鄉，離花蓮火車站約 15 分鐘車程，走路 3 分鐘到海堤\n'+
+'房間：共 6 間。海景雙人房 2 間（3,800 元）、山景雙人房 2 間（3,200 元）、四人家庭房 1 間（5,200 元）、一樓寵物友善家庭房 1 間（5,600 元）。平日假日同價，連續假期加收 500 元\n'+
+'入住與退房：入住 15:00，退房 11:00，提早到可先寄放行李\n'+
+'停車：門口 4 個免費車位，滿了巷口右轉 50 公尺有公有停車場，每小時 20 元\n'+
+'早餐：老闆娘手作，8:00 到 9:30，每天不一樣，可做素食，需前一天告知\n'+
+'寵物：只有一樓家庭房可帶毛孩，每隻清潔費 300 元，入住前要先說\n'+
+'付款：訂金為房價 30%，匯款或轉帳，尾款現金或刷卡皆可\n'+
+'合作體驗：可代訂 SUP、溯溪、夜間抓蝦、賞鯨，由合作廠商帶，看天候出發\n'+
+'LINE 回覆時間：每天 9:00 到 21:00，管家一人輪值\n'+
+'退訂規定：入住前 7 日以前取消退 100%，4 到 6 日退 70%，2 到 3 日退 50%，前 1 日與當日不退。天災以中央氣象署發布陸上颱風警報或公路封閉為準，可全額改期一次';
+
+  var PACK_CS=[
+'【對話 1】客人 A（LINE）\n客人：請問 11/15 週六還有兩人房嗎？\n我們：您好，11/15 海景雙人房還有 1 間，一晚 3,800 元含早餐。要幫您留嗎？\n客人：好，怎麼付訂金？\n我們：訂金是房價的 30%，匯款或轉帳都可以，資訊我私訊給您。收到後 24 小時內會回您確認訊息。',
+'【對話 2】客人 B（LINE）\n客人：你們有停車位嗎？我開休旅車\n我們：門口有 4 個免費車位，休旅車可以停。如果剛好滿了，巷口右轉 50 公尺有公有停車場，一小時 20 元，走回來大概 1 分鐘。',
+'【對話 3】客人 C（FB 私訊）\n客人：幾點可以 check in？我們大概中午就會到花蓮\n我們：入住時間是下午 3 點。中午到的話行李可以先放我們這裡，您先去市區吃飯沒問題，回來再拿鑰匙。',
+'【對話 4】客人 D（LINE）\n客人：可以帶狗嗎？是一隻 8 公斤的米克斯\n我們：可以喔，不過只有一樓的寵物友善家庭房能帶毛孩，每隻清潔費 300 元。訂房時先跟我們說一聲，我們會把地墊和水碗先準備好。\n客人：牠會自己睡床上耶\n我們：床上我們會鋪一條專用的寵物毯，麻煩入住時幫忙鋪一下就好。',
+'【對話 5】客人 E（LINE）\n客人：早餐幾點？有素的嗎？\n我們：早餐 8:00 到 9:30，老闆娘每天做的不太一樣。素食可以做，麻煩前一天中午前跟我們說，我們好準備。',
+'【對話 6】客人 F（OTA 訊息）\n客人：你們離火車站多遠？有接送嗎？\n我們：開車大概 15 分鐘。接送的話，我們平日下午 3 點到 6 點可以幫忙去火車站接一趟，一車最多 4 位，要先預約。其他時段就麻煩搭計程車，大概 250 元。',
+'【對話 7】客人 G（LINE）\n客人：請問 12/31 跨年那幾天還有房嗎？四個人\n我們：12/31 四人家庭房已經訂出去了，剩下兩間雙人房，可以併成四人。跨年期間是連續假期價格，每間加收 500 元。\n客人：那兩間雙人房在隔壁嗎\n我們：是的，在二樓同一側，中間就隔一道牆。',
+'【對話 8】客人 H（LINE）\n客人：房間有浴缸嗎？\n我們：六間房都是淋浴，沒有浴缸。海景雙人房的浴室有對外窗，洗澡的時候看得到海。',
+'【對話 9】客人 I（LINE）\n客人：下禮拜看起來會下雨，我們本來要去 SUP，可以改嗎？\n我們：體驗是合作廠商帶的，他們會看當天浪況決定出不出。如果因為天候取消，可以改期或全額退，不會收費。我幫您跟廠商確認後再回您。',
+'【對話 10】客人 J（LINE）\n客人：颱風要來了，我們訂 10/5 的房間可以退嗎？\n我們：如果中央氣象署發布陸上颱風警報，或是蘇花公路封閉，可以全額改期一次，不收費用。管家會再跟您確認日期，您先不用急。',
+'【對話 11】客人 K（FB 私訊）\n客人：可以加床嗎？我們三大一小\n我們：雙人房最多只能加一位，加床費 800 元含早餐。三大一小的話建議直接訂四人家庭房，反而划算。',
+'【對話 12】客人 L（LINE）\n客人：請問可以開統編嗎？公司要報帳\n我們：可以的，退房時跟管家說一聲就好。【這一則我們沒有說明電子發票的開立時間，待補充】',
+'【對話 13】客人 M（LINE）\n客人：太魯閣現在可以去嗎？\n我們：目前部分步道還在修復，砂卡礑、燕子口這些比較熱門的都還沒開放。出發前建議您查一下太管處的公告，我們也可以幫您推薦其他路線，像是鯉魚潭、慕谷慕魚外圍或是七星潭。',
+'【對話 14】客人 N（LINE）\n客人：你們附近晚上有什麼可以吃的？\n我們：走路 5 分鐘有一間在地人常去的小吃店，營業到九點。開車 10 分鐘到吉安市區，選擇比較多。我們也可以幫您訂附近的燒烤外送。',
+'【對話 15】客人 O（LINE）\n客人：我們想租腳踏車\n我們：民宿有 4 台腳踏車可以免費借，先跟管家說一聲。【電動車或親子座椅的部分我們沒有回答，待補充】',
+'【對話 16】客人 P（LINE）\n客人：房間有洗衣機嗎？我們要待五天\n我們：一樓有一台公用洗衣機，投幣式，一次 30 元，烘衣機也有。洗衣精我們這邊有，直接用沒關係。',
+'【對話 17】客人 Q（OTA 訊息）\n客人：我訂了 11/8，但現在要改成 11/9，可以嗎？\n我們：這張是從訂房網站訂的，改日期要麻煩您在平台上操作，或是取消後重訂。如果平台不能改，再跟我們說，管家幫您看看還有沒有房。',
+'【對話 18】客人 R（LINE）\n客人：小孩 3 歲要收費嗎？\n我們：未滿 6 歲不佔床不收費，一間房最多一位。需要嬰兒床的話我們有一張，先預約。',
+'【對話 19】客人 S（LINE）\n客人：請問你們有電梯嗎？我爸媽腳不方便\n我們：我們是兩層樓的民宿，沒有電梯。一樓有兩間房，您可以訂一樓的房間，進出都不用爬樓梯。浴室有扶手。',
+'【對話 20】客人 T（LINE）\n客人：昨天住你們那裡，我太太的外套好像忘在房間了\n我們：我們找到了，米色的那件對嗎？可以幫您寄回去，運費到付，或是您下次來再拿都可以。麻煩給我們收件地址和電話。'
+].join('\n＝＝＝\n');
+
+  var PACK_RV=[
+'1. ⭐⭐⭐⭐⭐ 老闆娘的早餐真的不是那種罐頭早餐，現煎的蔥油餅加一杯現打果汁，我女兒吃了兩份。房間打開窗就是海，早上五點多被光叫醒，反而覺得很幸福。',
+'2. ⭐⭐⭐⭐⭐ 帶狗出門最怕被白眼，這裡是真的歡迎毛孩，管家還先問我們狗狗會不會怕吹風機。地墊跟水碗都準備好了，很貼心。',
+'3. ⭐⭐⭐⭐⭐ 位置很安靜，離海堤走路三分鐘，晚上散步很舒服。停車就在門口不用找位子，這點對開車的人很重要。',
+'4. ⭐⭐⭐⭐⭐ 臨時問管家晚上要去哪吃，他直接幫我們打電話訂位，還畫了一張路線圖。這種服務在飯店不會有。',
+'5. ⭐⭐⭐⭐⭐ 第三次來了。每次早餐都不一樣，這次是粥配三樣小菜。老闆娘記得我們不吃香菜，整個很感動。',
+'6. ⭐⭐⭐⭐⭐ 房間不大但很乾淨，備品是大瓶的沐浴乳不是小包裝，看得出來有在想環保這件事。',
+'7. ⭐⭐⭐⭐⭐ 原本擔心民宿會很吵，結果晚上只聽得到海浪聲。床墊軟硬適中，我老公一向難睡也一覺到天亮。',
+'8. ⭐⭐⭐⭐⭐ 幫我們訂了夜間抓蝦，小朋友玩到不想回來。管家還提醒帶雨鞋跟手電筒，不然我們一定什麼都沒帶。',
+'9. ⭐⭐⭐⭐⭐ 我們是兩個女生自己來，管家特別交代晚上大門會鎖，有事直接打他手機，感覺很安全。',
+'10. ⭐⭐⭐⭐⭐ 海景房的浴室有窗戶，洗澡看得到海，這個設計我給一百分。',
+'11. ⭐⭐⭐⭐⭐ 退房後發現外套忘了，傳訊息過去馬上就找到並幫我寄回來，運費到付也很合理。',
+'12. ⭐⭐⭐⭐⭐ 爸媽腳不方便，訂了一樓的房間，浴室有扶手，進出都不用爬樓梯。訂房前問的問題都回得很快。',
+'13. ⭐⭐⭐⭐⭐ 民宿有免費腳踏車可以借，我們騎去海堤看日出，回來剛好吃早餐，一個早上很完整。',
+'14. ⭐⭐⭐⭐⭐ 颱風來不能去，老闆直接說可以改期不收錢，完全沒有刁難。這種時候的態度最看得出一間店。',
+'15. ⭐⭐⭐⭐⭐ 價格在花蓮算合理，重點是真的有被照顧到的感覺，不是那種住完記不起來的旅館。',
+'16. ⭐⭐⭐⭐⭐ 小孩在大廳打翻果汁，管家笑著說沒關係小朋友都這樣，還幫忙擦。這點讓帶小孩的爸媽鬆一口氣。',
+'17. ⭐⭐⭐⭐⭐ 公共區域有很多在地旅遊資訊，不是那種觀光客手冊，是老闆自己寫的推薦，很實用。',
+'18. ⭐⭐⭐⭐⭐ 早餐時間跟老闆娘聊了快一小時，聽她講以前吉安的樣子，這是住飯店沒有的收穫。',
+'19. ⭐⭐⭐⭐ 整體很好，唯一小建議是房間的插座有點少，兩個人充手機加相機就不太夠。',
+'20. ⭐⭐⭐⭐ 早餐很好吃但 8 點才開始，我們要趕車只好打包，老闆娘有幫我們準備成外帶，謝謝。',
+'21. ⭐⭐⭐⭐ 房間乾淨舒適，不過通往二樓的樓梯有點陡，帶長輩的話建議訂一樓。',
+'22. ⭐⭐⭐⭐ 地點安靜是優點也是缺點，晚上想買東西要開車，附近便利商店要走十分鐘以上。',
+'23. ⭐⭐⭐⭐ 整體不錯，就是 WiFi 在二樓訊號有點弱，看影片會卡，房間裡用手機網路比較順。',
+'24. ⭐⭐⭐⭐ 服務很好，但停車位只有四個，我們下午五點才到就沒位子了，停到巷口要走一小段。',
+'25. ⭐⭐⭐ 房間本身還可以，但隔壁講話聽得滿清楚的，半夜被吵醒兩次。隔音可以再加強。',
+'26. ⭐⭐⭐ 熱水大概要放一兩分鐘才會熱，第二天早上尖峰時間洗澡水溫有點不穩。其他都還好。',
+'27. ⭐⭐⭐ 蚊子有點多，開窗吹風就飛進來，希望可以加紗窗或是放電蚊香。',
+'28. ⭐⭐ 訂房時說有接送，到了才知道只有下午三點到六點才有，我們晚上八點到只能自己叫車。這個資訊應該在訂房頁寫清楚。',
+'29. ⭐⭐ 房間的牆壁有一點霉味，雖然打開除濕機有改善，但一進門的味道還是讓人不太舒服。設備看得出來有年紀了。',
+'30. ⭐ 連假去訂到加價的房間，結果冷氣不冷，反應之後有來看但沒修好，只說晚上會比較涼。花這個價錢有點失望。'
+].join('\n');
+
+  var CHK=[
+    ['模組一','AI 落點自評表 ＋ 選定 1 條流程','自評總分與階段、要改善的流程、一句話寫下成功的樣子'],
+    ['模組二','3 組提示詞 ＋ 品牌口吻指令卡','指令卡 1 張、可重複使用的提示詞 3 組、用新提示詞寫的文案 1 篇'],
+    ['模組三','社群月曆 ＋ 短影音腳本 ＋ 封面圖','一週月曆表、四平台貼文各 1 篇、分鏡表 1 份、封面圖 1 張'],
+    ['模組四','FAQ ＋ LINE 自動回覆樹','FAQ 20 到 30 題、六段訊息範本、回覆樹設定表、歡迎訊息文字'],
+    ['作業一','30 則評論 ＋ 20 則對話 ＋ 歡迎訊息上線','明天早上 9 點前交，準時每人加 3 分']
+  ];
+
+  /* ---------- 狀態 ---------- */
+  var state={grp:'',nick:'',shop:'',type:'',role:'',quiz:{},q10:[],flow:'',success:'',
+    work:{},rt:{},vc:{},bs:{},chk:[false,false,false,false,false],vote:'',drafts:'',tools:{},warm:''};
+  try{var raw=localStorage.getItem(STORE);if(raw){var ps=JSON.parse(raw);if(ps.cohort===COHORT){
+    ['grp','nick','shop','type','role','flow','success','vote','drafts','warm'].forEach(function(k){if(ps[k])state[k]=ps[k];});
+    ['quiz','work','rt','vc','bs','tools'].forEach(function(k){if(ps[k]&&typeof ps[k]==='object')state[k]=ps[k];});
+    if(Array.isArray(ps.q10))state.q10=ps.q10;
+    if(Array.isArray(ps.chk)&&ps.chk.length===5)state.chk=ps.chk.map(function(x){return !!x;});
+  }}}catch(e){}
+  function save(){try{localStorage.setItem(STORE,JSON.stringify(Object.assign({cohort:COHORT},state)));}catch(e){}}
+  function loggedIn(){return !!(state.grp&&state.nick);}
+  function myCode(){return state.grp+'｜'+state.nick;}
+
+  /* ---------- Supabase ---------- */
+  function payload(){
+    return {course:COURSE,cohort:COHORT,code:myCode(),name:state.nick,office:state.shop||state.grp,
+      commit_checks:state.chk,commit_text:state.success||'',
+      quiz:Object.assign({},state.quiz,{q10:state.q10,flow:state.flow,success:state.success,work:state.work,
+        rt:state.rt,vc:state.vc,bs:state.bs,chk:state.chk,vote:state.vote,shop:state.shop,type:state.type,role:state.role}),
+      score:0,cert_at:null};
+  }
+  async function syncRow(){
+    if(!loggedIn())return false;
+    try{
+      var r=await fetchT(SUPA_URL+'/rest/v1/lw_line_students?on_conflict=course,cohort,code',{method:'POST',
+        headers:Object.assign(H(),{'Content-Type':'application/json',Prefer:'resolution=merge-duplicates,return=minimal'}),
+        body:JSON.stringify(payload())},15000);
+      return r.ok;
+    }catch(e){return false;}
+  }
+  async function fetchMe(ms){
+    if(!loggedIn())return null;
+    try{
+      var u=SUPA_URL+'/rest/v1/lw_line_students?course=eq.'+encodeURIComponent(COURSE)+'&cohort=eq.'+encodeURIComponent(COHORT)+'&code=eq.'+encodeURIComponent(myCode())+'&select=quiz,commit_text,commit_checks';
+      var r=await fetchT(u,{headers:H()},ms||12000); var rows=await r.json();
+      return Array.isArray(rows)&&rows[0]?rows[0]:null;
+    }catch(e){return null;}
+  }
+  async function insertSub(o){
+    var r=await fetchT(SUPA_URL+'/rest/v1/lw_workshop_submissions',{method:'POST',headers:Object.assign(H(),{'Content-Type':'application/json',Prefer:'return=minimal'}),body:JSON.stringify(o)},20000);
+    if(!r.ok){var t='';try{t=await r.text();}catch(e){} throw new Error('送出失敗 '+r.status+' '+t.slice(0,60));}
+  }
+
+  /* ---------- 分頁 ---------- */
+  function switchTab(t){
+    document.querySelectorAll('.tab-section').forEach(function(s){s.classList.toggle('active',s.getAttribute('data-tab')===t);});
+    document.querySelectorAll('.tab-btn').forEach(function(b){var on=b.getAttribute('data-tab')===t;b.classList.toggle('on',on);b.setAttribute('aria-selected',on?'true':'false');});
+    var ab=document.querySelector('.tab-btn.on'); if(ab&&ab.scrollIntoView)try{ab.scrollIntoView({inline:'center',block:'nearest',behavior:'smooth'});}catch(e){}
+    window.scrollTo({top:0,behavior:'smooth'});
+    track('tab',{tab:t});
+    if(t==='work'){loadSubs();loadBoard();}
+    if(t==='done'){renderVote();loadBoard();}
+    if(t==='start')loadWarm();
+    if(t!=='ai')refreshStats();
+  }
+  window.switchTab=switchTab;
+  function toast(m){var el=document.getElementById('toast');el.textContent=m;el.classList.add('show');clearTimeout(el._t);el._t=setTimeout(function(){el.classList.remove('show');},2600);}
+  function copyTxt(btn,txt,okMsg){
+    var done=function(){var o=btn.innerHTML;btn.innerHTML='✓ 已複製';toast(okMsg||'✓ 已複製');setTimeout(function(){btn.innerHTML=o;},1600);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done,function(){fb(txt);done();});}
+    else{fb(txt);done();}
+    function fb(t){var ta=document.createElement('textarea');ta.value=t;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');}catch(e){}document.body.removeChild(ta);}
+  }
+
+  /* ---------- 互動題 ---------- */
+  function renderPoll(k){
+    var host=document.getElementById('poll_'+k); if(!host)return;
+    var P=POLLS[k], mine=state.quiz[k], voted=!!mine, n=pollN[k]||0;
+    var html=(P.pt?'<span class="pchip">個人題 ＋'+P.pt+'</span>':'<span class="pchip g">'+(k==='fake'?'破冰':'現場統計')+'</span>')
+      +'<div class="q">'+esc(P.q)+'</div>'+(P.sub?'<div class="qs">'+esc(P.sub)+'</div>':'');
+    P.o.forEach(function(o){
+      var c=(pollAgg[k]&&pollAgg[k][o[0]])||0, pct=n?Math.round(c/n*100):0;
+      html+='<button class="popt'+(mine===o[0]?' mine':'')+'" type="button" data-poll="'+k+'" data-v="'+o[0]+'">'
+        +(voted?'<span class="bar" style="width:'+pct+'%"></span>':'')
+        +'<span class="k">'+o[0]+'</span><span class="lb">'+esc(o[1])+'</span>'
+        +(voted?'<span class="pc">'+pct+'%</span>':'')+'</button>';
+    });
+    html+='<div class="n">'+(voted?('目前 '+n+' 人作答'):(P.ans?'點一個選項作答，答對加分':'點一個選項，結果會即時統計'))+'</div>';
+    if(P.ans){
+      html+='<div class="ansbox'+(voted?' show':'')+'"><div class="a">✅ 正解：'+P.ans+'　'+esc((P.o.filter(function(o){return o[0]===P.ans;})[0]||['',''])[1])+'</div>'
+        +'<p><b>為什麼：</b>'+esc(P.why)+'</p><div class="ext"><b>延伸：</b>'+esc(P.ext)+'</div></div>';
+    }
+    host.innerHTML=html;
+  }
+  function renderAllPolls(){Object.keys(POLLS).forEach(renderPoll);}
+  async function vote(k,v){
+    if(!loggedIn()){toast('先報到才能作答');openReg();return;}
+    state.quiz[k]=v; save(); renderPoll(k); updateHud(); track('poll_vote',{poll:k,value:v});
+    await syncRow(); refreshStats();
+  }
+
+  /* ---------- 一週工作盤點 ---------- */
+  function renderWork(){
+    document.getElementById('wkRows').innerHTML=WORK.map(function(w){
+      var v=(state.work[w.k]!==undefined)?state.work[w.k]:w.def;
+      return '<div style="margin-bottom:10px"><div class="lbl">'+esc(w.n)+'　<span style="font-weight:400;opacity:.75">'+esc(w.who)+'　AI 分擔 '+Math.round(w.ai*100)+'%</span></div>'
+        +'<div style="display:flex;gap:9px;align-items:center"><input type="number" min="0" step="0.5" data-wk="'+w.k+'" value="'+v+'" style="max-width:110px">'
+        +'<span style="font-size:.82rem;color:#a9c2c6">'+esc(w.unit)+'　<b style="color:#7fe3dd">'+esc(w.aiT)+'</b></span></div></div>';
+    }).join('');
+  }
+  function calcWork(){
+    var tot=0, save2=0, top=null, topH=0;
+    WORK.forEach(function(w){
+      var v=(state.work[w.k]!==undefined)?+state.work[w.k]:w.def;
+      if(isNaN(v)||v<0)v=0;
+      var h=v*w.mul; tot+=h; save2+=h*w.ai;
+      if(h>topH&&w.ai>0){topH=h;top=w;}
+    });
+    document.getElementById('wkTotal').textContent=n1(tot);
+    document.getElementById('wkSave').textContent=n1(save2);
+    document.getElementById('wkYear').textContent=n0(save2*52);
+    document.getElementById('wkTop').textContent=top?top.n.slice(0,6):'　';
+    var map={w1:'cs',w2:'social',w3:'review',w4:'winback',w5:'winback',w6:''};
+    var sug=top?map[top.k]:'';
+    var sugName=(FLOWS.filter(function(f){return f.k===sug;})[0]||{}).n||'';
+    document.getElementById('wkNote').innerHTML=tot
+      ? ('你一週花 <b>'+n1(tot)+' 小時</b>在這些事情上，其中 <b>'+n1(save2)+' 小時</b>是 AI 可以分擔的，一年約 <b>'+n0(save2*52)+' 小時</b>。'
+        +(top?('最花時間又能交給 AI 的是「<b>'+esc(top.n)+'</b>」'+(sugName?('，建議這兩天先改善「<b>'+esc(sugName)+'</b>」這條流程。'):'。')):'')
+        +'<br><span style="opacity:.8">分擔比例是課堂估算的上限，導入後請用自己的數字重算一次。</span>')
+      : '填上時數後，這裡會告訴你應該先改哪一條流程。';
+  }
+  function wkText(){
+    var L=['【我的一週工作盤點】'+(state.shop?state.shop:'')],tot=0,sv=0;
+    WORK.forEach(function(w){
+      var v=(state.work[w.k]!==undefined)?+state.work[w.k]:w.def; if(isNaN(v))v=0;
+      var h=v*w.mul; tot+=h; sv+=h*w.ai;
+      L.push('・'+w.n+'：'+v+'（'+w.unit+'），換算每週約 '+n1(h)+' 小時');
+    });
+    L.push('一週總時數：約 '+n1(tot)+' 小時');
+    L.push('AI 可分擔上限：約 '+n1(sv)+' 小時／週，一年約 '+n0(sv*52)+' 小時');
+    return L.join('\n');
+  }
+
+  /* ---------- AI 落點自評表 ---------- */
+  function renderQ10(){
+    document.getElementById('q10Host').innerHTML=Q10.map(function(q,i){
+      var v=state.q10[i];
+      return '<div class="qrow"><span class="qn">'+(i+1)+'</span><span class="qt">'+esc(q)+'</span>'
+        +'<span class="yn"><button type="button" class="y'+(v===1?' on':'')+'" data-q10="'+i+'" data-v="1">是</button>'
+        +'<button type="button" class="n'+(v===0?' on':'')+'" data-q10="'+i+'" data-v="0">否</button></span></div>';
+    }).join('');
+    q10Calc();
+  }
+  function q10Done(){return state.q10.filter(function(x){return x===0||x===1;}).length;}
+  function q10Sum(){return state.q10.filter(function(x){return x===1;}).length;}
+  function q10Stage(){var s=q10Sum();return s<=3?0:(s<=7?1:2);}
+  function q10Calc(){
+    var done=q10Done(), sum=q10Sum(), st=q10Stage();
+    document.getElementById('q10Score').textContent=sum+' / 10'+(done<10?('　已答 '+done+' 題'):'');
+    document.getElementById('q10Stage').innerHTML=STAGES.map(function(s,i){
+      return '<div class="stg'+(done===10&&i===st?' on':'')+'"><b>'+esc(s.n)+'</b><span>'+esc(s.r)+'</span></div>';
+    }).join('');
+    document.getElementById('q10Msg').innerHTML=done<10
+      ? ('還有 '+(10-done)+' 題沒回答。每題「是」得 1 分，「否」得 0 分，沒有標準答案，照實填最有用。')
+      : ('<b>你的分數：'+sum+' 分，落在'+esc(STAGES[st].n)+'。</b><br>'+esc(STAGES[st].d));
+  }
+  function q10Text(){
+    var yes=[]; state.q10.forEach(function(v,i){if(v===1)yes.push(i+1);});
+    var L=['【我的 AI 落點自評】'+(state.shop?state.shop:'')+(state.type?'（'+state.type+'）':''),
+      '得分：'+q10Sum()+' / 10 分，階段：'+STAGES[q10Stage()].n,
+      '回答「是」的題目：'+(yes.length?yes.join('、'):'無'),''];
+    Q10.forEach(function(q,i){L.push((i+1)+'. '+q+'　'+(state.q10[i]===1?'是':(state.q10[i]===0?'否':'未答')));});
+    if(state.flow){var f=FLOWS.filter(function(x){return x.k===state.flow;})[0];L.push('','這兩天要改善的流程：'+(f?f.n:''));}
+    if(state.success)L.push('成功的樣子：'+state.success);
+    L.push('',wkText());
+    return L.join('\n');
+  }
+  function renderFlow(){
+    document.getElementById('flowPick').innerHTML=FLOWS.map(function(f){
+      return '<button class="chip'+(state.flow===f.k?' on':'')+'" type="button" data-flow="'+f.k+'">'+esc(f.n)+'：'+esc(f.d)+'</button>';
+    }).join('');
+  }
+
+  /* ---------- R-T-C-F 組裝器 ---------- */
+  function rtText(){
+    var r=(state.rt.r||'').trim(), t=(state.rt.t||'').trim(), c=(state.rt.c||'').trim(), f=(state.rt.f||'').trim();
+    return '【R 角色】'+(r||'【還沒填】')+'\n【T 任務】'+(t||'【還沒填】')+'\n【C 情境】'+(c||'【還沒填】')+'\n【F 格式】'+(f||'【還沒填】')
+      +'\n\n限制：不要用「首選」「CP值爆表」「全台唯一」「保證看到」；不承諾天氣與活動結果；我沒提供的資訊不要自己編，不知道的寫【待確認】。\n開始之前，如果資訊不夠，先問我 3 個問題。';
+  }
+  function rtCalc(){
+    var n=['r','t','c','f'].filter(function(k){return (state.rt[k]||'').trim();}).length;
+    document.getElementById('rtOut').innerHTML=n
+      ? ('<b>已完成 '+n+' / 4 段</b>'+(n<4?'（還缺的段落會寫【還沒填】）':'　✅ 可以複製了')+'<br><span style="white-space:pre-wrap;font-size:.82rem;opacity:.92">'+esc(rtText().slice(0,240))+(rtText().length>240?'…':'')+'</span>')
+      : '四格都填好，這裡會出現完整的提示詞。';
+  }
+  /* ---------- 品牌口吻指令卡 ---------- */
+  var VCF=[['one','品牌一句話'],['who','主要旅客'],['tone','語氣三個形容詞'],['call','怎麼稱呼旅客'],['yes','常用詞'],
+    ['no','禁用詞'],['style','句子長短與分段'],['emoji','emoji 習慣'],['end','結尾習慣'],['sample','最像我們的示範句']];
+  function vcText(){
+    var L=['【品牌口吻指令卡】'+(state.shop||'')+(state.type?'（'+state.type+'）':''),
+      '以下是我們店說話的方式，請在接下來的所有產出都照這個口吻寫：'];
+    VCF.forEach(function(f){var v=(state.vc[f[0]]||'').trim(); if(v)L.push('・'+f[1]+'：'+v);});
+    L.push('','規則：不要用禁用詞；不承諾天氣、賞鯨、星空一定看得到；我沒提供的資訊不要自己編，不知道的寫【待確認】。');
+    return L.join('\n');
+  }
+  /* ---------- 底稿事實清單 ---------- */
+  var BSF=[['topic','主題'],['when','時間與地點'],['sell','3 個賣點'],['good','旅客能得到的好處'],['cta','行動呼籲']];
+  function bsText(){
+    var L=['你是花蓮在地的社群小編，熟悉 FB、IG、Threads、LINE 官方帳號的差異。'];
+    var vc=vcText(); if(VCF.some(function(f){return (state.vc[f[0]]||'').trim();}))L.push(vc);
+    L.push('','以下是這次的「底稿事實清單」：');
+    BSF.forEach(function(f){L.push('・'+f[1]+'：'+((state.bs[f[0]]||'').trim()||'【還沒填】'));});
+    L.push('','請一次改寫成 4 個版本：',
+      '1. FB：250 到 350 字，有故事感，適合熟客與家庭決策者，結尾放行動呼籲',
+      '2. IG：120 到 180 字，前兩行就要抓住目光，附 8 個 hashtag，並建議搭配的 3 張照片',
+      '3. Threads：100 字內，像跟朋友聊天，最後丟一個問題讓人留言，不放 hashtag',
+      '4. LINE 推播：60 字內，一則一個重點，附按鈕文字建議（6 字內）',
+      '所有版本都不能出現底稿以外的事實。如果需要補資訊，請在最後列出「需要店家確認的地方」。');
+    return L.join('\n');
+  }
+  function bsCalc(){
+    var n=BSF.filter(function(f){return (state.bs[f[0]]||'').trim();}).length;
+    document.getElementById('bsOut').innerHTML=n
+      ? ('<b>已完成 '+n+' / 5 格</b>'+(n===5?'　✅ 可以複製了':'')+(VCF.some(function(f){return (state.vc[f[0]]||'').trim();})?'<br>已自動帶入你的品牌口吻指令卡 ✓':'<br><span style="opacity:.8">提示：先到「② 提示詞」填品牌口吻指令卡，這裡會自動帶入。</span>'))
+      : '五格填好後，這裡會出現可以直接複製的提示詞。';
+  }
+
+  /* ---------- LINE 訊息成本 ---------- */
+  var PLAN={light:{fee:0,free:200,buy:false,n:'輕用量'},mid:{fee:1000,free:3000,buy:false,n:'中用量'},high:{fee:1400,free:6000,buy:true,n:'高用量'}};
+  function num(id,d){var v=parseFloat((document.getElementById(id)||{}).value);return isNaN(v)?d:v;}
+  function calcMsg(){
+    var p=PLAN[(document.getElementById('mPlan')||{}).value||'high'];
+    var used=Math.max(0,num('mUsed',0)), send=Math.max(0,num('mSend',0));
+    var total=used+send, over=Math.max(0,total-p.free);
+    var rate=over>50000?0.15:0.2;
+    var extra=p.buy?over*rate:0;
+    var cost=p.fee+extra, each=send?cost/send:0;
+    document.getElementById('mOver').textContent=n0(over);
+    document.getElementById('mExtra').textContent=p.buy?n0(extra):'不能加購';
+    document.getElementById('mTotal').textContent=n0(cost);
+    document.getElementById('mEach').textContent=send?(Math.round(each*100)/100):'0';
+    document.getElementById('mNote').innerHTML=
+      (!p.buy&&over>0)
+        ? ('⚠️ <b>'+p.n+'方案不能加購</b>，這個月總共要發 '+n0(total)+' 則，超出免費額度 '+n0(over)+' 則，<b>後面這些發不出去</b>。要嘛升級方案，要嘛把名單縮到 '+n0(Math.max(0,p.free-used))+' 人以內。')
+        : (over>0
+          ? ('這個月共 '+n0(total)+' 則，免費額度 '+n0(p.free)+' 則，超出 '+n0(over)+' 則 × '+rate+' 元 ＝ <b>'+n0(extra)+' 元</b>，加月費 '+n0(p.fee)+' 元，本月總共 <b>'+n0(cost)+' 元</b>。')
+          : ('這個月共 '+n0(total)+' 則，還在 '+n0(p.free)+' 則的免費額度內，只付月費 <b>'+n0(p.fee)+' 元</b>。還可以再發 '+n0(p.free-total)+' 則。'));
+  }
+  function msgText(){
+    var p=PLAN[(document.getElementById('mPlan')||{}).value||'high'];
+    var used=Math.max(0,num('mUsed',0)), send=Math.max(0,num('mSend',0)), total=used+send, over=Math.max(0,total-p.free);
+    var rate=over>50000?0.15:0.2, extra=p.buy?over*rate:0, cost=p.fee+extra;
+    return ['【LINE 推播成本試算】','方案：'+p.n+'（月費 '+n0(p.fee)+' 元，含 '+n0(p.free)+' 則）',
+      '本月已發：'+n0(used)+' 則','這次要發：'+n0(send)+' 人','合計：'+n0(total)+' 則',
+      '超出免費額度：'+n0(over)+' 則'+(p.buy?('（× '+rate+' 元 ＝ '+n0(extra)+' 元）'):'（本方案不能加購，發不出去）'),
+      '本月總成本：'+n0(cost)+' 元','平均每則：'+(send?(Math.round(cost/send*100)/100):0)+' 元'].join('\n');
+  }
+
+  /* ---------- 提示詞與工具 ---------- */
+  function renderPrompts(){
+    document.getElementById('promptHost').innerHTML=PROMPTS.map(function(p){
+      return '<div class="tcard" id="prompt_'+p.id+'"><div class="hd"><h3>'+esc(p.t)+'</h3><span class="badge o">'+esc(p.m)+'</span></div>'
+        +'<div class="pbody" id="pb_'+p.id+'">'+esc(p.b)+'</div>'
+        +(p.tip?'<p class="muted-note" style="margin-top:8px">💡 '+esc(p.tip)+'</p>':'')
+        +'<div class="prow"><button class="btn btn-primary btn-sm" data-cp="'+p.id+'" type="button">📋 複製提示詞</button>'
+        +'<button class="btn btn-ghost btn-sm" data-ex="'+p.id+'" type="button">展開全文</button>'
+        +'<span class="ai-go"><a href="https://chatgpt.com/" target="_blank" rel="noopener">🤖 ChatGPT</a><a href="https://gemini.google.com/app" target="_blank" rel="noopener">✨ Gemini</a></span>'
+        +'<span class="src">'+esc(p.src)+'</span></div></div>';
+    }).join('');
+  }
+  function goPrompt(id){
+    switchTab('ai');
+    setTimeout(function(){
+      var el=document.getElementById('prompt_'+id); if(!el)return;
+      el.scrollIntoView({behavior:'smooth',block:'center'});
+      el.style.boxShadow='0 0 0 3px rgba(15,138,134,.4)';
+      setTimeout(function(){el.style.boxShadow='';},2200);
+    },160);
+  }
+  window.goPrompt=goPrompt;
+  function toolCard(t){
+    var href=siteUTM(t.u), disp=t.u.replace(/^https?:\/\//,'');
+    return '<div class="toolcard"><div class="tn">'+(t.s?'<span class="star">⭐</span>':'')+esc(t.n)+'</div>'
+      +'<div class="td">'+esc(t.d)+'</div><div class="tu">'+esc(disp)+'</div>'
+      +'<a class="btn btn-primary btn-sm go" href="'+esc(href)+'" target="_blank" rel="noopener">開啟 →</a></div>';
+  }
+  function renderTools(){
+    Object.keys(TOOLS).forEach(function(k){
+      var el=document.getElementById('tool_'+k); if(el)el.innerHTML=TOOLS[k].map(toolCard).join('');
+    });
+    document.querySelectorAll('a[data-own]').forEach(function(a){a.href=siteUTM(a.getAttribute('href'));});
+  }
+  function renderPack(){
+    document.getElementById('packCs').textContent=PACK_CS;
+    document.getElementById('packRv').textContent=PACK_RV;
+    document.getElementById('packInfo').textContent=PACK_INFO;
+  }
+  function renderChk(){
+    document.getElementById('chkHost').innerHTML=CHK.map(function(c,i){
+      return '<label class="chk'+(state.chk[i]?' on':'')+'"><input type="checkbox" data-chk="'+i+'" '+(state.chk[i]?'checked':'')+'>'
+        +'<span class="d">'+esc(c[0])+'</span><span class="t">'+esc(c[1])+'<small>'+esc(c[2])+'</small></span></label>';
+    }).join('');
+  }
+
+  /* ---------- 暖身牆 ---------- */
+  async function sendWarm(){
+    if(!loggedIn()){toast('先報到才能貼到牆上');openReg();return;}
+    var v=(document.getElementById('warmText').value||'').trim();
+    if(!v){toast('先寫一句話');return;}
+    var b=document.getElementById('warmSend'), o=b.innerHTML; b.disabled=true; b.innerHTML='送出中…';
+    try{
+      await insertSub({course:COURSE,cohort:COHORT,team:state.grp,submitter:state.nick,task:'warm',kind:'text',content:v});
+      state.warm=v; save(); updateHud();
+      document.getElementById('warmText').value='';
+      document.getElementById('warmStatus').textContent='✅ 已貼上牆（'+new Date().toLocaleTimeString('zh-TW',{hour12:false,hour:'2-digit',minute:'2-digit'})+'）。想補充可以再貼一次。';
+      toast('📣 已貼到牆上'); track('warm',{}); loadWarm();
+    }catch(e){ toast('沒送出去，再按一次'); document.getElementById('warmStatus').textContent='⚠️ 送出失敗，再按一次，你打的字還在。'; }
+    b.disabled=false; b.innerHTML=o;
+  }
+  async function loadWarm(){
+    var host=document.getElementById('warmWall'); if(!host)return;
+    try{
+      var u=SUPA_URL+'/rest/v1/lw_workshop_submissions?course=eq.'+encodeURIComponent(COURSE)+'&cohort=eq.'+encodeURIComponent(COHORT)
+        +'&task=eq.warm&select=submitter,team,content,created_at&order=created_at.desc&limit=80';
+      var r=await fetchT(u,{headers:H()},14000); var rows=await r.json(); if(!Array.isArray(rows))rows=[];
+      if(!rows.length){host.innerHTML='<p class="muted-note">還沒有人貼。第一個貼的人，等一下講師會念你的。</p>';return;}
+      host.innerHTML=rows.map(function(x){
+        return '<div class="wnote"><div class="wt">'+esc(x.content||'')+'</div><div class="wb">'+esc(x.team||'')+' · '+esc(x.submitter||'')+'</div></div>';
+      }).join('');
+    }catch(e){ host.innerHTML='<p class="muted-note">讀取失敗，按「看最新」再試一次。</p>'; }
+  }
+
+  /* ---------- 上傳 ---------- */
+  var subMode='text', subFileObj=null;
+  function renderWho(){
+    ['whoBox','whoBox2'].forEach(function(id){
+      var box=document.getElementById(id); if(!box)return;
+      if(!loggedIn()){box.innerHTML='<div class="callout warn"><b>還沒報到：</b>先選組別、填名字，分數和交件才算得到你身上。<br><button class="btn btn-primary btn-sm" type="button" style="margin-top:8px" onclick="openReg()">🙋 現在報到</button></div>';return;}
+      box.innerHTML='<div class="who"><span class="g">'+esc(state.grp)+'</span><span>'+esc(state.nick)+(state.shop?' · '+esc(state.shop):'')+(state.type?' · '+esc(state.type):'')+'</span><button type="button" onclick="openReg()">改資料</button></div>';
+    });
+  }
+  function safe(s){return String(s||'').replace(/[^a-zA-Z0-9]/g,'_').slice(0,24)||'x';}
+  async function shrink(file){
+    try{
+      if(file.size<900*1024&&/image\/(png|jpe?g|webp|gif)/i.test(file.type||''))return file;
+      if(!window.createImageBitmap)return file;
+      var bmp=await createImageBitmap(file);
+      var max=1600, r=Math.min(1,max/Math.max(bmp.width,bmp.height));
+      var c=document.createElement('canvas'); c.width=Math.round(bmp.width*r); c.height=Math.round(bmp.height*r);
+      c.getContext('2d').drawImage(bmp,0,0,c.width,c.height);
+      var blob=await new Promise(function(res){c.toBlob(res,'image/jpeg',0.86);});
+      if(blob&&(blob.size<file.size||!/image\/(png|jpe?g|webp|gif)/i.test(file.type||'')))return blob;
+    }catch(e){}
+    return file;
+  }
+  async function uploadImage(file){
+    var ext=/jpeg/.test(file.type||'')?'jpg':((((file.name||'img').split('.').pop())||'png').toLowerCase().replace(/[^a-z0-9]/g,'')||'png');
+    var gi=GROUPS.indexOf(state.grp)+1;
+    var path=COURSE+'/'+safe(COHORT)+'/g'+(gi||0)+'/'+Date.now()+'-'+Math.floor(Math.random()*1e7)+'.'+ext;
+    var r=await fetchT(SUPA_URL+'/storage/v1/object/'+BUCKET+'/'+path,{method:'POST',headers:Object.assign(H(),{'Content-Type':file.type||'image/png','x-upsert':'false'}),body:file},60000);
+    if(!r.ok){var t='';try{t=await r.text();}catch(e){} throw new Error('圖片上傳失敗 '+r.status+' '+t.slice(0,60));}
+    return SUPA_URL+'/storage/v1/object/public/'+BUCKET+'/'+path;
+  }
+  function friendlyErr(e){
+    var m=String((e&&e.message)||e||'');
+    try{console.error('[upload]',m);}catch(x){}
+    if(/Failed to fetch|NetworkError|abort|timeout/i.test(m))return '網路不穩，這一版沒送出去。等幾秒再按一次就好，你打的字還在。';
+    if(/413|too large|exceeded/i.test(m))return '圖片太大傳不上去。改用手機截圖，或換一張小一點的。';
+    if(/mime|content-?type|415/i.test(m))return '這個圖片格式不支援。用手機截圖（PNG 或 JPG）再傳一次。';
+    if(/^圖片上傳失敗/.test(m))return '圖片沒傳成功，換一張或改用截圖再試一次。還是不行就舉手。';
+    return '沒送出去，再按一次試試。連續兩次都失敗就舉手。';
+  }
+  async function doSubmit(){
+    if(!loggedIn()){toast('先報到才能交件');openReg();return;}
+    var btn=document.getElementById('subBtn'), st=document.getElementById('subStatus'), orig=btn.innerHTML;
+    var task=(document.getElementById('subTask')||{}).value||'extra';
+    var base={course:COURSE,cohort:COHORT,team:state.grp,submitter:state.nick,task:task};
+    btn.disabled=true;
+    try{
+      if(subMode==='text'){
+        var txt=(document.getElementById('subText').value||'').trim();
+        if(!txt){toast('請先填寫內容');btn.disabled=false;btn.innerHTML=orig;return;}
+        btn.innerHTML='送出中…';
+        await insertSub(Object.assign({kind:'text',content:txt},base));
+        document.getElementById('subText').value=''; state.drafts=''; save();
+      }else{
+        if(!subFileObj){toast('請先選一張圖片');btn.disabled=false;btn.innerHTML=orig;return;}
+        btn.innerHTML='處理圖片…';
+        var f2=await shrink(subFileObj);
+        if(f2.size>10*1024*1024){toast('圖片超過 10MB，請換一張或先截圖');btn.disabled=false;btn.innerHTML=orig;return;}
+        btn.innerHTML='上傳中…';
+        var url=await uploadImage(f2);
+        await insertSub(Object.assign({kind:'image',image_url:url},base));
+        subFileObj=null; document.getElementById('subFile').value='';
+        var dz=document.getElementById('dropz'); dz.classList.remove('has');
+        dz.innerHTML='📷 點這裡拍照或選一張圖片<br><small>AI 對話畫面、表格、封面圖都可以（10MB 內）<br>⚠️ 有旅客個資的畫面請先遮掉</small>';
+      }
+      var idx={m1:0,m2:1,m3:2,m4:3,hw:4}[task];
+      if(idx!==undefined&&!state.chk[idx]){state.chk[idx]=true;renderChk();}
+      state.tools.uploaded=1; save(); updateHud(); syncRow();
+      toast('✓ 已送出！'); st.textContent='✓ 已送出，講師後台看得到了。';
+      track('submit_work',{group:state.grp,task:task});
+      loadSubs(); loadBoard();
+    }catch(e){ var msg=friendlyErr(e); toast(msg); st.textContent='⚠️ '+msg; }
+    btn.disabled=false; btn.innerHTML=orig;
+  }
+  function fmtTime(s){try{return new Date(s).toLocaleString('zh-TW',{hour12:false,month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});}catch(e){return '';}}
+  var TASKNAME={m1:'模組一',m2:'模組二',m3:'模組三',m4:'模組四',hw:'作業一',warm:'暖身',extra:'補充'};
+  async function loadSubs(){
+    var host=document.getElementById('subList'); if(!host)return;
+    if(!loggedIn()){host.innerHTML='<p class="muted-note">報到後，這裡會顯示你們這組交過的東西。</p>';return;}
+    try{
+      var u=SUPA_URL+'/rest/v1/lw_workshop_submissions?course=eq.'+encodeURIComponent(COURSE)+'&cohort=eq.'+encodeURIComponent(COHORT)
+        +'&team=eq.'+encodeURIComponent(state.grp)+'&task=neq.warm&select=submitter,task,kind,content,image_url,created_at&order=created_at.asc';
+      var r=await fetchT(u,{headers:H()},15000); var rows=await r.json(); if(!Array.isArray(rows))rows=[];
+      if(!rows.length){host.innerHTML='<p class="muted-note">你們這組還沒交過。做完一份就上傳一份 🙌</p>';return;}
+      host.innerHTML=rows.map(function(x){
+        var body=(x.kind==='image')
+          ? '<a href="'+esc(x.image_url)+'" target="_blank" rel="noopener"><img src="'+esc(x.image_url)+'" alt="上傳的成果" loading="lazy"></a>'
+          : '<div class="txt">'+esc((x.content||'').slice(0,300))+((x.content||'').length>300?'…':'')+'</div>';
+        return '<div class="subitem"><span class="vN">'+esc(TASKNAME[x.task]||'補充')+'</span><div class="body"><div class="who2">'+esc(x.submitter||'')+' · '+fmtTime(x.created_at)+'</div>'+body+'</div></div>';
+      }).join('');
+    }catch(e){host.innerHTML='<p class="muted-note">讀取失敗，稍後再試。</p>';}
+  }
+  async function loadBoard(){
+    var hosts=[document.getElementById('miniBoard'),document.getElementById('board2')].filter(Boolean);
+    if(!hosts.length)return;
+    try{
+      var base='course=eq.'+encodeURIComponent(COURSE)+'&cohort=eq.'+encodeURIComponent(COHORT);
+      var r1=await fetchT(SUPA_URL+'/rest/v1/lw_workshop_submissions?'+base+'&task=neq.warm&select=team,task',{headers:H()},15000);
+      var r2=await fetchT(SUPA_URL+'/rest/v1/lw_workshop_scores?'+base+'&select=team,points',{headers:H()},15000);
+      var subs=await r1.json(), sc=await r2.json(); if(!Array.isArray(subs))subs=[]; if(!Array.isArray(sc))sc=[];
+      var up={},bo={};
+      subs.forEach(function(x){up[x.team]=(up[x.team]||0)+1;});
+      sc.forEach(function(x){bo[x.team]=(bo[x.team]||0)+(+x.points||0);});
+      var arr=GROUPS.map(function(g){return {g:g,u:up[g]||0,b:bo[g]||0,p:(up[g]||0)+(bo[g]||0)};});
+      var max=Math.max.apply(null,arr.map(function(a){return a.p;}));
+      var html=arr.map(function(a){
+        return '<div class="mb'+(a.g===state.grp?' me':'')+(max>0&&a.p===max?' top':'')+'">'
+          +'<div class="gn">'+(max>0&&a.p===max?'🏆 ':'')+esc(a.g)+'</div><div class="pt">'+a.p+'</div>'
+          +'<div class="sm">交件 '+a.u+(a.b?' · 講師 '+(a.b>0?'+':'')+a.b:'')+'</div></div>';
+      }).join('');
+      hosts.forEach(function(h){h.innerHTML=html;});
+    }catch(e){ hosts.forEach(function(h){h.innerHTML='<p class="muted-note">分數讀取中…</p>';}); }
+  }
+
+  /* ---------- 全場統計 ---------- */
+  var voteTally={}, voteN=0;
+  async function refreshStats(){
+    try{
+      var u=SUPA_URL+'/rest/v1/lw_line_students?course=eq.'+encodeURIComponent(COURSE)+'&cohort=eq.'+encodeURIComponent(COHORT)+'&select=code,quiz';
+      var r=await fetchT(u,{headers:H()},12000); var rows=await r.json(); if(!Array.isArray(rows))return;
+      Object.keys(POLLS).forEach(function(k){pollAgg[k]={};pollN[k]=0;});
+      voteTally={}; voteN=0;
+      rows.forEach(function(row){
+        var q=row.quiz||{};
+        Object.keys(POLLS).forEach(function(k){ var v=q[k]; if(v){pollAgg[k][v]=(pollAgg[k][v]||0)+1;pollN[k]++;} });
+        if(q.vote){voteTally[q.vote]=(voteTally[q.vote]||0)+1;voteN++;}
+      });
+      var sig=JSON.stringify([pollAgg,pollN,state.quiz,voteTally,state.vote]);
+      if(sig===statSig)return;
+      statSig=sig; renderAllPolls();
+      var vs=document.querySelector('.tab-section[data-tab="done"]');
+      if(vs&&vs.classList.contains('active'))renderVote();
+      myScore();
+    }catch(e){}
+  }
+  function myScore(){
+    var el=document.getElementById('myScore'); if(!el)return;
+    if(!loggedIn()){el.textContent='報到後顯示。';return;}
+    var keys=Object.keys(POLLS).filter(function(k){return POLLS[k].ans;});
+    var right=keys.filter(function(k){return state.quiz[k]===POLLS[k].ans;});
+    el.innerHTML='<b>'+esc(state.nick)+'</b>（'+esc(state.grp)+'）互動題答對 <b>'+right.length+' / '+keys.length+'</b> 題，＋'+right.length+' 點。'
+      +(right.length===keys.length&&keys.length?'　🎉 全對！':'')
+      +'<br><span class="muted-note">現場舉手答對、準時交作業的部分由講師在後台加分，這裡只算你在網站上作答的。兩天分數累計。</span>';
+  }
+  function renderVote(){
+    var host=document.getElementById('voteGrid'); if(!host)return;
+    var show=!!state.vote;
+    host.innerHTML=GROUPS.map(function(g){
+      var self=loggedIn()&&g===state.grp, on=state.vote===g;
+      return '<button class="vcard'+(on?' on':'')+(self?' self':'')+'" type="button" data-vote="'+g+'"'+(self?' disabled':'')+'>'
+        +'<div class="vn">'+(on?'✅ ':'')+g+'</div><div class="vc">'+(self?'你這組':(show?((voteTally[g]||0)+' 票'):'點我投票'))+'</div></button>';
+    }).join('');
+    document.getElementById('voteStatus').textContent=loggedIn()
+      ? (state.vote?('你投給 '+state.vote+'（投完才看得到票數，可以改）'):'還沒投票。')
+      : '報到後才能投票。';
+  }
+
+  /* ---------- 報到 ---------- */
+  var pickGroup='';
+  function renderGpick(){
+    document.getElementById('gpick').innerHTML=GROUPS.map(function(g){
+      return '<button type="button" class="'+(pickGroup===g?'on':'')+'" data-g="'+g+'">'+g.replace('第','').replace('組','')+'</button>';
+    }).join('');
+  }
+  function openReg(){
+    pickGroup=state.grp; renderGpick();
+    document.getElementById('regNick').value=state.nick||'';
+    document.getElementById('regShop').value=state.shop||'';
+    document.getElementById('regType').value=state.type||'';
+    document.getElementById('regRole').value=state.role||'';
+    var er=document.getElementById('regErr'); er.style.display='none'; er.style.color=''; er.textContent='請選組別並填名字';
+    document.getElementById('regOverlay').classList.add('show');
+  }
+  window.openReg=openReg;
+  function closeReg(){document.getElementById('regOverlay').classList.remove('show');}
+  async function doReg(){
+    var b=document.getElementById('regBtn'); if(b.disabled)return;
+    var nick=(document.getElementById('regNick').value||'').trim();
+    var shop=(document.getElementById('regShop').value||'').trim();
+    var type=document.getElementById('regType').value||'';
+    var role=document.getElementById('regRole').value||'';
+    var er=document.getElementById('regErr');
+    if(!pickGroup||!nick){er.style.display='block';return;}
+    var changed=(state.grp!==pickGroup||state.nick!==nick);
+    state.grp=pickGroup; state.nick=nick; state.shop=shop; state.type=type; state.role=role;
+    if(changed){ state.quiz={}; state.vote=''; }
+    save();
+    var ob=b.textContent; b.disabled=true; b.textContent='報到中…';
+    er.style.display='block'; er.style.color='var(--mute)'; er.textContent='報到中，網路慢的話最多等 5 秒…';
+    try{
+      var row=await fetchMe(5000);
+      if(row){
+        var q=(row.quiz&&typeof row.quiz==='object')?row.quiz:{};
+        state.quiz=q;
+        if(Array.isArray(q.q10))state.q10=q.q10;
+        if(q.flow)state.flow=q.flow;
+        if(q.work&&typeof q.work==='object')state.work=q.work;
+        if(q.rt&&typeof q.rt==='object')state.rt=q.rt;
+        if(q.vc&&typeof q.vc==='object')state.vc=q.vc;
+        if(q.bs&&typeof q.bs==='object')state.bs=q.bs;
+        if(Array.isArray(q.chk)&&q.chk.length===5)state.chk=q.chk.map(function(x){return !!x;});
+        if(q.vote)state.vote=q.vote;
+        state.success=row.commit_text||q.success||'';
+      }
+      save(); closeReg(); renderAll(); syncRow(); refreshStats(); loadSubs(); loadBoard(); loadWarm();
+      track('reg',{group:state.grp});
+      try{if(window.fbq)fbq('trackCustom','Register');}catch(e){}
+      toast('✓ 報到完成，'+state.grp+' '+state.nick);
+    }finally{
+      b.disabled=false; b.textContent=ob;
+      er.style.display='none'; er.style.color=''; er.textContent='請選組別並填名字';
+    }
+  }
+
+  /* ---------- HUD 與整體渲染 ---------- */
+  function updateHud(){
+    document.getElementById('hud').classList.add('show');
+    var ansd=Object.keys(POLLS).filter(function(k){return POLLS[k].ans&&state.quiz[k];}).length;
+    var vcN=VCF.filter(function(f){return (state.vc[f[0]]||'').trim();}).length;
+    var steps=(loggedIn()?1:0)+(state.warm?1:0)+(q10Done()===10?1:0)+(state.flow?1:0)+(ansd>=4?1:0)+(vcN>=5?1:0)+(state.tools.uploaded?1:0)+(state.vote?1:0);
+    document.getElementById('hudGp').firstChild.textContent=loggedIn()?(state.grp+' '):'👋 ';
+    document.getElementById('hudGpSub').textContent=loggedIn()?(state.nick+'　'+steps+'/8'):'點我報到';
+    document.getElementById('hudBar').style.width=(steps/8*100)+'%';
+  }
+  function renderAll(){
+    renderWho(); renderAllPolls(); renderWork(); calcWork(); renderQ10(); renderFlow(); renderChk(); renderVote(); myScore(); updateHud();
+    document.querySelectorAll('[data-rt]').forEach(function(el){var k=el.getAttribute('data-rt');if(state.rt[k]!==undefined)el.value=state.rt[k];});
+    document.querySelectorAll('[data-vc]').forEach(function(el){var k=el.getAttribute('data-vc');if(state.vc[k]!==undefined)el.value=state.vc[k];});
+    document.querySelectorAll('[data-bs]').forEach(function(el){var k=el.getAttribute('data-bs');if(state.bs[k]!==undefined)el.value=state.bs[k];});
+    var s=document.getElementById('successText'); if(s)s.value=state.success||'';
+    var d=document.getElementById('subText'); if(d&&state.drafts)d.value=state.drafts;
+    rtCalc(); bsCalc();
+  }
+
+  /* ---------- 事件 ---------- */
+  document.querySelectorAll('.tab-btn').forEach(function(b){b.addEventListener('click',function(){switchTab(b.getAttribute('data-tab'));});});
+  document.getElementById('hud').addEventListener('click',function(){ if(!loggedIn()){openReg();} else switchTab('work'); });
+  document.getElementById('heroReg').addEventListener('click',openReg);
+  document.getElementById('gpick').addEventListener('click',function(e){var b=e.target.closest('[data-g]');if(!b)return;pickGroup=b.getAttribute('data-g');renderGpick();});
+  document.getElementById('regBtn').addEventListener('click',function(){if(!this.disabled)doReg();});
+  document.getElementById('regNick').addEventListener('keydown',function(e){if(e.key==='Enter')doReg();});
+  document.getElementById('regSkip').addEventListener('click',function(e){e.preventDefault();closeReg();});
+  document.getElementById('regOverlay').addEventListener('click',function(e){if(e.target===this)closeReg();});
+
+  document.addEventListener('click',function(e){
+    var pv=e.target.closest('[data-poll]'); if(pv){ vote(pv.getAttribute('data-poll'),pv.getAttribute('data-v')); return; }
+    var qq=e.target.closest('[data-q10]');
+    if(qq){ if(!loggedIn()){toast('先報到，自評結果才存得起來');openReg();return;}
+      var i=+qq.getAttribute('data-q10'), v=+qq.getAttribute('data-v');
+      state.q10[i]=(state.q10[i]===v)?undefined:v; save(); renderQ10(); updateHud();
+      clearTimeout(window._s1); window._s1=setTimeout(syncRow,1200); return; }
+    var fl=e.target.closest('[data-flow]');
+    if(fl){ state.flow=(state.flow===fl.getAttribute('data-flow'))?'':fl.getAttribute('data-flow'); save(); renderFlow(); updateHud(); if(loggedIn())syncRow(); return; }
+    var vt=e.target.closest('[data-vote]');
+    if(vt){ if(!loggedIn()){toast('先報到才能投票');openReg();return;}
+      var g=vt.getAttribute('data-vote'); if(g===state.grp){toast('不能投自己這組');return;}
+      state.vote=(state.vote===g?'':g); save(); renderVote(); updateHud(); return; }
+    var cp=e.target.closest('[data-cp]');
+    if(cp){ var p=PROMPTS.filter(function(x){return x.id===cp.getAttribute('data-cp');})[0]; if(p){copyTxt(cp,p.b,'📋 已複製，貼到 ChatGPT 或 Gemini');state.tools.copied=1;save();track('copy_prompt',{id:p.id});} return; }
+    var ex=e.target.closest('[data-ex]');
+    if(ex){ var el=document.getElementById('pb_'+ex.getAttribute('data-ex')); if(el){el.classList.toggle('open');ex.textContent=el.classList.contains('open')?'收合':'展開全文';} return; }
+    var ob=e.target.closest('a[href^="http"]'); if(ob){ track('outbound_click',{url:ob.href}); }
+  });
+  document.addEventListener('input',function(e){
+    var wk=e.target.closest('[data-wk]');
+    if(wk){ state.work[wk.getAttribute('data-wk')]=wk.value; save(); calcWork();
+      if(loggedIn()){clearTimeout(window._s2);window._s2=setTimeout(syncRow,1800);} return; }
+    var rt=e.target.closest('[data-rt]');
+    if(rt){ state.rt[rt.getAttribute('data-rt')]=rt.value; save(); rtCalc();
+      if(loggedIn()){clearTimeout(window._s3);window._s3=setTimeout(syncRow,1800);} return; }
+    var vc=e.target.closest('[data-vc]');
+    if(vc){ state.vc[vc.getAttribute('data-vc')]=vc.value; save(); bsCalc(); updateHud();
+      if(loggedIn()){clearTimeout(window._s4);window._s4=setTimeout(syncRow,1800);} return; }
+    var bs=e.target.closest('[data-bs]');
+    if(bs){ state.bs[bs.getAttribute('data-bs')]=bs.value; save(); bsCalc();
+      if(loggedIn()){clearTimeout(window._s5);window._s5=setTimeout(syncRow,1800);} return; }
+    if(e.target.id==='successText'){ state.success=e.target.value; save();
+      if(loggedIn()){clearTimeout(window._s6);window._s6=setTimeout(syncRow,1800);} return; }
+    if(/^(mUsed|mSend)$/.test(e.target.id)){calcMsg();return;}
+    if(e.target.id==='subText'){state.drafts=e.target.value;save();return;}
+  });
+  document.addEventListener('change',function(e){
+    if(e.target.id==='mPlan'){calcMsg();return;}
+    var c=e.target.closest('[data-chk]');
+    if(c){ state.chk[+c.getAttribute('data-chk')]=c.checked; save();
+      var lb=c.closest('.chk'); if(lb)lb.classList.toggle('on',c.checked);
+      updateHud(); if(loggedIn())syncRow(); }
+  });
+  document.getElementById('warmSend').addEventListener('click',sendWarm);
+  document.getElementById('warmRefresh').addEventListener('click',function(){loadWarm();toast('🔄 已更新');});
+  document.getElementById('warmText').addEventListener('keydown',function(e){if(e.key==='Enter')sendWarm();});
+  document.getElementById('wkCopy').addEventListener('click',function(){copyTxt(this,wkText(),'📋 已複製工作盤點');});
+  document.getElementById('wkToPrompt').addEventListener('click',function(){copyTxt(this,q10Text(),'📋 已複製，貼到模組一提示詞裡');setTimeout(function(){goPrompt('m1');},500);});
+  document.getElementById('q10Copy').addEventListener('click',function(){
+    if(q10Done()<10){toast('10 題都回答完再複製');return;}
+    copyTxt(this,q10Text(),'📋 已複製自評結果');
+  });
+  document.getElementById('rtCopy').addEventListener('click',function(){copyTxt(this,rtText(),'📋 已複製，貼到 ChatGPT 或 Gemini');});
+  document.getElementById('vcCopy').addEventListener('click',function(){
+    var n=VCF.filter(function(f){return (state.vc[f[0]]||'').trim();}).length;
+    if(!n){toast('先填幾格再複製');return;}
+    copyTxt(this,vcText(),'📋 已複製指令卡');
+  });
+  document.getElementById('vcSend').addEventListener('click',async function(){
+    if(!loggedIn()){toast('先報到才能交件');openReg();return;}
+    var n=VCF.filter(function(f){return (state.vc[f[0]]||'').trim();}).length;
+    if(n<5){toast('至少填 5 格再送出');return;}
+    var b=this, o=b.innerHTML; b.disabled=true; b.innerHTML='送出中…';
+    try{
+      await insertSub({course:COURSE,cohort:COHORT,team:state.grp,submitter:state.nick,task:'m2',kind:'text',content:vcText()});
+      if(!state.chk[1]){state.chk[1]=true;renderChk();}
+      state.tools.uploaded=1; save(); updateHud(); syncRow();
+      document.getElementById('vcStatus').textContent='✅ 已送出（'+new Date().toLocaleTimeString('zh-TW',{hour12:false,hour:'2-digit',minute:'2-digit'})+'）';
+      toast('✅ 指令卡已交件'); loadBoard();
+    }catch(e){ toast('沒送出去，再按一次'); }
+    b.disabled=false; b.innerHTML=o;
+  });
+  document.getElementById('bsCopy').addEventListener('click',function(){
+    var n=BSF.filter(function(f){return (state.bs[f[0]]||'').trim();}).length;
+    if(!n){toast('先填幾格再複製');return;}
+    copyTxt(this,bsText(),'📋 已複製，貼到 ChatGPT 或 Gemini');
+  });
+  document.getElementById('bsSend').addEventListener('click',async function(){
+    if(!loggedIn()){toast('先報到才能交件');openReg();return;}
+    var n=BSF.filter(function(f){return (state.bs[f[0]]||'').trim();}).length;
+    if(n<3){toast('至少填 3 格再送出');return;}
+    var b=this, o=b.innerHTML; b.disabled=true; b.innerHTML='送出中…';
+    try{
+      await insertSub({course:COURSE,cohort:COHORT,team:state.grp,submitter:state.nick,task:'m3',kind:'text',content:bsText()});
+      if(!state.chk[2]){state.chk[2]=true;renderChk();}
+      state.tools.uploaded=1; save(); updateHud(); syncRow();
+      document.getElementById('bsStatus').textContent='✅ 已送出';
+      toast('✅ 底稿已交件'); loadBoard();
+    }catch(e){ toast('沒送出去，再按一次'); }
+    b.disabled=false; b.innerHTML=o;
+  });
+  document.getElementById('mCopy').addEventListener('click',function(){copyTxt(this,msgText(),'📋 已複製這筆帳');});
+  document.getElementById('packCsCopy').addEventListener('click',function(){copyTxt(this,PACK_CS,'📋 已複製 20 則對話');});
+  document.getElementById('packRvCopy').addEventListener('click',function(){copyTxt(this,PACK_RV,'📋 已複製 30 則評論');});
+  document.getElementById('packInfoCopy').addEventListener('click',function(){copyTxt(this,PACK_INFO,'📋 已複製店家資料');});
+  document.getElementById('voteSave').addEventListener('click',async function(){
+    if(!loggedIn()){openReg();return;}
+    if(!state.vote){toast('先點一組');return;}
+    var ok=await syncRow(); toast(ok?'🗳️ 投票已送出':'⚠️ 送出失敗，再按一次'); refreshStats(); renderVote();
+  });
+  document.getElementById('subMode').addEventListener('click',function(e){
+    var b=e.target.closest('[data-m]'); if(!b)return;
+    subMode=b.getAttribute('data-m');
+    this.querySelectorAll('button').forEach(function(x){x.classList.toggle('on',x===b);});
+    document.getElementById('subTextWrap').style.display=subMode==='text'?'block':'none';
+    document.getElementById('subImgWrap').style.display=subMode==='image'?'block':'none';
+  });
+  document.getElementById('dropz').addEventListener('click',function(){document.getElementById('subFile').click();});
+  document.getElementById('dropz').addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();document.getElementById('subFile').click();}});
+  document.getElementById('subFile').addEventListener('change',function(){
+    var f=this.files&&this.files[0]; if(!f)return; subFileObj=f;
+    var dz=document.getElementById('dropz'); dz.classList.add('has');
+    var rd=new FileReader(); rd.onload=function(ev){dz.innerHTML='<div>✓ 已選：'+esc(f.name)+'</div><img src="'+ev.target.result+'" alt="預覽">';};
+    rd.readAsDataURL(f);
+  });
+  document.getElementById('subBtn').addEventListener('click',doSubmit);
+  document.getElementById('shareBtn').addEventListener('click',function(){
+    var url=location.origin+location.pathname;
+    if(navigator.share){navigator.share({title:'花蓮觀光旅宿 AI 營運實作專班 Day 1',text:'自評表、提示詞、FAQ 與 LINE 回覆樹，都在這一頁。',url:url}).then(function(){track('share',{});}).catch(function(){});}
+    else{copyTxt(this,url,'🔗 已複製這一頁的網址');}
+  });
+
+  /* ---------- 啟動 ---------- */
+  document.getElementById('dropz').setAttribute('tabindex','0');
+  document.getElementById('dropz').setAttribute('role','button');
+  renderPrompts(); renderTools(); renderPack(); renderAll(); calcMsg();
+  refreshStats(); loadBoard(); loadWarm();
+  setInterval(function(){
+    var a=document.querySelector('.tab-section.active'); var tab=a?a.getAttribute('data-tab'):'';
+    if(tab!=='ai')refreshStats();
+    if(tab==='start')loadWarm();
+    if(tab==='done'||tab==='work')loadBoard();
+  },15000);
+  setInterval(function(){ if(loggedIn()&&navigator.onLine!==false)syncRow(); },45000);
+  setTimeout(function(){ if(!loggedIn()){ openReg(); } },900);
+})();
+</script>
+</body>
+</html>
