@@ -77,7 +77,7 @@ tr:nth-child(even) td{background:#fafdfd}
 </head>
 <body>
 <header><div class="wrap">
-  <div><h1>🎛️ 講師後台　花蓮觀光旅宿 AI 專班<span class="sub">Day 1 打好底 · 10/27 F HOTEL 花蓮站前館</span></h1></div>
+  <div><h1>🎛️ 講師後台　花蓮觀光旅宿 AI 專班<span class="sub">D1 打好底 · D2 被看見 · 10/27 到 10/28 F HOTEL 花蓮站前館</span></h1></div>
   <div class="sp">
     <input class="inp" id="cohort" style="width:140px" title="梯次">
     <button class="btn sm g" id="reload">🔄 重新整理</button>
@@ -121,8 +121,11 @@ tr:nth-child(even) td{background:#fafdfd}
         <option value="m1">模組一 自評與流程</option>
         <option value="m2">模組二 提示詞與指令卡</option>
         <option value="m3">模組三 內容</option>
-        <option value="m4">模組四 FAQ 與 LINE</option>
+        <option value="m4">D2 模組四 FAQ 與 LINE</option>
         <option value="hw">回家作業一</option>
+        <option value="d2a">D2 評論分析</option>
+        <option value="d2b">D2 影片與剪片需求單</option>
+        <option value="d2c">D2 導入計畫</option>
         <option value="extra">其他補充</option>
       </select>
       <select class="inp" id="fTeam"><option value="">全部組別</option></select>
@@ -134,7 +137,7 @@ tr:nth-child(even) td{background:#fafdfd}
 
   <section data-s="score">
     <h2 class="t">計分（兩天累計）</h2>
-    <p class="note">交件數會自動計入。下面是講師手動加分，點一下就記一筆，可以重複點。按「撤銷」會扣掉最後一次加分。</p>
+    <p class="note">交件數會自動計入（兩天累計）。下面是講師手動加分，點一下就記一筆，可以重複點。按「撤銷」會扣掉最後一次加分。<b>⚠️ D2 九題裡有 5 題正解是 B，上台唸的時候記得口頭洗牌。</b></p>
     <div id="scoreList"></div>
     <h2 class="t">加分紀錄</h2>
     <div class="row"><button class="btn sm g" id="csvScore">⬇️ 匯出 CSV</button></div>
@@ -169,8 +172,8 @@ var KEY='sb_publishable_Tuj9p4DXvO-jEqVcBnumTg_TqZ1NnRu';
 var COURSE='hualien-hotel-ai';
 var GROUPS=['第1組','第2組','第3組','第4組','第5組','第6組','第7組','第8組','第9組','第10組','第11組','第12組'];
 var Q10=['用過生成式 AI 處理工作','有重複使用的提示詞','AI 文案不用大改就能用','清楚哪些資料不能貼給 AI','常見客服問題已整理成文字','LINE 有歡迎訊息與自動回應','每月整理一次評論','能匯出旅客名單','依客人類型發不同訊息','店裡有分工或 SOP'];
-var ANS={q1:'B',q2:'B',q3:'A',q4:'C',q5:'B',q6:'B',q7:'C',q8:'A'};
-var QT={q1:'不應該丟給免費 AI 的事',q2:'最不能直接用 AI 回答的',q3:'三種口吻配對',q4:'最缺 R-T-C-F 哪一段',q5:'最適合 Threads 的',q6:'最好的前 3 秒開場',q7:'一定要轉真人的',q8:'六段訊息 SOP 順序'};
+var ANS={q1:'B',q2:'B',q3:'A',q4:'C',q5:'B',q6:'B',q7:'C',q8:'A',d1:'B',d2:'C',d3:'B',d4:'B',d5:'B',d6:'C',d7:'A',d8:'A',d9:'B'};
+var QT={q1:'D1 不應該丟給免費 AI 的事',q2:'D1 最不能直接用 AI 回答的',q3:'D1 三種口吻配對',q4:'D1 最缺 R-T-C-F 哪一段',q5:'D1 最適合 Threads 的',q6:'D1 最好的前 3 秒開場',q7:'D1 一定要轉真人的',q8:'D1 六段訊息 SOP 順序',d1:'D2 熱點要自己找',d2:'D2 R-T-C-F 最常省略哪段',d3:'D2 哪則評論最優先',d4:'D2 公開回覆犯什麼錯',d5:'D2 改語氣花時間怎麼解',d6:'D2 KANO 只在負評出現',d7:'D2 圖變影片做壞原因',d8:'D2 倒數影片挑風格',d9:'D2 前 30 天先做什麼'};
 var POLLNA={use:'目前有在用 AI 嗎',pay:'有花錢買 AI 嗎',cost:'每月大約花多少',fake:'破冰 2 真 1 假'};
 var POLLOPT={
   use:[['A','有，工作上常用'],['B','有，偶爾用一下'],['C','還沒用過或很少用']],
@@ -178,8 +181,8 @@ var POLLOPT={
   cost:[['A','沒有付費'],['B','約 US$20'],['C','US$100 以上']],
   fake:[['1','Podcast 100 集'],['2','虛擬貨幣 1 億美金'],['3','史瓦帝尼演講']]
 };
-var QOPT={q1:['A','B','C','D'],q2:['A','B','C','D'],q3:['A','B','C','D'],q4:['A','B','C','D'],q5:['A','B','C','D'],q6:['A','B','C','D'],q7:['A','B','C','D'],q8:['A','B','C','D']};
-var TASKNA={m1:'模組一',m2:'模組二',m3:'模組三',m4:'模組四',hw:'作業一',warm:'暖身',extra:'補充'};
+var QOPT={};Object.keys(ANS).forEach(function(k){QOPT[k]=(k==='d6'||true)?['A','B','C','D']:['A','B','C','D'];});
+var TASKNA={m1:'D1 模組一',m2:'D1 模組二',m3:'D1 模組三',m4:'D2 模組四',hw:'作業一',d2a:'D2 評論',d2b:'D2 影片',d2c:'D2 導入',warm:'暖身',extra:'補充'};
 var PRESET=[['個人題答對',1],['團體第一',3],['團體第二',2],['團體第三',1],['發表 優',5],['發表 良',3],['準時交作業',3],['扣分',-1]];
 
 function H(){return {apikey:KEY,Authorization:'Bearer '+KEY};}
@@ -224,9 +227,10 @@ function renderSum(){
   var q10done=st.filter(function(s){var a=(s.quiz||{}).q10;return Array.isArray(a)&&a.filter(function(x){return x===0||x===1;}).length===10;}).length;
   var voted=st.filter(function(s){return (s.quiz||{}).vote;}).length;
   var ansAvg=st.length?(st.reduce(function(n,s){var qz=s.quiz||{};return n+Object.keys(ANS).filter(function(k){return qz[k]===ANS[k];}).length;},0)/st.length):0;
+  var d2done=sub.filter(function(x){return /^d2/.test(x.task);}).length;
   q('#sumCards').innerHTML=[
     ['報到人數',st.length,''],['暖身牆',warm.length,'o'],['交件總數',sub.length,'g'],
-    ['自評完成',q10done+' / '+st.length,'b'],['平均答對',(Math.round(ansAvg*10)/10)+' / 8',''],['投票人數',voted,'o']
+    ['自評完成',q10done+' / '+st.length,'b'],['平均答對',(Math.round(ansAvg*10)/10)+' / 17',''],['D2 交件',d2done,'o']
   ].map(function(x){return '<div class="c '+x[2]+'"><b>'+x[1]+'</b><span>'+x[0]+'</span></div>';}).join('');
 
   var bo={},up={},ppl={};
@@ -387,7 +391,7 @@ function renderList(){
       return '<tr><td>'+esc(teamOf(s.code))+'</td><td><b>'+esc(s.name||'')+'</b></td><td>'+esc(s.office||'')+'</td>'
         +'<td>'+esc(qz.type||'')+'</td><td>'+esc(qz.role||'')+'</td>'
         +'<td>'+(done===10?(sum+' 分 '+SN[stageOf(sum)]):(done?('未完成 '+done+'/10'):''))+'</td>'
-        +'<td>'+right+' / 8</td><td>'+esc(qz.vote||'')+'</td><td>'+fmt(s.created_at)+'</td></tr>';
+        +'<td>'+right+' / 17</td><td>'+esc(qz.vote||'')+'</td><td>'+fmt(s.created_at)+'</td></tr>';
     }).join('');
   q('#csvList').onclick=function(){
     csv('學員名單_'+cohort()+'.csv',[['組別','姓名','店名','業態','角色','自評分數','階段','答對題數','投票','報到時間']].concat(

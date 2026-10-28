@@ -62,7 +62,7 @@ h2.t{font-size:1.5rem;font-weight:900;margin-bottom:18px;color:var(--mint)}
 </head>
 <body>
 <div class="top">
-  <h1>🏨 花蓮觀光旅宿 AI 營運實作專班<small>Day 1 打好底 · 10/27 F HOTEL 花蓮站前館 · 講師 何佳勳（小圭）</small></h1>
+  <h1>🏨 花蓮觀光旅宿 AI 營運實作專班<small>D1 打好底 · D2 被看見 · 10/27 到 10/28 · 講師 何佳勳（小圭）</small></h1>
   <div class="modes">
     <button data-v="score" class="on">1 計分榜</button>
     <button data-v="warm">2 暖身牆</button>
@@ -146,7 +146,7 @@ function renderScore(){
   var maxV=Math.max.apply(null,arr.map(function(a){return a.v;}));
   q('#scStat').innerHTML=[
     ['報到人數',D.students.length,''],['交件總數',subs.length,'o'],
-    ['暖身牆',warm.length,''],['投票數',vn,'o']
+    ['D2 交件',subs.filter(function(x){return /^d2/.test(x.task);}).length,''],['投票數',vn,'o']
   ].map(function(x){return '<div class="s '+x[2]+'"><b>'+x[1]+'</b><span>'+x[0]+'</span></div>';}).join('');
   q('#scGrid').innerHTML=arr.map(function(a){
     return '<div class="g'+(max>0&&a.p===max?' top':'')+'"><div class="gn">'+(max>0&&a.p===max?'🏆 ':'')+a.g+'</div>'
